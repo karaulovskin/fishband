@@ -1,0 +1,25 @@
+.header__top {
+    padding-top: 25px;
+    padding-bottom: 18px;
+    background-image: url("../images/header/bg.png");
+    background-repeat: no-repeat;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.header__top-left {
+    flex-grow: 1;
+}
+.header__btn {
+    width: 242px;
+    min-width: 242px;
+    margin-top: 14px;
+}
+
+.header__bottom-right {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 28px;
+}

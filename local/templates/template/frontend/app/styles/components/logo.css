@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+.logo__link {
+    display: block;
+}
+.logo__img-over {
+    width: 196px;
+    min-width: 196px;
+}
+.logo__text {
+    margin-left: 5%;
+    font-family: 'RobotoCondensed-BoldItalic';
+    text-transform: uppercase;
+    letter-spacing: 0.054rem;
+    font-size: 22px;
+    color: var(--c-orange);
+}

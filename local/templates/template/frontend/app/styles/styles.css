@@ -4,7 +4,7 @@
 
 html {
     height: 100% !important;
-    font-family: 'UbuntuRegular';
+    font-family: 'Roboto-Regular';
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -27,10 +27,11 @@ html {
 }
 
 body {
-    color: var(--c-black);
     height: 100% !important;
     max-height: 100%;
     min-width: 320px;
+    color: var(--c-black);
+    background-color: var(--c-bc);
 }
 
 #svg-sprite {
@@ -63,7 +64,7 @@ body {
 }
 
 .container {
-    max-width: 1590px;
+    max-width: 1238px;
     margin: auto;
     padding: 0 30px;
 

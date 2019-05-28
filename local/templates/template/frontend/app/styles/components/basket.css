@@ -1,0 +1,18 @@
+.basket {
+    position: relative;
+}
+.basket span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 12px;
+    line-height: 22px;
+    color: var(--c-black);
+    background-color: #fff;
+    border-radius: 100%;
+}

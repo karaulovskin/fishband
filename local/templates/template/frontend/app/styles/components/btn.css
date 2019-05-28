@@ -1,0 +1,12 @@
+.btn--login {
+    display: block;
+    padding: 14px 20px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    letter-spacing: 0.06rem;
+    color: #fff;
+    background-color: var(--c-orange);
+    border-radius: 5px;
+}

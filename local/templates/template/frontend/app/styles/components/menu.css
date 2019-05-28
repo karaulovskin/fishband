@@ -1,0 +1,26 @@
+.menu {
+    height: 70px;
+    padding: 18px 0;
+    background-color: var(--c-orange);
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.menu__list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.menu__link {
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--c-black);
+}
+
+.menu-sub {
+    display: none;
+}
