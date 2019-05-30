@@ -1,0 +1,29 @@
+.footer {
+    padding: 25px 0;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    border-top: 4px solid var(--c-black);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+.footer__top {
+    margin-bottom: 20px;
+}
+
+.footer__top,
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__col {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    min-width: 50%;
+}

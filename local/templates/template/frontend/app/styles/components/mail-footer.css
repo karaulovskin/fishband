@@ -1,0 +1,7 @@
+.mail-footer__link {
+    border-bottom: 1px solid var(--c-orange);
+
+    &:hover {
+        border-color: transparent;
+    }
+}

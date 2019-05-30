@@ -1,0 +1,19 @@
+.callback {
+    display: flex;
+    align-items: center;
+}
+
+.callback__label {
+    margin-right: 10px;
+}
+
+.callback__link {
+    display: inline-block;
+    padding: 14px 24px 10px;
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    letter-spacing: 0.06rem;
+    color: #fff;
+    background-color: var(--c-orange);
+    border-radius: 5px;
+}

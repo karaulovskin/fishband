@@ -1,0 +1,22 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+.socials__label {
+    margin-right: 8px;
+    font-size: 13px;
+    letter-spacing: 0.03rem;
+}
+.socials-list {
+    display: flex;
+    margin: 0 -4px;
+}
+.socials-list__item {
+    padding: 0 4px;
+}
+.socials-list__link {
+    display: block;
+}
+.socials-list__img {
+    display: block;
+}

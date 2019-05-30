@@ -204,6 +204,8 @@ img {
 a {
     text-decoration: none;
     line-height: 1;
+    color: var(--c-orange);
+    transition: .2s;
 
     &:hover {
         text-decoration: none;
