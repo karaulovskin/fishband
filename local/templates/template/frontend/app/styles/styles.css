@@ -53,6 +53,10 @@ body {
     flex: 1 1 auto;
     min-height: 0;
     padding-bottom: 108px;
+    background-image: url('../images/bg/page_bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
 
     @media (--tablet-below) {
         padding-bottom: 60px;
