@@ -52,7 +52,7 @@ body {
     position: relative;
     flex: 1 1 auto;
     min-height: 0;
-    padding-bottom: 108px;
+    padding-top: 40px;
     background-image: url('../images/bg/page_bg.png');
     background-repeat: no-repeat;
     background-position: bottom;
@@ -74,6 +74,29 @@ body {
 
     @media (--mobile) {
         padding: 0 15px;
+    }
+}
+
+.bg-orange {
+    position: relative;
+    background: rgba(211, 84, 0, .20);
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 4000px;
+        background: rgba(211, 84, 0, .20);
+    }
+
+    &:before {
+        right: 100%;
+    }
+
+    &:after {
+        left: 100%;
     }
 }
 

@@ -13,8 +13,10 @@ window.imagesLoaded = imagesLoaded;
 
 // load modules
 import Utils from'./js/utils/utils'
-import SvgUse from'./js/svgUse'
 import Forms from'./js/forms/forms'
+import Maps from'./js/maps'
+import SvgUse from'./js/svgUse'
+import Sliders from'./js/sliders'
 
 // Run components
 
@@ -43,14 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     App.Utils = new Utils();
     App.Forms = new Forms();
+    App.Maps = new Maps();
     App.SvgUse = new SvgUse();
+    App.Sliders = new Sliders();
 
 
 
     $('.inputmask').inputmask({mask: "+7 (999) 999-99-99", greedy: false});
 
-    // prevent copying
-    $('.no-select').on('selectstart', false);
-
-    $(".no-select img").on('mousedown', false);
 });
