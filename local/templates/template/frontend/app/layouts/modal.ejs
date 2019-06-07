@@ -26,6 +26,58 @@
         </div>
     </div>
     <div class="popup__footer">
-        <a href="#" class="link">Регистрация на сайте</a>
+        <a href="#popupReg" class="link popup_modal">Регистрация на сайте</a>
+    </div>
+</div>
+
+<div id="popupReg" class="popup">
+    <div class="popup__content">
+        <div class="popup__head">
+            <div class="popup__title">Регистрация на сайте</div>
+            <div class="popup__desc">Для регистрации на сайте необходимо заполнить поля ниже.</div>
+        </div>
+        <div class="popup__body">
+            <form action="" class="popup__form">
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">Логин</div>
+                        <input type="text" class="input" placeholder="Ваш логин">
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">E-mail</div>
+                        <input type="text" class="input" placeholder="example@mail.ru">
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <div class="checkbox">
+                        <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
+                            <div class="checkbox__fake"></div>
+                            <div class="checkbox__text">
+                                <span>Я согласен на</span>
+                                <a href="#">обработку персональных данных</a>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="popup__btn">
+                    <input type="submit" class="submit" value="Зарегистрироваться">
+                </div>
+            </form>
+        </div>
     </div>
 </div>

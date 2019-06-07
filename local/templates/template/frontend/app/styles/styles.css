@@ -240,8 +240,8 @@ a {
 }
 
 a:not([class]) {
-    color: var(--c-purple);
-    border-bottom: 1px solid var(--c-purple);
+    color: var(--c-orange);
+    border-bottom: 1px solid var(--c-orange);
     transition: .2s;
 
     &:focus,
@@ -251,7 +251,7 @@ a:not([class]) {
     }
 
     &:active {
-         color: var(--c-purple);
+         color: var(--c-orange);
     }
 }
 
