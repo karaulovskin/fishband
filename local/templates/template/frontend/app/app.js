@@ -15,6 +15,7 @@ window.imagesLoaded = imagesLoaded;
 import Utils from'./js/utils/utils'
 import Forms from'./js/forms/forms'
 import Maps from'./js/maps'
+import Modals from'./js/modals'
 import SvgUse from'./js/svgUse'
 import Sliders from'./js/sliders'
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Utils = new Utils();
     App.Forms = new Forms();
     App.Maps = new Maps();
+    App.Modals = new Modals();
     App.SvgUse = new SvgUse();
     App.Sliders = new Sliders();
 

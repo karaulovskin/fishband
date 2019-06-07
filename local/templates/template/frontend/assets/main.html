@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
-    <link href="./css/app.css?1559663054000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1559917077000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -12,7 +12,7 @@
 
 <body>
     <script>
-        var INLINE_SVG_REVISION = 1559656237000;
+        var INLINE_SVG_REVISION = 1559917071000;
     </script>
 
     <div class="flow-container">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="header__btn">
-                            <a href="#" class="btn btn--login">Авторизация на сайте</a>
+                            <a href="#popupCome" class="btn btn--login popup_modal">Авторизация на сайте</a>
                         </div>
                     </div>
 
@@ -358,9 +358,40 @@
                 </div>
             </div>
         </footer>
+        <div id="popupCome" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Войти на сайт</div>
+                    <div class="popup__desc">Для входа на сайт введите ваш логин и пароль.</div>
+                </div>
+                <div class="popup__body">
+                    <form action="" class="popup__form">
+                        <div class="popup__row">
+                            <label class="popup__label">
+                                <div class="popup__label-title">Логин</div>
+                                <input type="text" class="input" placeholder="Ваш логин">
+                            </label>
+                        </div>
+                        <div class="popup__row">
+                            <label class="popup__label">
+                                <div class="popup__label-title">Пароль</div>
+                                <a href="#" class="restore-password">Забыли пароль?</a>
+                                <input type="text" class="input" placeholder="Ваш пароль">
+                            </label>
+                        </div>
+                        <div class="popup__btn">
+                            <input type="submit" class="submit" value="Войти">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="popup__footer">
+                <a href="#" class="link">Регистрация на сайте</a>
+            </div>
+        </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1559662303000" type="text/javascript"></script>
+    <script src="./js/main.js?1559917076000" type="text/javascript"></script>
 </body>
 
 </html>
