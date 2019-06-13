@@ -21,5 +21,5 @@
 .header__bottom-right {
     display: flex;
     justify-content: space-between;
-    margin-left: 28px;
+    /*margin-left: 28px;*/
 }
