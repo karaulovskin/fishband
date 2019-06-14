@@ -2145,6 +2145,9 @@ input::-ms-clear {
 .menu__item {
     position: relative;
 }
+.menu__item.current .menu__link {
+  background-color: #fbb25d;
+}
 .menu__item:hover .menu__link {
   background-color: #fbb25d;
 }

@@ -17,6 +17,12 @@
 .menu__item {
     position: relative;
 
+    &.current {
+        .menu__link {
+            background-color: var(--orange-hover);
+        }
+    }
+
     &:hover {
         .menu__link {
             background-color: var(--orange-hover);
