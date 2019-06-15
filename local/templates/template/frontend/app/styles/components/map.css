@@ -1,0 +1,38 @@
+.map {
+    margin-bottom: 60px;
+}
+.map-mode__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 -5px;
+}
+.map-mode__item {
+    width: 16.6%;
+    min-width: 16.6%;
+    padding: 0 5px;
+
+    &.current,
+    &:hover {
+        .map-mode__link {
+            color: #fff;
+            background-color: var(--c-orange);
+        }
+    }
+
+}
+.map-mode__link {
+    display: block;
+    padding: 16px;
+    font-family: 'RobotoCondensed-Bold';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.02rem;
+    color: var(--c-orange);
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+}
+.map-view {
+    height: 380px;
+}

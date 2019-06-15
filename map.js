@@ -16,7 +16,7 @@ export default class Maps {
         function init(){
             myMap = new ymaps.Map("mapView", {
                 center: map,
-                zoom: 6
+                zoom: 17
             });
 
             myPlacemark = new ymaps.Placemark(map, {}, {
