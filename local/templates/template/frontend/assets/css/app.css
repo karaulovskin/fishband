@@ -2314,6 +2314,13 @@ input::-ms-clear {
     letter-spacing: 0.08rem;
     color: #e07c1a;
 }
+.popup__subtitle {
+    margin-bottom: 20px;
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 24px;
+    letter-spacing: 0.08rem;
+    color: #2c3e50;
+}
 .popup__desc {
     text-align: left;
     font-size: 15px;

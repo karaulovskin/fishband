@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
-    <link href="./css/app.css?1560678931000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1560682961000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -444,6 +444,22 @@
             </div>
         </div>
 
+        <div id="popupEditCallback" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Изменить пароля</div>
+                    <div class="popup__desc">
+                        Изменения успешно сохраненны. Теперь вы можете войти в личный кабинет с новым паролем.
+                    </div>
+                </div>
+                <div class="popup__body">
+                    <div class="popup__btn">
+                        <a href="#popupCome" class="submit popup_modal">Авторизация на сайте</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="popupRecovery" class="popup">
             <div class="popup__content">
                 <div class="popup__head">
@@ -464,6 +480,17 @@
                             <input type="submit" class="submit" value="Восстановить пароль">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupRecoveryCallback" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Восстановление пароля</div>
+                    <div class="popup__desc">
+                        На адрес електронной почты: example@mail.ru отправлено письмо с инструкцией по восстановлению доступа.
+                    </div>
                 </div>
             </div>
         </div>
@@ -516,6 +543,18 @@
                             <input type="submit" class="submit" value="Зарегистрироваться">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="popupSuccess" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Регистрация на сайте</div>
+                    <div class="popup__subtitle">Регистрация успешно завершена!</div>
+                    <div class="popup__desc">
+                        Проверьте вашу почту. Для подтверждения регистрации перейдите по ссылке из письма.
+                    </div>
                 </div>
             </div>
         </div>
