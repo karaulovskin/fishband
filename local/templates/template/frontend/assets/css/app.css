@@ -2158,7 +2158,6 @@ input::-ms-clear {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 100%;
     margin: 0 -5px;
 }
 .map-mode__item {

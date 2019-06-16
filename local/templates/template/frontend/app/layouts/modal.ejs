@@ -2,7 +2,7 @@
     <div class="popup__content">
         <div class="popup__head">
             <div class="popup__title">Войти на сайт</div>
-            <div class="popup__desc">Для входа на сайт введите ваш логин и пароль.</div>
+            <div class="popup__desc">Для входа на сайт введите ваш логин и пароль</div>
         </div>
         <div class="popup__body">
             <form action="" class="popup__form">
@@ -15,7 +15,7 @@
                 <div class="popup__row">
                     <label class="popup__label">
                         <div class="popup__label-title">Пароль</div>
-                        <a href="#" class="restore-password">Забыли пароль?</a>
+                        <a href="#popupRecovery" class="restore-password popup_modal">Забыли пароль?</a>
                         <input type="text" class="input" placeholder="Ваш пароль">
                     </label>
                 </div>
@@ -30,11 +30,39 @@
     </div>
 </div>
 
+<div id="popupRecovery" class="popup">
+    <div class="popup__content">
+        <div class="popup__head">
+            <div class="popup__title">Восстановление пароля</div>
+            <div class="popup__desc">Введите новый пароль</div>
+        </div>
+        <div class="popup__body">
+            <form action="" class="popup__form">
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                </div>
+                <div class="popup__row">
+                    <label class="popup__label">
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                </div>
+                <div class="popup__btn">
+                    <input type="submit" class="submit" value="Изменить пароль">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <div id="popupReg" class="popup">
     <div class="popup__content">
         <div class="popup__head">
             <div class="popup__title">Регистрация на сайте</div>
-            <div class="popup__desc">Для регистрации на сайте необходимо заполнить поля ниже.</div>
+            <div class="popup__desc">Для регистрации на сайте необходимо заполнить поля ниже</div>
         </div>
         <div class="popup__body">
             <form action="" class="popup__form">
