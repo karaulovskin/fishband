@@ -1,0 +1,5 @@
+.page-head {
+    padding: 28px 0;
+    background-color: #fff;
+    border-bottom: 2px solid var(--c-orange);
+}

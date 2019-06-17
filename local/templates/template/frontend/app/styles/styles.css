@@ -101,11 +101,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'UbuntuBold';
+    font-family: 'RobotoCondensed-Bold';
 }
 
 h1 {
-    font-size: 42px;
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 0.08rem;
+    color: var(--c-orange);
 
     @media (--desktop-below) {
         font-size: 38px;
