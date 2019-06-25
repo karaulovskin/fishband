@@ -17,9 +17,32 @@
     min-width: 242px;
     margin-top: 14px;
 }
-
+.header__bottom {
+    border-bottom: 2px solid var(--c-orange);
+}
 .header__bottom-right {
     display: flex;
     justify-content: space-between;
     /*margin-left: 28px;*/
 }
+.header__content {
+    padding: 40px 0;
+    background-color: #f4dab7;
+    border-bottom: 2px solid var(--c-orange);
+}
+.header__contacts {
+    padding: 18px 0;
+    background-color: #f4dab7;
+
+    .grid__col--3 {
+        display: flex;
+
+        &:nth-child(2) {
+             justify-content: center;
+        }
+        &:nth-child(3) {
+             justify-content: flex-end;
+        }
+    }
+}
+

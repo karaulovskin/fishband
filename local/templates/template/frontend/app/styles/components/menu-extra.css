@@ -19,12 +19,14 @@
 
     &.current {
         .menu-extra__link {
+            color: #fff;
             background-color: var(--c-orange);
         }
     }
 
     &:hover {
         .menu-extra__link {
+            color: #fff;
             background-color: var(--c-orange);
         }
     }
