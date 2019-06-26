@@ -22,3 +22,56 @@
     background-color: var(--c-orange);
     border-radius: 5px;
 }
+.btn-buy {
+    display: flex;
+    align-items: center;
+    svg {
+        width: 24px;
+        height: 21px;
+        margin-right: 10px;
+    }
+    span {
+        border-bottom: 1px solid var(--c-orange);
+        transition: .2s;
+    }
+    &:hover {
+        span {
+            border-color: transparent;
+        }
+    }
+}
+.btn-delivery {
+    display: flex;
+    align-items: center;
+    svg {
+        width: 31px;
+        height: 21px;
+        margin-right: 10px;
+    }
+    span {
+        border-bottom: 1px solid var(--c-orange);
+        transition: .2s;
+    }
+    &:hover {
+        span {
+            border-color: transparent;
+        }
+    }
+}
+.btn-like {
+    position: relative;
+    padding-left: 50px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        width: 23px;
+        height: 25px;
+        background-image: url("../images/icons/like.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}

@@ -1,0 +1,33 @@
+.link {
+    color: var(--c-orange);
+    border-bottom: 1px solid var(--c-orange);
+    transition: .2s;
+
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+.link-back {
+    position: relative;
+    padding-left: 12px;
+    &:before {
+        content: '<';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: var(--c-orange);
+    }
+    span {
+        border-bottom: 1px solid var(--c-orange);
+        transition: .2s;
+    }
+
+    &:hover {
+        span {
+            border-color: transparent;
+        }
+    }
+}

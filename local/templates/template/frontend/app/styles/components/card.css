@@ -1,0 +1,55 @@
+.card {
+    display: flex;
+    padding: 35px 25px;
+    background-color: var(--c-bg-grey);
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.card__left {
+    width: 43%;
+    min-width: 43%;
+}
+.card__right {
+    width: 57%;
+    min-width: 57%;
+    padding-left: 40px;
+}
+.card__gallery {
+    display: flex;
+    margin: 0 -12px;
+}
+.card__gallery-left {
+
+}
+.card__gallery-right {
+
+}
+.card-prop {
+    margin-top: 42px;
+    margin-bottom: 40px;
+}
+.card-prop__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.card-prop__item-key {
+    margin-right: 4px;
+}
+.card-prop__item-value {
+    span {
+        font-family: 'Roboto-Bold';
+    }
+}
+.card__price {
+    font-family: 'Roboto-Bold';
+    font-size: 32px;
+}
+.card__btn {
+    display: flex;
+    justify-content: space-between;
+    max-width: 272px;
+}
