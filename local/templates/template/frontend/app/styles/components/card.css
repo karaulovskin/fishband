@@ -66,6 +66,40 @@
     font-family: 'Roboto-Bold';
     font-size: 32px;
 }
+.card-buy {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 290px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+
+    .btn-orange {
+        padding: 11px 20px 8px;
+    }
+}
+.card-buy__select-form {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-buy__select-value {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
+}
+.card-buy__select-reduce,
+.card-buy__select-increase {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: var(--c-orange);
+    cursor: pointer;
+}
 .card__btn {
     display: flex;
     justify-content: space-between;

@@ -18,6 +18,7 @@ import Maps from'./js/maps'
 import Modals from'./js/modals'
 import SvgUse from'./js/svgUse'
 import Sliders from'./js/sliders'
+import Tabs from'./js/tabs'
 
 // Run components
 
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Modals = new Modals();
     App.SvgUse = new SvgUse();
     App.Sliders = new Sliders();
+    App.Tabs = new Tabs();
 
 
 

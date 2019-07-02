@@ -9,6 +9,7 @@
     color: #fff;
     background-color: var(--c-orange);
     border-radius: 5px;
+    cursor: pointer;
 }
 .btn--login {
     display: block;

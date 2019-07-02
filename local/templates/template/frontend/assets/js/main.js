@@ -137,6 +137,10 @@ var _sliders = __webpack_require__(23);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
+var _tabs = __webpack_require__(25);
+
+var _tabs2 = _interopRequireDefault(_tabs);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.svg4everybody = _svg4everybody2.default; // Load plugins
@@ -179,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Modals = new _modals2.default();
     App.SvgUse = new _svgUse2.default();
     App.Sliders = new _sliders2.default();
+    App.Tabs = new _tabs2.default();
 
     $('.inputmask').inputmask({ mask: "+7 (999) 999-99-99", greedy: false });
 });
@@ -11974,7 +11979,6 @@ var Maps = function () {
         _classCallCheck(this, Maps);
 
         this.init();
-        console.log('map');
     }
 
     _createClass(Maps, [{
@@ -25188,6 +25192,62 @@ return Swiper$1;
 
 })));
 
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Tabs = function () {
+    function Tabs() {
+        _classCallCheck(this, Tabs);
+
+        this.container = '[data-tabs]';
+        this.nav = '[data-tabs-nav]';
+        this.navItem = '[data-tabs-nav-item]';
+        this.navTrigger = '[data-tabs-nav-trigger]';
+        this.content = '[data-tabs-content]';
+        this.contentItem = '[data-tabs-content-item]';
+
+        this.bindEvents();
+    }
+
+    _createClass(Tabs, [{
+        key: 'switchTab',
+        value: function switchTab(elem) {
+            var self = this;
+            var $tab = elem;
+            var $navItem = $tab.closest(self.navItem);
+            var $contentItem = $(self.contentItem);
+            var $indx = $navItem.index();
+
+            $contentItem.eq($indx).add($navItem).addClass('current').siblings().removeClass('current');
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.navTrigger, function () {
+                self.switchTab($(this));
+            });
+        }
+    }]);
+
+    return Tabs;
+}();
+
+exports.default = Tabs;
 
 /***/ })
 /******/ ]);

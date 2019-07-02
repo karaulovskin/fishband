@@ -2,7 +2,6 @@ export default class Maps {
 
     constructor() {
         this.init();
-        console.log('map');
     }
 
     init() {

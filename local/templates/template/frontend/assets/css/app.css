@@ -1888,6 +1888,7 @@ input::-ms-clear {
     color: #fff;
     background-color: #e07c1a;
     border-radius: 5px;
+    cursor: pointer;
 }
 .btn--login {
     display: block;
@@ -1991,6 +1992,51 @@ input::-ms-clear {
     background-color: #e07c1a;
     border-radius: 5px;
 }
+.card-tabs {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.card-tabs__head {
+    padding: 18px 25px 0;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #e07c1a;
+}
+.card-tabs__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.card-tabs__list-item {
+    margin-right: 26px;
+    padding-bottom: 6px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+}
+.card-tabs__list-item.current {
+  color: #e07c1a;
+  border-color: #e07c1a;
+}
+.card-tabs__list-item:last-child {
+  margin-right: 0;
+}
+.card-tabs__list-trigger {
+    cursor: pointer;
+}
+.card-tabs__content-item {
+    display: none;
+    padding: 32px 25px 42px;
+}
+.card-tabs__content-item.current {
+  display: block;
+}
+.card-tabs__content-title {
+    margin-bottom: 20px;
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    color: #e07c1a;
+}
 .card {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2070,6 +2116,47 @@ input::-ms-clear {
 .card__price {
     font-family: 'Roboto-Bold';
     font-size: 32px;
+}
+.card-buy {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    max-width: 290px;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+.card-buy .btn-orange {
+  padding: 11px 20px 8px;
+}
+.card-buy__select-form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card-buy__select-value {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 50px;
+    border-top: 1px solid #95a5a6;
+    border-bottom: 1px solid #95a5a6;
+}
+.card-buy__select-reduce, .card-buy__select-increase {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #e07c1a;
+    cursor: pointer;
 }
 .card__btn {
     display: -webkit-box;
@@ -2989,6 +3076,14 @@ input::-ms-clear {
 }
 .socials-list__img {
     display: block;
+}
+.textual {
+    margin-bottom: 40px;
+    padding: 35px 100px 38px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
 /*Main styles*/
 @media (max-width: 750px) {
