@@ -7,23 +7,49 @@
             <div class="card__gallery">
                 <div class="card__gallery-left">
                     <div class="card-slider-navigation">
-                        <div class="card-slider-navigation__btn--prev"></div>
+                        <button class="card-slider-navigation__btn--prev">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-arrow_prev"></use>
+                            </svg>
+                        </button>
                         <div class="card-slider-thumbs">
                         <div class="card-slider-thumbs__container swiper-container">
                             <div class="card-slider-thumbs__wrapper swiper-wrapper">
                                 <div class="card-slider-thumbs__slide swiper-slide">
                                     <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
                                 </div>
+                                <div class="card-slider-thumbs__slide swiper-slide">
+                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                </div>
+                                <div class="card-slider-thumbs__slide swiper-slide">
+                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                </div>
+                                <div class="card-slider-thumbs__slide swiper-slide">
+                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                </div>
                             </div>
                         </div>
                     </div>
-                        <div class="card-slider-navigation__btn--next"></div>
+                        <button class="card-slider-navigation__btn--next">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-arrow_prev"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
                 <div class="card__gallery-right">
                     <div class="card-slider">
                         <div class="card-slider__container swiper-container">
                             <div class="card-slider__wrapper swiper-wrapper">
+                                <div class="card-slider__slide swiper-slide">
+                                    <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                </div>
+                                <div class="card-slider__slide swiper-slide">
+                                    <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                </div>
+                                <div class="card-slider__slide swiper-slide">
+                                    <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                </div>
                                 <div class="card-slider__slide swiper-slide">
                                     <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
                                 </div>
@@ -35,7 +61,13 @@
         </div>
         <div class="card__right">
             <div class="card__content">
-                <div class="card__stock">В наличии</div>
+
+                <!-- Нет в наличии -->
+                <!--
+                <div class="card__stock">Нет в наличии</div>
+                -->
+                <div class="card__stock card__stock--available">В наличии</div>
+
                 <div class="card-prop">
                     <div class="card-prop__item">
                         <div class="card-prop__item-key">Артикул:</div>

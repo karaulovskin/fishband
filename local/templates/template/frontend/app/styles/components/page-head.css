@@ -8,6 +8,10 @@
     align-items: baseline;
     margin-top: 24px;
     margin-bottom: 28px;
+
+    &.page-head__row--space-between {
+        justify-content: space-between;
+    }
 }
 
 .page-head__shop {

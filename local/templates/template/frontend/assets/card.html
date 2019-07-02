@@ -1,10 +1,11 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Карточка товара</title>
-    <link href="./css/app.css?1561568002000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1562058671000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -12,7 +13,7 @@
 
 <body>
     <script>
-        var INLINE_SVG_REVISION = 1561560908000;
+        var INLINE_SVG_REVISION = 1562053412000;
     </script>
 
     <div class="flow-container">
@@ -128,12 +129,14 @@
                 </div>
                 <div class="page-head">
                     <div class="container">
-                        <!-- стр. Магазин
-                <div class="page-head__shop">
-                    <h1 class="title">Магазин</h1>
-                    <a href="#" class="btn-orange">Если Shop, то Fishband</a>
-                </div>
-                -->
+
+                        <!-- стр. Магазин -->
+                        <!--<div class="page-head__nav">-->
+                        <!--<div class="page-head__row page-head__row--space-between">-->
+                        <!--<h1 class="title">Магазин</h1>-->
+                        <!--<a href="#" class="btn-orange">Если Shop, то Fishband</a>-->
+                        <!--</div>-->
+                        <!--</div>-->
 
                         <div class="page-head__nav">
                             <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
@@ -206,23 +209,23 @@
                                 <div class="socials-list">
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/vk.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/vk.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/fb.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/fb.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/od.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/od.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/tw.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/tw.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                 </div>
                             </div>
@@ -242,23 +245,49 @@
                         <div class="card__gallery">
                             <div class="card__gallery-left">
                                 <div class="card-slider-navigation">
-                                    <div class="card-slider-navigation__btn--prev"></div>
+                                    <button class="card-slider-navigation__btn--prev">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-arrow_prev"></use>
+                            </svg>
+                        </button>
                                     <div class="card-slider-thumbs">
                                         <div class="card-slider-thumbs__container swiper-container">
                                             <div class="card-slider-thumbs__wrapper swiper-wrapper">
                                                 <div class="card-slider-thumbs__slide swiper-slide">
                                                     <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
                                                 </div>
+                                                <div class="card-slider-thumbs__slide swiper-slide">
+                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                                </div>
+                                                <div class="card-slider-thumbs__slide swiper-slide">
+                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                                </div>
+                                                <div class="card-slider-thumbs__slide swiper-slide">
+                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-slider-navigation__btn--next"></div>
+                                    <button class="card-slider-navigation__btn--next">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-arrow_prev"></use>
+                            </svg>
+                        </button>
                                 </div>
                             </div>
                             <div class="card__gallery-right">
                                 <div class="card-slider">
                                     <div class="card-slider__container swiper-container">
                                         <div class="card-slider__wrapper swiper-wrapper">
+                                            <div class="card-slider__slide swiper-slide">
+                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                            </div>
+                                            <div class="card-slider__slide swiper-slide">
+                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                            </div>
+                                            <div class="card-slider__slide swiper-slide">
+                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
+                                            </div>
                                             <div class="card-slider__slide swiper-slide">
                                                 <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
                                             </div>
@@ -270,7 +299,13 @@
                     </div>
                     <div class="card__right">
                         <div class="card__content">
-                            <div class="card__stock">В наличии</div>
+
+                            <!-- Нет в наличии -->
+                            <!--
+                <div class="card__stock">Нет в наличии</div>
+                -->
+                            <div class="card__stock card__stock--available">В наличии</div>
+
                             <div class="card-prop">
                                 <div class="card-prop__item">
                                     <div class="card-prop__item-key">Артикул:</div>
@@ -300,17 +335,17 @@
                             </div>
                             <div class="card__btn">
                                 <a href="#" class="btn-buy">
-                                    <svg class="i-icon">
-                                        <use xlink:href="#icon-buy"></use>
-                                    </svg>
-                                    <span>Оплата</span>
-                                </a>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-buy"></use>
+                        </svg>
+                        <span>Оплата</span>
+                    </a>
                                 <a href="#" class="btn-delivery">
-                                    <svg class="i-icon">
-                                        <use xlink:href="#icon-delivery"></use>
-                                    </svg>
-                                    <span>Доставка</span>
-                                </a>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-delivery"></use>
+                        </svg>
+                        <span>Доставка</span>
+                    </a>
                             </div>
                         </div>
                     </div>
@@ -425,15 +460,15 @@
                             </div>
                             <div class="shop-slider__nav">
                                 <button class="shop-slider__nav-prev">
-                                    <svg class="i-icon">
-                                        <use xlink:href="#icon-arrow_prev"></use>
-                                    </svg>
-                                </button>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-arrow_prev"></use>
+                        </svg>
+                    </button>
                                 <button class="shop-slider__nav-next">
-                                    <svg class="i-icon">
-                                        <use xlink:href="#icon-arrow_next"></use>
-                                    </svg>
-                                </button>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-arrow_next"></use>
+                        </svg>
+                    </button>
                             </div>
                             <div class="shop-slider__pagination swiper-pagination"></div>
                         </div>
@@ -463,23 +498,23 @@
                                 <div class="socials-list">
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/vk.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/vk.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/fb.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/fb.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/od.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/od.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                     <div class="socials-list__item">
                                         <a href="#" class="socials-list__link">
-                                            <img src="./images/icons/tw.png" alt="" class="socials-list__img">
-                                        </a>
+                                    <img src="./images/icons/tw.png" alt="" class="socials-list__img">
+                                </a>
                                     </div>
                                 </div>
                             </div>
@@ -514,16 +549,16 @@
                     <form action="" class="popup__form">
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Логин</div>
-                                <input type="text" class="input" placeholder="Ваш логин">
-                            </label>
+                        <div class="popup__label-title">Логин</div>
+                        <input type="text" class="input" placeholder="Ваш логин">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Пароль</div>
-                                <a href="#popupRecovery" class="restore-password popup_modal">Забыли пароль?</a>
-                                <input type="text" class="input" placeholder="Ваш пароль">
-                            </label>
+                        <div class="popup__label-title">Пароль</div>
+                        <a href="#popupRecovery" class="restore-password popup_modal">Забыли пароль?</a>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
                         </div>
                         <div class="popup__btn">
                             <input type="submit" class="submit" value="Войти">
@@ -546,15 +581,15 @@
                     <form action="" class="popup__form">
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Пароль</div>
-                                <input type="text" class="input" placeholder="Ваш пароль">
-                            </label>
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Повторите пароль</div>
-                                <input type="text" class="input" placeholder="Ваш пароль">
-                            </label>
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
                         </div>
                         <div class="popup__btn">
                             <input type="submit" class="submit" value="Изменить пароль">
@@ -592,9 +627,9 @@
                     <form action="" class="popup__form">
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">E-mail</div>
-                                <input type="text" class="input" placeholder="example@mail.ru">
-                            </label>
+                        <div class="popup__label-title">E-mail</div>
+                        <input type="text" class="input" placeholder="example@mail.ru">
+                    </label>
                         </div>
                         <div class="popup__btn">
                             <input type="submit" class="submit" value="Восстановить пароль">
@@ -625,38 +660,38 @@
                     <form action="" class="popup__form">
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Логин</div>
-                                <input type="text" class="input" placeholder="Ваш логин">
-                            </label>
+                        <div class="popup__label-title">Логин</div>
+                        <input type="text" class="input" placeholder="Ваш логин">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">E-mail</div>
-                                <input type="text" class="input" placeholder="example@mail.ru">
-                            </label>
+                        <div class="popup__label-title">E-mail</div>
+                        <input type="text" class="input" placeholder="example@mail.ru">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Пароль</div>
-                                <input type="text" class="input" placeholder="Ваш пароль">
-                            </label>
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <label class="popup__label">
-                                <div class="popup__label-title">Повторите пароль</div>
-                                <input type="text" class="input" placeholder="Ваш пароль">
-                            </label>
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
                         </div>
                         <div class="popup__row">
                             <div class="checkbox">
                                 <label class="checkbox__label">
-                                    <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
-                                    <div class="checkbox__fake"></div>
-                                    <div class="checkbox__text">
-                                        <span>Я согласен на</span>
-                                        <a href="#">обработку персональных данных</a>
-                                    </div>
-                                </label>
+                            <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
+                            <div class="checkbox__fake"></div>
+                            <div class="checkbox__text">
+                                <span>Я согласен на</span>
+                                <a href="#">обработку персональных данных</a>
+                            </div>
+                        </label>
                             </div>
                         </div>
                         <div class="popup__btn">
@@ -680,7 +715,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1561567181000" type="text/javascript"></script>
+    <script src="./js/main.js?1562057863000" type="text/javascript"></script>
 </body>
 
 </html>
