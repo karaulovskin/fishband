@@ -5,14 +5,19 @@
     margin-bottom: 25px;
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    overflow: hidden;
 
     &.category-list__item--banner {
-
         box-shadow: none;
+    }
+    &.is_open {
     }
     &.last-child {
         margin-bottom: 0;
     }
+}
+.category-list__link {
+    display: block;
 }
 .category-list__head {
     display: flex;
@@ -30,7 +35,7 @@
     color: var(--c-orange);
 }
 .category-list__body {
-    height: 0;
+    display: none;
     background-color: var(--c-bg-grey-dark);
     overflow: hidden;
 }

@@ -121,23 +121,27 @@ var _forms = __webpack_require__(15);
 
 var _forms2 = _interopRequireDefault(_forms);
 
-var _maps = __webpack_require__(19);
+var _accordion = __webpack_require__(19);
+
+var _accordion2 = _interopRequireDefault(_accordion);
+
+var _maps = __webpack_require__(20);
 
 var _maps2 = _interopRequireDefault(_maps);
 
-var _modals = __webpack_require__(20);
+var _modals = __webpack_require__(21);
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var _svgUse = __webpack_require__(22);
+var _svgUse = __webpack_require__(23);
 
 var _svgUse2 = _interopRequireDefault(_svgUse);
 
-var _sliders = __webpack_require__(23);
+var _sliders = __webpack_require__(24);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _tabs = __webpack_require__(25);
+var _tabs = __webpack_require__(26);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -179,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     App.Utils = new _utils2.default();
     App.Forms = new _forms2.default();
+    App.Accordion = new _accordion2.default();
     App.Maps = new _maps2.default();
     App.Modals = new _modals2.default();
     App.SvgUse = new _svgUse2.default();
@@ -11974,6 +11979,74 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Accordion = function () {
+    function Accordion() {
+        _classCallCheck(this, Accordion);
+
+        this.container = '[data-accordion]';
+        this.item = '[data-accordion-item]';
+        this.trigger = '[data-accordion-trigger]';
+        this.content = '[data-accordion-content]';
+        this.duration = 500;
+
+        this.bindEvents();
+    }
+
+    _createClass(Accordion, [{
+        key: 'switchAccordion',
+        value: function switchAccordion(elem) {
+            var self = this;
+            var $trigger = elem;
+            var $container = $trigger.closest(self.container);
+            var $items = $container.find(self.item);
+            var $item = $trigger.closest(self.item);
+            var $content = $item.find(self.content);
+            var $otherContent = $container.find(self.content);
+
+            console.log($item);
+
+            if (!$item.hasClass('is_open')) {
+                $items.removeClass('is_open');
+                $item.addClass('is_open');
+                $otherContent.stop(true, true).slideUp(self.duration);
+                $content.slideDown(self.duration);
+            } else {
+                $content.slideUp(self.duration);
+                $item.removeClass('is_open');
+            }
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.trigger, function (e) {
+                e.preventDefault();
+                self.switchAccordion($(this));
+            });
+        }
+    }]);
+
+    return Accordion;
+}();
+
+exports.default = Accordion;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var Maps = function () {
     function Maps() {
         _classCallCheck(this, Maps);
@@ -12014,7 +12087,7 @@ var Maps = function () {
 exports.default = Maps;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12026,7 +12099,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fancybox = __webpack_require__(21);
+var _fancybox = __webpack_require__(22);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
@@ -12079,7 +12152,7 @@ var Modals = function () {
 exports.default = Modals;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 // ==================================================
@@ -17716,7 +17789,7 @@ exports.default = Modals;
 })(document, jQuery);
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17806,7 +17879,7 @@ exports.default = SvgUse;
 ;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17819,7 +17892,7 @@ exports.Slider = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _swiper = __webpack_require__(24);
+var _swiper = __webpack_require__(25);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -17927,7 +18000,7 @@ var Slider = exports.Slider = function Slider(selector, options) {
 };
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25194,7 +25267,7 @@ return Swiper$1;
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

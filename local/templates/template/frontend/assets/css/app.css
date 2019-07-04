@@ -2233,13 +2233,20 @@ input::-ms-clear {
     border-radius: 5px;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
             box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    overflow: hidden;
 }
 .category-list__item.category-list__item--banner {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.category-list__item.is_open {
+
+}
 .category-list__item.last-child {
   margin-bottom: 0;
+}
+.category-list__link {
+    display: block;
 }
 .category-list__head {
     display: -webkit-box;
@@ -2264,7 +2271,7 @@ input::-ms-clear {
     color: #e07c1a;
 }
 .category-list__body {
-    height: 0;
+    display: none;
     background-color: #f0f0f0;
     overflow: hidden;
 }

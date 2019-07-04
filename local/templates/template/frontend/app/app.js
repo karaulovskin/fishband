@@ -14,6 +14,7 @@ window.imagesLoaded = imagesLoaded;
 // load modules
 import Utils from'./js/utils/utils'
 import Forms from'./js/forms/forms'
+import Accordion from'./js/accordion'
 import Maps from'./js/maps'
 import Modals from'./js/modals'
 import SvgUse from'./js/svgUse'
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     App.Utils = new Utils();
     App.Forms = new Forms();
+    App.Accordion = new Accordion();
     App.Maps = new Maps();
     App.Modals = new Modals();
     App.SvgUse = new SvgUse();
