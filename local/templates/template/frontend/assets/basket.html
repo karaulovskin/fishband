@@ -1,0 +1,632 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Карточка товара</title>
+    <link href="./css/app.css?1562233097000" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+    <script>
+        var INLINE_SVG_REVISION = 1562233075000;
+    </script>
+
+    <div class="flow-container">
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__top-left">
+                        <div class="logo">
+                            <a href="/" class="logo__link">
+                                <div class="logo__img-over">
+                                    <img src="./images/logo/logo.png" alt="" class="logo__img">
+                                </div>
+                            </a>
+                            <div class="logo__text">Широта рыболовных горизонтов</div>
+                        </div>
+                    </div>
+                    <div class="header__top-right">
+                        <div class="header__search">
+                            <div class="search">
+                                <input type="text" class="search__input" placeholder="Поиск по сайту">
+                                <input type="submit" class="search__submit">
+                            </div>
+                        </div>
+                        <div class="header__btn">
+                            <a href="#popupCome" class="btn btn--login popup_modal">Авторизация на сайте</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="menu">
+                    <div class="container">
+                        <nav class="menu__list">
+                            <div class="menu__item current">
+                                <a href="#" class="menu__link">О проекте</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Новости</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Болталка</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Есть тема</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Наши байки</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Рыболовные горизонты</a>
+                            </div>
+                            <div class="menu__item">
+                                <a href="#" class="menu__link">Магазин</a>
+                                <div class="menu-sub">
+                                    <div class="menu-sub__list">
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Каталог</a>
+                                        </div>
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Условия оформления заказа</a>
+                                        </div>
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Оплата</a>
+                                        </div>
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Отгрузка</a>
+                                        </div>
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Страховка груза</a>
+                                        </div>
+                                        <div class="menu-sub__item">
+                                            <a href="#" class="menu-sub__link">Контакты</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="header__bottom-right">
+                            <div class="basket">
+                                <img src="./images/icons/basket.png" alt="" class="basket__icons">
+                                <span>10</span>
+                            </div>
+                            <div class="add-fast">
+                                <a href="#" class="add-fast__link">Добавить пост</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-extra">
+                    <div class="container">
+                        <nav class="menu-extra__list">
+                            <div class="menu-extra__item current">
+                                <a href="#" class="menu-extra__link">Каталог</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Заказ</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Оплата</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Доставка</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Гарантия</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Контакты</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="page-head">
+                    <div class="container">
+
+                        <!-- стр. Магазин -->
+                        <!--<div class="page-head__nav">-->
+                        <!--<div class="page-head__row page-head__row--space-between">-->
+                        <!--<h1 class="title">Магазин</h1>-->
+                        <!--<a href="#" class="btn-orange">Если Shop, то Fishband</a>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="page-head__nav">
+                            <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
+                            <div class="page-head__row">
+                                <h1 class="title">Про моторы</h1>
+                                <div class="title-desc">Лодочные моторы</div>
+                            </div>
+                            <a href="#" class="btn-orange btn-like">Мне нравится</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__content">
+                <div class="container">
+                    <div class="offers">
+                        <div class="offers__list">
+                            <div class="offers__item">
+                                <a href="#" class="offers__link">
+                                    <div class="offers__label">Организация и сопровождение рыбалки</div>
+                                    <img src="./images/bg/offers.jpg" alt="" class="offers__img">
+                                </a>
+                            </div>
+                            <div class="offers__item">
+                                <a href="#" class="offers__link">
+                                    <div class="offers__label">Консультация и обучение рыбалке</div>
+                                    <img src="./images/bg/offers.jpg" alt="" class="offers__img">
+                                </a>
+                            </div>
+                            <div class="offers__item">
+                                <a href="#" class="offers__link">
+                                    <div class="offers__label">Рыбалка-приключение в подарок</div>
+                                    <img src="./images/bg/offers.jpg" alt="" class="offers__img">
+                                </a>
+                            </div>
+                            <div class="offers__item">
+                                <a href="#" class="offers__link">
+                                    <div class="offers__label">Персональные спецпроекты</div>
+                                    <img src="./images/bg/offers.jpg" alt="" class="offers__img">
+                                </a>
+                            </div>
+                            <div class="offers__item">
+                                <a href="#" class="offers__link">
+                                    <div class="offers__label">Рыболовная фотосессия</div>
+                                    <img src="./images/bg/offers.jpg" alt="" class="offers__img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="offers__btns">
+                            <a href="#" class="btn-orange">Все специальные предложения</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__contacts">
+                <div class="container">
+                    <div class="grid">
+                        <div class="grid__col grid__col--3">
+                            <a href="#" class="btn-orange">Обсуждение и FAQ</a>
+                        </div>
+                        <div class="grid__col grid__col--3">
+                            <div class="callback">
+                                <div class="callback__label">Пишите, звоните нам</div>
+                                <a href="#" class="callback__link">WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col--3">
+                            <div class="socials">
+                                <div class="socials__label">Мы в соц.сетях</div>
+                                <div class="socials-list">
+                                    <div class="socials-list__item">
+                                        <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/vk.png" alt="" class="socials-list__img">
+                                </a>
+                                    </div>
+                                    <div class="socials-list__item">
+                                        <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/fb.png" alt="" class="socials-list__img">
+                                </a>
+                                    </div>
+                                    <div class="socials-list__item">
+                                        <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/od.png" alt="" class="socials-list__img">
+                                </a>
+                                    </div>
+                                    <div class="socials-list__item">
+                                        <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/tw.png" alt="" class="socials-list__img">
+                                </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+
+
+
+            <div class="container">
+                <div class="order">
+                    <div class="order__body">
+                        <div class="category-item">
+                            <a href="#" class="category-item__link">
+                                <div class="category-item__left">
+                                    <div class="category-item__img-over">
+                                        <img src="./images/bg/category.jpg" alt="" class="category-item__img">
+                                    </div>
+                                    <div class="category-item__title">Спиннинг Black Hole GF 230м 5-18гSpin 260 IM9+</div>
+                                </div>
+                                <div class="category-item__right">
+                                    <div class="category-item__price">1 640 руб.</div>
+                                    <div class="card-buy__select">
+                                        <form class="card-buy__select-form" action="">
+                                            <input type="button" class="card-buy__select-reduce" value="-">
+                                            <input type="text" class="card-buy__select-value" value="0">
+                                            <input type="button" class="card-buy__select-increase" value="+">
+                                        </form>
+                                    </div>
+                                    <div class="category-item__total">1 000 640 руб.</div>
+                                    <button class="category-item__delete">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item">
+                            <a href="#" class="category-item__link">
+                                <div class="category-item__left">
+                                    <div class="category-item__img-over">
+                                        <img src="./images/bg/category.jpg" alt="" class="category-item__img">
+                                    </div>
+                                    <div class="category-item__title">Спиннинг Black Hole GF 230м 5-18гSpin 260 IM9+</div>
+                                </div>
+                                <div class="category-item__right">
+                                    <div class="category-item__price">1 640 руб.</div>
+                                    <div class="card-buy__select">
+                                        <form class="card-buy__select-form" action="">
+                                            <input type="button" class="card-buy__select-reduce" value="-">
+                                            <input type="text" class="card-buy__select-value" value="0">
+                                            <input type="button" class="card-buy__select-increase" value="+">
+                                        </form>
+                                    </div>
+                                    <div class="category-item__total">1 000 640 руб.</div>
+                                    <button class="category-item__delete">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item">
+                            <a href="#" class="category-item__link">
+                                <div class="category-item__left">
+                                    <div class="category-item__img-over">
+                                        <img src="./images/bg/category.jpg" alt="" class="category-item__img">
+                                    </div>
+                                    <div class="category-item__title">Спиннинг Black Hole GF 230м 5-18гSpin 260 IM9+</div>
+                                </div>
+                                <div class="category-item__right">
+                                    <div class="category-item__price">1 640 руб.</div>
+                                    <div class="card-buy__select">
+                                        <form class="card-buy__select-form" action="">
+                                            <input type="button" class="card-buy__select-reduce" value="-">
+                                            <input type="text" class="card-buy__select-value" value="0">
+                                            <input type="button" class="card-buy__select-increase" value="+">
+                                        </form>
+                                    </div>
+                                    <div class="category-item__total">1 000 640 руб.</div>
+                                    <button class="category-item__delete">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item">
+                            <a href="#" class="category-item__link">
+                                <div class="category-item__left">
+                                    <div class="category-item__img-over">
+                                        <img src="./images/bg/category.jpg" alt="" class="category-item__img">
+                                    </div>
+                                    <div class="category-item__title">Спиннинг Black Hole GF 230м 5-18гSpin 260 IM9+</div>
+                                </div>
+                                <div class="category-item__right">
+                                    <div class="category-item__price">1 640 руб.</div>
+                                    <div class="card-buy__select">
+                                        <form class="card-buy__select-form" action="">
+                                            <input type="button" class="card-buy__select-reduce" value="-">
+                                            <input type="text" class="card-buy__select-value" value="0">
+                                            <input type="button" class="card-buy__select-increase" value="+">
+                                        </form>
+                                    </div>
+                                    <div class="category-item__total">1 000 640 руб.</div>
+                                    <button class="category-item__delete">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </button>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-item">
+                            <a href="#" class="category-item__link">
+                                <div class="category-item__left">
+                                    <div class="category-item__img-over">
+                                        <img src="./images/bg/category.jpg" alt="" class="category-item__img">
+                                    </div>
+                                    <div class="category-item__title">Спиннинг Black Hole GF 230м 5-18гSpin 260 IM9+</div>
+                                </div>
+                                <div class="category-item__right">
+                                    <div class="category-item__price">1 640 руб.</div>
+                                    <div class="card-buy__select">
+                                        <form class="card-buy__select-form" action="">
+                                            <input type="button" class="card-buy__select-reduce" value="-">
+                                            <input type="text" class="card-buy__select-value" value="0">
+                                            <input type="button" class="card-buy__select-increase" value="+">
+                                        </form>
+                                    </div>
+                                    <div class="category-item__total">1 000 640 руб.</div>
+                                    <button class="category-item__delete">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order__footer">
+                        <div class="order-total">
+                            <div class="order-total__label">Итого:</div>
+                            <div class="order-total__value">99 999 руб.</div>
+                        </div>
+                        <div class="order__btns">
+                            <a href="#" class="btn-border">Продолжить покупки</a>
+                            <a href="#" class="btn-orange">Оформить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__col">
+                    <div class="footer__about">
+                        FISHBAND.RU — это место в интернете для общения и обмена информацией уважаемого сообщества рыбаков, объединенного любовью к своему увлечению - рыбалке.
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__call">
+                        <div class="callback">
+                            <div class="callback__label">Пишите, звоните нам</div>
+                            <a href="#" class="callback__link">WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="socials">
+                            <div class="socials__label">Мы в соц.сетях</div>
+                            <div class="socials-list">
+                                <div class="socials-list__item">
+                                    <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/vk.png" alt="" class="socials-list__img">
+                                </a>
+                                </div>
+                                <div class="socials-list__item">
+                                    <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/fb.png" alt="" class="socials-list__img">
+                                </a>
+                                </div>
+                                <div class="socials-list__item">
+                                    <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/od.png" alt="" class="socials-list__img">
+                                </a>
+                                </div>
+                                <div class="socials-list__item">
+                                    <a href="#" class="socials-list__link">
+                                    <img src="./images/icons/tw.png" alt="" class="socials-list__img">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__col">
+                    <div class="copyright">© fishband.ru 2004—2019</div>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__mail">
+                        <div class="mail-footer">
+                            <span class="mail-footer__label">По всем вопросам обращайтесь на</span>
+                            <a href="mailto:admin@fishband.ru" class="mail-footer__link">admin@fishband.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer__privacy">
+                        <a href="#" class="privacy">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="popupCome" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Войти на сайт</div>
+                <div class="popup__desc">Для входа на сайт введите ваш логин и пароль.</div>
+            </div>
+            <div class="popup__body">
+                <form action="" class="popup__form">
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Логин</div>
+                        <input type="text" class="input" placeholder="Ваш логин">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Пароль</div>
+                        <a href="#popupRecovery" class="restore-password popup_modal">Забыли пароль?</a>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                    </div>
+                    <div class="popup__btn">
+                        <input type="submit" class="submit" value="Войти">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup__footer">
+            <a href="#popupReg" class="link popup_modal">Регистрация на сайте</a>
+        </div>
+    </div>
+
+    <div id="popupEdit" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Изменить пароля</div>
+                <div class="popup__desc">Введите новый пароль.</div>
+            </div>
+            <div class="popup__body">
+                <form action="" class="popup__form">
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                    </div>
+                    <div class="popup__btn">
+                        <input type="submit" class="submit" value="Изменить пароль">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupEditCallback" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Изменить пароля</div>
+                <div class="popup__desc">
+                    Изменения успешно сохраненны. Теперь вы можете войти в личный кабинет с новым паролем.
+                </div>
+            </div>
+            <div class="popup__body">
+                <div class="popup__btn">
+                    <a href="#popupCome" class="submit popup_modal">Авторизация на сайте</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupRecovery" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Восстановление пароля</div>
+                <div class="popup__desc">
+                    Введите электронную почту указанную при регистрации. Инструкции по восстановлению доступа, будут высланы вам в самое ближайшее время.
+                </div>
+            </div>
+            <div class="popup__body">
+                <form action="" class="popup__form">
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">E-mail</div>
+                        <input type="text" class="input" placeholder="example@mail.ru">
+                    </label>
+                    </div>
+                    <div class="popup__btn">
+                        <input type="submit" class="submit" value="Восстановить пароль">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupRecoveryCallback" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Восстановление пароля</div>
+                <div class="popup__desc">
+                    На адрес електронной почты: example@mail.ru отправлено письмо с инструкцией по восстановлению доступа.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupReg" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Регистрация на сайте</div>
+                <div class="popup__desc">Для регистрации на сайте необходимо заполнить поля ниже.</div>
+            </div>
+            <div class="popup__body">
+                <form action="" class="popup__form">
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Логин</div>
+                        <input type="text" class="input" placeholder="Ваш логин">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">E-mail</div>
+                        <input type="text" class="input" placeholder="example@mail.ru">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <label class="popup__label">
+                        <div class="popup__label-title">Повторите пароль</div>
+                        <input type="text" class="input" placeholder="Ваш пароль">
+                    </label>
+                    </div>
+                    <div class="popup__row">
+                        <div class="checkbox">
+                            <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
+                            <div class="checkbox__fake"></div>
+                            <div class="checkbox__text">
+                                <span>Я согласен на</span>
+                                <a href="#">обработку персональных данных</a>
+                            </div>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="popup__btn">
+                        <input type="submit" class="submit" value="Зарегистрироваться">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupSuccess" class="popup">
+        <div class="popup__content">
+            <div class="popup__head">
+                <div class="popup__title">Регистрация на сайте</div>
+                <div class="popup__subtitle">Регистрация успешно завершена!</div>
+                <div class="popup__desc">
+                    Проверьте вашу почту. Для подтверждения регистрации перейдите по ссылке из письма.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    </div>
+    <script src="./js/main.js?1562233094000" type="text/javascript"></script>
+</body>
+
+</html>

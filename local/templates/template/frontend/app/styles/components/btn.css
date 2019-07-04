@@ -8,6 +8,21 @@
     letter-spacing: 0.06rem;
     color: #fff;
     background-color: var(--c-orange);
+    border: 1px solid var(--c-orange);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-border {
+    display: inline-block;
+    padding: 14px 20px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    letter-spacing: 0.06rem;
+    color: var(--c-orange);
+    background-color: transparent;
+    border: 1px solid var(--c-orange);
     border-radius: 5px;
     cursor: pointer;
 }

@@ -1887,6 +1887,21 @@ input::-ms-clear {
     letter-spacing: 0.06rem;
     color: #fff;
     background-color: #e07c1a;
+    border: 1px solid #e07c1a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-border {
+    display: inline-block;
+    padding: 14px 20px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    letter-spacing: 0.06rem;
+    color: #e07c1a;
+    background-color: transparent;
+    border: 1px solid #e07c1a;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -2284,8 +2299,8 @@ input::-ms-clear {
   font-size: 16px;
 }
 .category-item {
-    border-top: 1px solid #cccccc;
-    border-top: 1px solid #95a5a6;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #95a5a6;
 }
 .category-item .btn-orange {
   height: 40px;
@@ -2349,10 +2364,14 @@ input::-ms-clear {
     font-size: 18px;
     color: #e07c1a;
 }
-.category-item__price {
+.category-item__price, .category-item__total {
     font-family: 'Roboto-Bold';
     font-size: 20px;
     color: #2c3e50;
+}
+.category-item__delete {
+    width: 16px;
+    height: 16px;
 }
 .footer {
     padding: 25px 0;
@@ -2794,6 +2813,51 @@ input::-ms-clear {
 .offers__btns {
     margin-top: 40px;
     text-align: center;
+}
+.order {
+    margin-bottom: 50px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.order__footer {
+    padding: 32px 25px 40px;
+}
+.order__btns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+.order__btns .btn-border {
+  margin-right: 24px;
+}
+.order-total {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 75px;
+    margin-bottom: 34px;
+}
+.order-total__label {
+    margin-right: 20px;
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    color: #e07c1a;
+}
+.order-total__value {
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    color: #2c3e50;
 }
 .page-head {
     padding: 28px 0;
