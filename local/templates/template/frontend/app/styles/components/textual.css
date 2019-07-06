@@ -5,3 +5,9 @@
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
+.textual-title {
+    margin-bottom: 20px;
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    color: var(--c-orange);
+}

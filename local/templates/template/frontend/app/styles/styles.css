@@ -132,7 +132,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 28px;
 
     @media (--desktop-below) {
         font-size: 34px;
@@ -152,7 +152,7 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 24px;
 
     @media (--desktop-below) {
         font-size: 30px;
@@ -172,7 +172,7 @@ h3 {
 }
 
 h4 {
-    font-size: 26px;
+    font-size: 22px;
 
     @media (--desktop-below) {
         font-size: 24px;
@@ -192,7 +192,7 @@ h4 {
 }
 
 h5 {
-    font-size: 22px;
+    font-size: 20px;
 
     @media (--desktop-below) {
         font-size: 20px;
@@ -281,19 +281,17 @@ a {
 ul, ol {
     list-style-type: none;
     margin: 0;
-    margin-left: 20px;
     padding: 0;
 
     > li {
-        padding-left: 22px;
+        padding-left: 14px;
     }
     li {
-        margin: 10px 0;
+        margin: 12px 0;
 
         ul.type-1 {
             margin-left: 0;
             li {
-                padding-left: 25px;
                 &:before {
                     width: 10px;
                     height: 2px;
@@ -307,16 +305,16 @@ ul, ol {
 ul {
     > li {
         position: relative;
-        padding-left: 34px;
 
             &::before {
                 content: '';
                 position: absolute;
-                top: 0.8em;
+                top: 0.5em;
                 left: 0;
-                width: 15px;
-                height: 1px;
-                background-color: var(--c-purple);
+                width: 7px;
+                height: 7px;
+                background-color: var(--c-orange);
+                border-radius: 100%;
             }
     }
     &.type-1 {

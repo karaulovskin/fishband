@@ -1062,7 +1062,7 @@ h1 {
   }
 }
 h2 {
-    font-size: 36px;
+    font-size: 28px;
 }
 @media (max-width: 1366px) {
   h2 {
@@ -1085,7 +1085,7 @@ h2 {
   }
 }
 h3 {
-    font-size: 32px;
+    font-size: 24px;
 }
 @media (max-width: 1366px) {
   h3 {
@@ -1108,7 +1108,7 @@ h3 {
   }
 }
 h4 {
-    font-size: 26px;
+    font-size: 22px;
 }
 @media (max-width: 1366px) {
   h4 {
@@ -1131,7 +1131,7 @@ h4 {
   }
 }
 h5 {
-    font-size: 22px;
+    font-size: 20px;
 }
 @media (max-width: 1366px) {
   h5 {
@@ -1218,20 +1218,16 @@ a:focus {
 ul, ol {
     list-style-type: none;
     margin: 0;
-    margin-left: 20px;
     padding: 0;
 }
 ul > li, ol > li {
-  padding-left: 22px;
+  padding-left: 14px;
 }
 ul li, ol li {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 ul li ul.type-1, ol li ul.type-1 {
   margin-left: 0;
-}
-ul li ul.type-1 li, ol li ul.type-1 li {
-  padding-left: 25px;
 }
 ul li ul.type-1 li:before, ol li ul.type-1 li:before {
   width: 10px;
@@ -1240,16 +1236,16 @@ ul li ul.type-1 li:before, ol li ul.type-1 li:before {
 }
 ul > li {
   position: relative;
-  padding-left: 34px;
 }
 ul > li::before {
   content: '';
   position: absolute;
-  top: 0.8em;
+  top: 0.5em;
   left: 0;
-  width: 15px;
-  height: 1px;
-  background-color: var(--c-purple);
+  width: 7px;
+  height: 7px;
+  background-color: #e07c1a;
+  border-radius: 100%;
 }
 ul.type-1 li {
   padding-left: 34px;
@@ -2777,8 +2773,8 @@ input::-ms-clear {
     color: #2c3e50;
     background-color: #fff;
 }
-.offers {
-
+.content .offers {
+    margin-bottom: 40px;
 }
 .offers__list {
     display: -webkit-box;
@@ -2788,11 +2784,12 @@ input::-ms-clear {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin: 0 -12px;
+    margin: 0 -12px -25px;
 }
 .offers__item {
     width: 20%;
     min-width: 20%;
+    margin-bottom: 25px;
     padding: 0 12px;
 }
 .offers__link {
@@ -3303,6 +3300,12 @@ input::-ms-clear {
     border-radius: 3px;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
             box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.textual-title {
+    margin-bottom: 20px;
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    color: #e07c1a;
 }
 /*Main styles*/
 @media (max-width: 750px) {
