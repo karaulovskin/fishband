@@ -2373,6 +2373,32 @@ input::-ms-clear {
     width: 16px;
     height: 16px;
 }
+.contacts {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    padding: 35px 100px 38px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.contacts__col  {
+    width: 50%;
+    min-width: 50%;
+}
+.contacts-item {
+    margin-bottom: 20px;
+}
+.contacts-item__key {
+    margin-bottom: 4px;
+    font-family: 'Roboto-Bold';
+}
+.contacts-map {
+    height: 350px;
+}
 .footer {
     padding: 25px 0;
     font-size: 13px;
@@ -3273,7 +3299,7 @@ input::-ms-clear {
 .textual {
     margin-bottom: 40px;
     padding: 35px 100px 38px;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
     border-radius: 3px;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
             box-shadow: 0 10px 20px rgba(0,0,0,.1);

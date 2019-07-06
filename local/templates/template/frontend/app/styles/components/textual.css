@@ -1,7 +1,7 @@
 .textual {
     margin-bottom: 40px;
     padding: 35px 100px 38px;
-    background-color: var(--c-bg-grey-dark);
+    background-color: var(--c-bg-grey);
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }

@@ -12051,12 +12051,13 @@ var Maps = function () {
     function Maps() {
         _classCallCheck(this, Maps);
 
-        this.init();
+        this.mapView();
+        this.contactsMap();
     }
 
     _createClass(Maps, [{
-        key: "init",
-        value: function init() {
+        key: "mapView",
+        value: function mapView() {
             if ($("#mapView").length) ymaps.ready(init);
 
             var myMap = void 0;
@@ -12065,6 +12066,31 @@ var Maps = function () {
 
             function init() {
                 myMap = new ymaps.Map("mapView", {
+                    center: map,
+                    zoom: 6
+                });
+
+                myPlacemark = new ymaps.Placemark(map, {}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: '/images/icons/mark.png',
+                    iconImageSize: [50, 70]
+                    // iconImageOffset: [-12, -10]
+                });
+
+                myMap.geoObjects.add(myPlacemark);
+            }
+        }
+    }, {
+        key: "contactsMap",
+        value: function contactsMap() {
+            if ($("#contactsMap").length) ymaps.ready(init);
+
+            var myMap = void 0;
+            var myPlacemark = void 0;
+            var map = $("#contactsMap").data("map");
+
+            function init() {
+                myMap = new ymaps.Map("contactsMap", {
                     center: map,
                     zoom: 6
                 });

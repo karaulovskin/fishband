@@ -1,10 +1,11 @@
 export default class Maps {
 
     constructor() {
-        this.init();
+        this.mapView();
+        this.contactsMap();
     }
 
-    init() {
+    mapView() {
         if ($("#mapView").length)
             ymaps.ready(init);
 
@@ -14,6 +15,31 @@ export default class Maps {
 
         function init(){
             myMap = new ymaps.Map("mapView", {
+                center: map,
+                zoom: 6
+            });
+
+            myPlacemark = new ymaps.Placemark(map, {}, {
+                iconLayout: 'default#image',
+                iconImageHref: '/images/icons/mark.png',
+                iconImageSize: [50, 70],
+                // iconImageOffset: [-12, -10]
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+
+    contactsMap() {
+        if ($("#contactsMap").length)
+            ymaps.ready(init);
+
+        let myMap;
+        let myPlacemark;
+        let map = $("#contactsMap").data("map");
+
+        function init(){
+            myMap = new ymaps.Map("contactsMap", {
                 center: map,
                 zoom: 6
             });

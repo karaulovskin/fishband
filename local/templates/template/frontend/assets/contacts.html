@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Карточка товара</title>
+    <title>Контакты</title>
     <link href="./css/app.css?1562438451000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -240,155 +240,118 @@
 
 
             <div class="container">
-                <div class="card">
-                    <div class="card__left">
-                        <div class="card__gallery">
-                            <div class="card__gallery-left">
-                                <div class="card-slider-navigation">
-                                    <button class="card-slider-navigation__btn--prev">
-                            <svg class="i-icon">
-                                <use xlink:href="#icon-arrow_prev"></use>
-                            </svg>
-                        </button>
-                                    <div class="card-slider-thumbs">
-                                        <div class="card-slider-thumbs__container swiper-container">
-                                            <div class="card-slider-thumbs__wrapper swiper-wrapper">
-                                                <div class="card-slider-thumbs__slide swiper-slide">
-                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
-                                                </div>
-                                                <div class="card-slider-thumbs__slide swiper-slide">
-                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
-                                                </div>
-                                                <div class="card-slider-thumbs__slide swiper-slide">
-                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
-                                                </div>
-                                                <div class="card-slider-thumbs__slide swiper-slide">
-                                                    <img src="./images/bg/card-thumbs.jpg" alt="" class="card-slider-thumbs__img">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="card-slider-navigation__btn--next">
-                            <svg class="i-icon">
-                                <use xlink:href="#icon-arrow_prev"></use>
-                            </svg>
-                        </button>
-                                </div>
+                <div class="contacts">
+                    <div class="contacts__col">
+                        <div class="contacts-item">
+                            <div class="contacts-item__key">
+                                <span>Адрес:</span>
                             </div>
-                            <div class="card__gallery-right">
-                                <div class="card-slider">
-                                    <div class="card-slider__container swiper-container">
-                                        <div class="card-slider__wrapper swiper-wrapper">
-                                            <div class="card-slider__slide swiper-slide">
-                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
-                                            </div>
-                                            <div class="card-slider__slide swiper-slide">
-                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
-                                            </div>
-                                            <div class="card-slider__slide swiper-slide">
-                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
-                                            </div>
-                                            <div class="card-slider__slide swiper-slide">
-                                                <img src="./images/bg/card.jpg" alt="" class="card-slider__img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="contacts-item__value">
+                                <span>г. Москва, ул. Удальцова 52, оф. 159</span>
+                            </div>
+                        </div>
+                        <div class="contacts-item">
+                            <div class="contacts-item__key">
+                                <span>Телефон:</span>
+                            </div>
+                            <div class="contacts-item__value">
+                                <span>+7 (999) 999-99-99</span>
+                            </div>
+                        </div>
+                        <div class="contacts-item">
+                            <div class="contacts-item__key">
+                                <span>E-mail:</span>
+                            </div>
+                            <div class="contacts-item__value">
+                                <a href="#">example@mail.ru</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card__right">
-                        <div class="card__content">
-
-                            <!-- Нет в наличии -->
-                            <!--
-                <div class="card__stock">Нет в наличии</div>
-                -->
-                            <div class="card__stock card__stock--available">В наличии</div>
-
-                            <div class="card-prop">
-                                <div class="card-prop__item">
-                                    <div class="card-prop__item-key">Артикул:</div>
-                                    <div class="card-prop__item-value">
-                                        <span>123456</span>
-                                    </div>
+                    <div class="contacts__col">
+                        <div id="contactsMap" class="contacts-map" data-map="[55.740636537286,37.587128295898]"></div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner__img-over">
+                        <img src="./images/bg/banner.png" alt="" class="banner__img">
+                    </div>
+                    <div class="banner-menu">
+                        <div class="banner-menu__item">
+                            <a href="#" class="banner-menu__link">
+                                <div class="banner-menu__icon-over">
+                                    <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
                                 </div>
-                                <div class="card-prop__item">
-                                    <div class="card-prop__item-key">Производитель:</div>
-                                    <div class="card-prop__item-value">
-                                        <a href="#">Black Hole</a>
-                                    </div>
+                                <div class="banner-menu__title">
+                                    <span>Горячая тема</span>
                                 </div>
-                                <div class="card-prop__item">
-                                    <div class="card-prop__item-key">Серия:</div>
-                                    <div class="card-prop__item-value">
-                                        <a href="#">Black Hole</a>
-                                    </div>
+                            </a>
+                        </div>
+                        <div class="banner-menu__item">
+                            <a href="#" class="banner-menu__link">
+                                <div class="banner-menu__icon-over">
+                                    <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
                                 </div>
-                            </div>
-                            <div class="card__price">1 640 руб.</div>
-                            <div class="card-buy">
-                                <div class="card-buy__select">
-                                    <form class="card-buy__select-form" action="">
-                                        <input type="button" class="card-buy__select-reduce" value="-">
-                                        <input type="text" class="card-buy__select-value" value="0">
-                                        <input type="button" class="card-buy__select-increase" value="+">
-                                    </form>
+                                <div class="banner-menu__title">
+                                    <span>Top Fishband Shop</span>
                                 </div>
-                                <input type="button" class="btn-orange" value="В корзину">
-                            </div>
-                            <div class="card__btn">
-                                <a href="#" class="btn-buy">
-                        <svg class="i-icon">
-                            <use xlink:href="#icon-buy"></use>
-                        </svg>
-                        <span>Оплата</span>
-                    </a>
-                                <a href="#" class="btn-delivery">
-                        <svg class="i-icon">
-                            <use xlink:href="#icon-delivery"></use>
-                        </svg>
-                        <span>Доставка</span>
-                    </a>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="banner-menu__item">
+                            <a href="#" class="banner-menu__link">
+                                <div class="banner-menu__icon-over">
+                                    <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                </div>
+                                <div class="banner-menu__title">
+                                    <span>Точка на карте</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="banner-menu__item">
+                            <a href="#" class="banner-menu__link">
+                                <div class="banner-menu__icon-over">
+                                    <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                </div>
+                                <div class="banner-menu__title">
+                                    <span>Хит рыбацких баек</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="banner-menu__item">
+                            <a href="#" class="banner-menu__link">
+                                <div class="banner-menu__icon-over">
+                                    <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                </div>
+                                <div class="banner-menu__title">
+                                    <span>Подарок рыбаку</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="card-tabs" data-tabs>
-                    <div class="card-tabs__head">
-                        <div class="card-tabs__list" data-tabs-nav>
-                            <div class="card-tabs__list-item current" data-tabs-nav-item>
-                                <div class="card-tabs__list-trigger" data-tabs-nav-trigger>
-                                    Описание
-                                </div>
+                <div class="map">
+                    <div class="map-mode">
+                        <div class="map-mode__list">
+                            <div class="map-mode__item current">
+                                <a href="#" class="map-mode__link">Наши люди</a>
                             </div>
-                            <div class="card-tabs__list-item" data-tabs-nav-item>
-                                <div class="card-tabs__list-trigger" data-tabs-nav-trigger>
-                                    Характеристики
-                                </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Точка на карте</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Есть тема</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Фото</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Наши байки</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Магазин</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-tabs__body">
-                        <div class="card-tabs__content" data-tabs-content>
-                            <div class="card-tabs__content-item current" data-tabs-content-item>
-                                <div class="card-tabs__content-title">Описание</div>
-                                <div class="card-tabs__content-desc">
-                                    <p>
-                                        Серия высококачественных спиннингов из высокомодульного карбона (24 и 30 тонн). Изготовленные с особым вниманием к деталям и оснащенные кольцами со вставками SIC, эти удилища предназначены для лёгкой и средне лёгкой ловли, практически на все доступные
-                                        спиннинговые приманки. Лёгкие модели имеют вклеенную вершинку, которая отлично сигнализирует самую деликатную поклёвку. Благодаря прогрессивному строю и мощным соединениям между секциями эти удилища позволяют безопасно
-                                        вываживать крупных хищников. Широкий выбор удилищ по длине и тесту, в данной серии, позволит подобрать спиннинг для любого места лова и предпочтений ловящего.
-                                    </p>
-                                    <p>
-                                        Серия высококачественных спиннингов из высокомодульного карбона (24 и 30 тонн). Изготовленные с особым вниманием к деталям и оснащенные кольцами со вставками SIC, эти удилища предназначены для лёгкой и средне лёгкой ловли, практически на все доступные
-                                        спиннинговые приманки. Лёгкие модели имеют вклеенную вершинку, которая отлично сигнализирует самую деликатную поклёвку. Благодаря прогрессивному строю и мощным соединениям между секциями эти удилища позволяют безопасно
-                                        вываживать крупных хищников. Широкий выбор удилищ по длине и тесту, в данной серии, позволит подобрать спиннинг для любого места лова и предпочтений ловящего.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-tabs__content-item" data-tabs-content-item>2</div>
-                        </div>
-                    </div>
+                    <div id="mapView" class="map-view" data-map="[55.740636537286,37.587128295898]"></div>
                 </div>
                 <div class="shop-prod bg-orange">
                     <div class="shop-prod__title-over">
@@ -515,6 +478,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 
         <footer class="footer">

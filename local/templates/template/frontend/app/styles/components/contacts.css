@@ -1,0 +1,22 @@
+.contacts {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 35px 100px 38px;
+    background-color: var(--c-bg-grey);
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.contacts__col  {
+    width: 50%;
+    min-width: 50%;
+}
+.contacts-item {
+    margin-bottom: 20px;
+}
+.contacts-item__key {
+    margin-bottom: 4px;
+    font-family: 'Roboto-Bold';
+}
+.contacts-map {
+    height: 350px;
+}
