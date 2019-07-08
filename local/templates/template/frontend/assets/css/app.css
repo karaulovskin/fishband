@@ -1887,6 +1887,20 @@ input::-ms-clear {
     border-radius: 5px;
     cursor: pointer;
 }
+.btn-gray {
+    display: inline-block;
+    padding: 14px 20px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-size: 14px;
+    letter-spacing: 0.06rem;
+    color: #2c3e50;
+    background-color: #e4e6e8;
+    border: 1px solid #e4e6e8;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .btn-border {
     display: inline-block;
     padding: 14px 20px 10px;
@@ -3069,6 +3083,88 @@ input::-ms-clear {
     font-family: 'Roboto-Medium';
     color: #2c3e50;
     background-color: #f9f9f9;
+}
+.profile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.profile__left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.profile__img-over {
+    width: 175px;
+    min-width: 175px;
+    height: 175px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.profile__desc {
+    width: 572px;
+    min-width: 572px;
+    margin-left: 25px;
+}
+.profile__name {
+    margin-top: 10px;
+    letter-spacing: 0.07rem;
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 32px;
+    color: #e07c1a;
+}
+.profile__status {
+    font-family: 'Roboto-Medium';
+    font-size: 18px;
+    color: #95a5a6;
+}
+.profile__reg {
+    margin-top: 8px;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+.profile__edit {
+    margin-top: 25px;
+}
+.profile__row {
+    padding: 22px 0 10px;
+    border-top: 1px solid #ccc;
+}
+.profile__title {
+    margin-bottom: 25px;
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 24px;
+    letter-spacing: 0.07rem;
+    color: #e07c1a;
+}
+.profile__label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 20px;
+}
+.profile__label-title {
+    width: 136px;
+    min-width: 136px;
+}
+.profile__input {
+    width: calc(100% - 136px);
+    min-width: calc(100% - 136px);
 }
 .restore-password {
     position: absolute;
