@@ -64,8 +64,8 @@
         width: 0px;
         height: 0px;
         margin-bottom: -5px;
-        border-top: 5px solid #fff;
-        border-left: 5px solid #fff;
+        border-top: 5px solid var(--c-bg-grey);
+        border-left: 5px solid var(--c-bg-grey);
         border-right: 5px solid transparent;
         border-bottom: 5px solid transparent;
     }
@@ -84,6 +84,10 @@
 }
 .menu-sub__item {
     border-bottom: 1px solid #dae0e0;
+
+    &:last-child {
+        border-color: transparent;
+    }
 }
 .menu-sub__link {
     display: block;
@@ -92,5 +96,5 @@
     font-size: 16px;
     line-height: 1.2;
     color: var(--c-black);
-    background-color: #fff;
+    background-color: var(--c-bg-grey);
 }

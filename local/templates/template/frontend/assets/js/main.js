@@ -133,15 +133,19 @@ var _modals = __webpack_require__(21);
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var _svgUse = __webpack_require__(23);
+var _profile = __webpack_require__(23);
+
+var _profile2 = _interopRequireDefault(_profile);
+
+var _svgUse = __webpack_require__(24);
 
 var _svgUse2 = _interopRequireDefault(_svgUse);
 
-var _sliders = __webpack_require__(24);
+var _sliders = __webpack_require__(25);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _tabs = __webpack_require__(26);
+var _tabs = __webpack_require__(27);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -186,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Accordion = new _accordion2.default();
     App.Maps = new _maps2.default();
     App.Modals = new _modals2.default();
+    App.Profile = new _profile2.default();
     App.SvgUse = new _svgUse2.default();
     App.Sliders = new _sliders2.default();
     App.Tabs = new _tabs2.default();
@@ -17829,6 +17834,56 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Profile = function () {
+    function Profile() {
+        _classCallCheck(this, Profile);
+
+        this.container = '[data-profile-top]';
+
+        this.bindEvents();
+    }
+
+    _createClass(Profile, [{
+        key: 'handler',
+        value: function handler() {
+            if (!$(this.container).hasClass('is-active')) {
+                $(this.container).addClass('is-active');
+            } else {
+                $(this.container).removeClass('is-active');
+            }
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.container, function (e) {
+                e.preventDefault();
+                self.handler();
+            });
+        }
+    }]);
+
+    return Profile;
+}();
+
+exports.default = Profile;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var SvgUse = function () {
     function SvgUse() {
         _classCallCheck(this, SvgUse);
@@ -17905,7 +17960,7 @@ exports.default = SvgUse;
 ;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17918,7 +17973,7 @@ exports.Slider = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _swiper = __webpack_require__(25);
+var _swiper = __webpack_require__(26);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -18026,7 +18081,7 @@ var Slider = exports.Slider = function Slider(selector, options) {
 };
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25293,7 +25348,7 @@ return Swiper$1;
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

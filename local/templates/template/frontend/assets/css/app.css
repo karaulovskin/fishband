@@ -2744,8 +2744,8 @@ input::-ms-clear {
   width: 0px;
   height: 0px;
   margin-bottom: -5px;
-  border-top: 5px solid #fff;
-  border-left: 5px solid #fff;
+  border-top: 5px solid #f9f9f9;
+  border-left: 5px solid #f9f9f9;
   border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
@@ -2764,6 +2764,9 @@ input::-ms-clear {
 .menu-sub__item {
     border-bottom: 1px solid #dae0e0;
 }
+.menu-sub__item:last-child {
+  border-color: transparent;
+}
 .menu-sub__link {
     display: block;
     padding: 12px 20px;
@@ -2771,7 +2774,7 @@ input::-ms-clear {
     font-size: 16px;
     line-height: 1.2;
     color: #2c3e50;
-    background-color: #fff;
+    background-color: #f9f9f9;
 }
 .content .offers {
     margin-bottom: 40px;
@@ -2979,6 +2982,93 @@ input::-ms-clear {
 }
 .privacy:hover {
   border-color: transparent;
+}
+.profile-top {
+    position: relative;
+    margin-top: 12px;
+}
+.profile-top.is-active .profile-top-menu {
+  top: 53px;
+  visibility: visible;
+  opacity: 1;
+}
+.profile-top__link {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.profile-top__img-over {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    margin-right: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.profile-top__name {
+    font-family: 'Roboto-Bold';
+    font-size: 18px;
+    letter-spacing: 0.08rem;
+}
+.profile-top-menu {
+    position: absolute;
+    top: 87px;
+    left: 8px;
+    width: 234px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    z-index: 1001;
+
+}
+.profile-top-menu:before, .profile-top-menu:after {
+  content: '';
+  position: absolute;
+}
+.profile-top-menu:before {
+  bottom: 100%;
+  left: 12px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0px;
+  height: 0px;
+  margin-bottom: -5px;
+  border-top: 5px solid #f9f9f9;
+  border-left: 5px solid #f9f9f9;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.profile-top-menu:after {
+  content: '';
+  position: absolute;
+}
+.profile-top-menu__list {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+.profile-top-menu__item {
+    border-bottom: 1px solid #dae0e0;
+}
+.profile-top-menu__item:last-child {
+  border-color: transparent;
+}
+.profile-top-menu__link {
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Roboto-Medium';
+    color: #2c3e50;
+    background-color: #f9f9f9;
 }
 .restore-password {
     position: absolute;

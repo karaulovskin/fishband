@@ -17,6 +17,7 @@ import Forms from'./js/forms/forms'
 import Accordion from'./js/accordion'
 import Maps from'./js/maps'
 import Modals from'./js/modals'
+import Profile from'./js/profile'
 import SvgUse from'./js/svgUse'
 import Sliders from'./js/sliders'
 import Tabs from'./js/tabs'
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Accordion = new Accordion();
     App.Maps = new Maps();
     App.Modals = new Modals();
+    App.Profile = new Profile();
     App.SvgUse = new SvgUse();
     App.Sliders = new Sliders();
     App.Tabs = new Tabs();
