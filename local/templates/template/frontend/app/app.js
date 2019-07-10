@@ -20,6 +20,7 @@ import Modals from'./js/modals'
 import Profile from'./js/profile'
 import SvgUse from'./js/svgUse'
 import Sliders from'./js/sliders'
+import Select from'./js/select'
 import Tabs from'./js/tabs'
 
 // Run components
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Profile = new Profile();
     App.SvgUse = new SvgUse();
     App.Sliders = new Sliders();
+    App.Select = new Select();
     App.Tabs = new Tabs();
 
 

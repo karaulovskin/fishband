@@ -145,7 +145,11 @@ var _sliders = __webpack_require__(25);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _tabs = __webpack_require__(27);
+var _select = __webpack_require__(27);
+
+var _select2 = _interopRequireDefault(_select);
+
+var _tabs = __webpack_require__(28);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
@@ -193,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Profile = new _profile2.default();
     App.SvgUse = new _svgUse2.default();
     App.Sliders = new _sliders2.default();
+    App.Select = new _select2.default();
     App.Tabs = new _tabs2.default();
 
     $('.inputmask').inputmask({ mask: "+7 (999) 999-99-99", greedy: false });
@@ -25349,6 +25354,105 @@ return Swiper$1;
 
 /***/ }),
 /* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Select = function () {
+    function Select() {
+        _classCallCheck(this, Select);
+
+        this.select = '[data-select]';
+        this.input = '[data-select-input]';
+        this.inputText = '[data-select-input-text]';
+        this.dropdown = '[data-select-dropdown]';
+        this.option = '[data-select-option]';
+
+        this.bindEvents();
+    }
+
+    _createClass(Select, [{
+        key: 'openSelect',
+        value: function openSelect(elem) {
+            var self = this;
+            var $selectInput = elem;
+            var $select = $selectInput.closest(self.select);
+            var $dropdown = $select.find(self.dropdown);
+
+            $(self.dropdown).hide();
+            if (!$select.hasClass('is_open')) {
+                $select.addClass('is_open');
+                $dropdown.show();
+            } else {
+                $select.removeClass('is_open');
+                $dropdown.hide();
+            }
+        }
+    }, {
+        key: 'closeSelect',
+        value: function closeSelect() {
+            var self = this;
+            var select = $(self.select);
+            var dropdown = $(self.dropdown);
+
+            select.removeClass('is_open');
+            dropdown.hide();
+        }
+    }, {
+        key: 'selectOption',
+        value: function selectOption(elem) {
+            var self = this;
+            var $option = elem;
+            var $otherOption = $option.siblings(elem);
+            var $optionText = $option.text();
+            var $optionValue = $option.attr('value');
+            var $select = $option.closest(self.select);
+            var $input = $select.find(self.input);
+            var $inputText = $select.find(self.inputText);
+            var $dropdown = $select.find(self.dropdown);
+
+            $option.addClass('current');
+            $otherOption.removeClass('current');
+            $inputText.text($optionText);
+            $input.val($optionValue);
+            $dropdown.hide();
+            $select.removeClass('is_open');
+            $select.addClass('selected');
+            $select.trigger('select::selected');
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.input, function (e) {
+                e.preventDefault();
+                self.openSelect($(this));
+            });
+
+            $(document).on('click', this.option, function (e) {
+                e.preventDefault();
+                self.selectOption($(this));
+            });
+        }
+    }]);
+
+    return Select;
+}();
+
+exports.default = Select;
+
+/***/ }),
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

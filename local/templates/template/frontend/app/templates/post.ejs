@@ -2,6 +2,75 @@
 <% locals.block('title', 'Добавить пост') %>
 
 <div class="container">
-
+    <!-- Пост к темам -->
+    <div class="post">
+        <div class="post__head">
+            <div class="post__head-left">
+                <div class="select-custom" data-select>
+                    <input class="select-custom__input" type="text" hidden>
+                    <div class="select-custom__label">Выберите раздел:</div>
+                    <div class="select-custom__trigger" data-select-input>
+                        <span>Есть тема</span>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-select_arrow"></use>
+                        </svg>
+                        <div class="select-custom__dropdown" data-select-dropdown>
+                            <div class="select-custom__option" value="Есть тема" data-select-option>Есть тема</div>
+                            <div class="select-custom__option" value="Наши байки" data-select-option>Наши байки</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select-custom" data-select>
+                    <input class="select-custom__input" type="text" hidden>
+                    <div class="select-custom__label">Выберите категорию:</div>
+                    <div class="select-custom__trigger" data-select-input>
+                        <span>Общалка</span>
+                        <svg class="i-icon">
+                            <use xlink:href="#icon-select_arrow"></use>
+                        </svg>
+                        <div class="select-custom__dropdown" data-select-dropdown>
+                            <div class="select-custom__option" value="Общалка" data-select-option>Общалка</div>
+                            <div class="select-custom__option" value="Рыбная" data-select-option>Рыбная</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post__head-right">
+                <div class="post__date">20 мая 2019</div>
+            </div>
+        </div>
+        <div class="post__body">
+            <form action="" class="post__form">
+                <div class="post__title">Заголовок</div>
+                <div class="post__row">
+                    <label class="post__label">
+                        <div class="post__input">
+                            <input type="text" class="input">
+                            <div class="post__input-label">Добавьте подпись, не более 100 символов.</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="post__row">
+                    <label class="post__label post__label--bg">
+                        <div class="post__label-title">Укажите место:</div>
+                        <a href="#" class="post__label-link">Выбрать на карте</a>
+                    </label>
+                </div>
+                <div class="post__row">
+                    <label class="post__label post__label--bg">
+                        <div class="post__label-title">Добавьте теги:</div>
+                        <div class="post__input">
+                            <input type="text" class="input">
+                            <div class="post__input-label">До 30 тегов, указывайте теги через запятую.</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="post__btns">
+                    <input type="submit" class="btn-orange" value="Опубликовать">
+                    <a href="#" class="btn-border">Отменить</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
