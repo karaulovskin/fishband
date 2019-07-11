@@ -36,6 +36,9 @@
 .post__row {
     margin-bottom: 24px;
 }
+.post__row--add {
+    margin-bottom: 100px;
+}
 .post__label--bg {
     display: flex;
     padding: 20px 24px;

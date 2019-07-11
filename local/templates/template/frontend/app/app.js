@@ -15,6 +15,7 @@ window.imagesLoaded = imagesLoaded;
 import Utils from'./js/utils/utils'
 import Forms from'./js/forms/forms'
 import Accordion from'./js/accordion'
+import DownloadFile from'./js/download-file'
 import Maps from'./js/maps'
 import Modals from'./js/modals'
 import Profile from'./js/profile'
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Utils = new Utils();
     App.Forms = new Forms();
     App.Accordion = new Accordion();
+    App.DownloadFile = new DownloadFile();
     App.Maps = new Maps();
     App.Modals = new Modals();
     App.Profile = new Profile();
