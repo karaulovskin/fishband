@@ -1,0 +1,19 @@
+.gallery {
+    margin: 22px 0;
+}
+.gallery__item:not(:last-child) {
+    margin-bottom: 22px;
+}
+.gallery__link {
+    display: block;
+    width: 533px;
+    margin: auto;
+    overflow: hidden;
+}
+.gallery__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: 'cover';
+    font-family: "object-fit: 'cover';";
+}

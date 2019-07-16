@@ -24,4 +24,8 @@
 .textual__btns {
     margin-top: 38px;
     text-align: center;
+
+    .btn-like {
+        margin-right: 20px;
+    }
 }

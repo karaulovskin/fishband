@@ -2,10 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+    text-align: left;
 }
 
 .grid__col {
     padding: 0 15px;
+}
+
+.grid__col--flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.grid__col--2 {
+    width: 50%;
+    min-width: 50%;
 }
 
 .grid__col--3 {

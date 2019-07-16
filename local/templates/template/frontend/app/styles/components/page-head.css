@@ -3,6 +3,10 @@
     background-color: #fff;
 }
 
+.page-head__nav {
+    position: relative;
+} 
+
 .page-head__row {
     display: flex;
     align-items: baseline;
@@ -18,4 +22,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.page-head__edit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
