@@ -161,6 +161,10 @@ var _tabs = __webpack_require__(30);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
+var _video = __webpack_require__(31);
+
+var _video2 = _interopRequireDefault(_video);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.svg4everybody = _svg4everybody2.default; // Load plugins
@@ -209,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Sliders = new _sliders2.default();
     App.Select = new _select2.default();
     App.Tabs = new _tabs2.default();
+    App.Video = new _video2.default();
 
     $('.inputmask').inputmask({ mask: "+7 (999) 999-99-99", greedy: false });
 });
@@ -26830,6 +26835,99 @@ var Tabs = function () {
 }();
 
 exports.default = Tabs;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Video = function () {
+    function Video() {
+        _classCallCheck(this, Video);
+
+        this.bindEvents();
+    }
+
+    _createClass(Video, [{
+        key: 'findVideo',
+        value: function findVideo() {
+            var videos = document.querySelectorAll('.video');
+
+            for (var i = 0; i < videos.length; i++) {
+                this.setupVideo(videos[i]);
+            }
+        }
+    }, {
+        key: 'setupVideo',
+        value: function setupVideo(video) {
+            var _this = this;
+
+            var link = video.querySelector('.video__link');
+            var media = video.querySelector('.video__media');
+            var button = video.querySelector('.video__button');
+            var id = this.parseMediaURL(media);
+
+            video.addEventListener('click', function () {
+                var iframe = _this.createIframe(id);
+
+                link.remove();
+                button.remove();
+                video.appendChild(iframe);
+            });
+
+            link.removeAttribute('href');
+            video.classList.add('video--enabled');
+        }
+    }, {
+        key: 'parseMediaURL',
+        value: function parseMediaURL(media) {
+            var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+            var url = media.src;
+            var match = url.match(regexp);
+
+            return match[1];
+        }
+    }, {
+        key: 'createIframe',
+        value: function createIframe(id) {
+            var iframe = document.createElement('iframe');
+
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('allow', 'autoplay');
+            iframe.setAttribute('src', this.generateURL(id));
+            iframe.classList.add('video__media');
+
+            return iframe;
+        }
+    }, {
+        key: 'generateURL',
+        value: function generateURL(id) {
+            var query = '?rel=0&showinfo=0&autoplay=1';
+
+            return 'https://www.youtube.com/embed/' + id + query;
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+            this.findVideo();
+        }
+    }]);
+
+    return Video;
+}();
+
+exports.default = Video;
 
 /***/ })
 /******/ ]);

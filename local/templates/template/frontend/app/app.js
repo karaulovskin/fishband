@@ -24,6 +24,7 @@ import SvgUse from'./js/svgUse'
 import Sliders from'./js/sliders'
 import Select from'./js/select'
 import Tabs from'./js/tabs'
+import Video from'./js/video'
 
 // Run components
 
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Sliders = new Sliders();
     App.Select = new Select();
     App.Tabs = new Tabs();
+    App.Video = new Video();
 
 
 

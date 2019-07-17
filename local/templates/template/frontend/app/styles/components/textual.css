@@ -5,6 +5,13 @@
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
     overflow: hidden;
+
+    ul {
+        margin: 32px 0;
+    }
+    ul > li::before {
+        background-color: var(--c-black);
+    }
 }
 .textual__img-over {
     margin: -35px -100px 28px;
