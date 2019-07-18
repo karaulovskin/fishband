@@ -4,6 +4,10 @@ input {
     padding: 0;
     border: 1px solid var(--inputBorder);
     box-shadow: none;
+
+    &::placeholder {
+        font-size: 15px;
+    }
 }
 
 select, input, button, textarea, [type='submit'] {
@@ -20,6 +24,10 @@ textarea {
     width: 100%;
     resize: none;
     padding: 15px;
+
+    &::placeholder {
+        font-size: 15px;
+    }
 }
 
 button {

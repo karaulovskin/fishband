@@ -1,0 +1,44 @@
+<% locals.setLayout('base.ejs') %>
+<% locals.block('title', 'Наши байки комментарии') %>
+
+<div class="container">
+    <div class="comments">
+        <div class="comments__head"></div>
+        <div class="comments-add">
+            <div class="comments-add__block">
+                <button class="btn-orange" data-comments-add-btn>Написать комментарий</button>
+                <div class="comments-add__note" data-comments-add-note>
+                    <form action="" class="comments-add__form">
+                        <textarea name="" id="" cols="30" rows="10" class="comments-add__textarea" placeholder="Написать комментарий..."></textarea>
+                        <div class="comments-add__btns">
+                            <div class="comments-add__btns-left">
+                                <div class="interactive">
+                                    <div class="interactive__item">
+                                        <a href="#" class="interactive__link" download aria-label="Загрузить изображение">
+                                            <svg class="i-icon">
+                                                <!--<use xlink:href="#icon-arrow_prev"></use>-->
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="interactive__item">
+                                        <a href="#" class="interactive__link" download aria-label="Загрузить видео">
+                                            <svg class="i-icon">
+                                                <!--<use xlink:href="#icon-arrow_prev"></use>-->
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments-add__btns-right">
+                                <input type="submit" class="comments-add__submit btn-orange" value="Отправить" data-comments-add-submit>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="comments__list">
+            <div class="comments__item"></div>
+        </div>
+    </div>
+</div>

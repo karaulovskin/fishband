@@ -1,6 +1,6 @@
 .page-head {
     padding: 28px 0;
-    background-color: #fff;
+    background-color: var(--c-bg-grey-dark);
 }
 
 .page-head__nav {

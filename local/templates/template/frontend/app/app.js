@@ -15,6 +15,7 @@ window.imagesLoaded = imagesLoaded;
 import Utils from'./js/utils/utils'
 import Forms from'./js/forms/forms'
 import Accordion from'./js/accordion'
+import Comments from'./js/comments'
 import DownloadFile from'./js/download-file'
 import Edit from'./js/edit'
 import Maps from'./js/maps'
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Utils = new Utils();
     App.Forms = new Forms();
     App.Accordion = new Accordion();
+    App.Comments = new Comments();
     App.DownloadFile = new DownloadFile();
     App.Edit = new Edit();
     App.Maps = new Maps();
