@@ -3,6 +3,19 @@
     border-radius: 5px;
     overflow: hidden;
 }
+.comments__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 25px 0;
+    background-color: var(--c-bg-grey-dark);
+    border-bottom: 2px solid var(--c-orange);
+}
+.comments__value {
+    font-family: 'RobotoCondensed-Bold';
+    font-size: 18px;
+    color: var(--c-orange);
+}
 .comments__item {
     background-color: var(--c-bg-grey);
     border-top: 1px solid #ccc;
@@ -21,11 +34,6 @@
 }
 .comments__item--banner + .comments__item {
     border-color: transparent;
-}
-.comments__head {
-    padding: 20px 25px;
-    background-color: var(--c-bg-grey-dark);
-    border-bottom: 2px solid var(--c-orange);
 }
 .comments-add__block {
     padding: 32px 25px;

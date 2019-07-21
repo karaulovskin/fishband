@@ -1,0 +1,35 @@
+.comments-filter {
+    display: flex;
+    align-items: center;
+    margin: 4px -15px 0;
+}
+.comments-filter__item {
+    padding: 0 15px;
+
+    &.is-active {
+        .comments-filter__link {
+            color: var(--c-orange);
+
+            &:after {
+                 background-color: var(--c-orange);
+            }
+        }
+    }
+}
+.comments-filter__link {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 14px;
+    font-family: 'Roboto-Medium';
+    color: var(--c-black);
+    
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -14px;
+        height: 2px;
+        background-color: transparent;
+    }
+}
