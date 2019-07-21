@@ -1,0 +1,34 @@
+.comments-item {
+    padding: 22px 25px;
+    font-size: 15px;
+}
+.comments-item__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.comments-item__body {
+    padding: 10px 0;
+
+    span {
+        font-family: 'Roboto-Medium';
+        color: var(--c-orange);
+    }
+}
+.comments-item__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.comments-item__col {
+    display: flex;
+    align-items: center;
+}
+.comments-item__date {
+    margin-right: 22px;
+    color: var(--c-border);
+}
+.comments-item__media {
+    display: flex;
+    margin-top: 12px;
+}

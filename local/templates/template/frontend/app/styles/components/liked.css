@@ -1,0 +1,23 @@
+.liked {
+    display: flex;
+    align-aitems: center;
+    color: var(--c-border);
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--c-border);
+    }
+
+    &.is-active {
+        color: var(--c-orange);
+        svg {
+            fill: var(--c-orange);
+        }
+    }
+}
+.liked__value {
+    margin-left: 3px;
+    font-family: 'Roboto-Bold';
+    font-size: 13px;
+}

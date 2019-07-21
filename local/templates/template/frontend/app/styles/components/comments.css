@@ -1,8 +1,26 @@
 .comments {
     margin-bottom: 50px;
-    background-color: var(--c-bg-grey);
     border-radius: 5px;
     overflow: hidden;
+}
+.comments__item {
+    background-color: var(--c-bg-grey);
+    border-top: 1px solid #ccc;
+
+    &.comments__item--banner {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+        background-color: transparent;
+        border-color: transparent;
+
+        .banner {
+            margin-top: 40px;
+        }
+    }
+}
+.comments__item--banner + .comments__item {
+    border-color: transparent;
 }
 .comments__head {
     padding: 20px 25px;
@@ -10,14 +28,16 @@
     border-bottom: 2px solid var(--c-orange);
 }
 .comments-add__block {
-    padding: 20px 25px;
+    padding: 32px 25px;
     text-align: center;
+    background-color: var(--c-bg-grey);
 }
 .comments-add__note {
     position: relative;
     display: none;
     height: 170px;
     padding-bottom: 95px;
+    background-color: #fff;
     border: 1px solid var(--c-border);
     border-radius: 5px;
 
@@ -49,4 +69,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+.comments__btns {
+    text-align: center;
+
+    .btn-orange {
+        margin-top: 40px;
+    }
 }

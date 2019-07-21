@@ -31,3 +31,9 @@
         }
     }
 }
+
+.link-orange {
+    display: inline-block;
+    font-family: 'Roboto-Medium';
+    color: var(--c-orange);
+}
