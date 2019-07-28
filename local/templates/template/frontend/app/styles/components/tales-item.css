@@ -22,6 +22,12 @@
     background-color: var(--c-bg-grey-dark);
     border-top: 2px solid var(--c-orange);
 }
+.tales-item__col {
+    &:first-child {
+        flex: 1;
+        max-width: 190px;
+    }
+}
 .tales-item__date {
     font-family: 'RobotoCondensed-Regular';
     font-size: 15px;

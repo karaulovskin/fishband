@@ -1,0 +1,45 @@
+.activity {
+    display: flex;
+    align-items: center;
+    margin: 0 -13px;
+}
+.activity__item {
+    padding: 0 13px;
+}
+.activity__link {
+    display: flex;
+    align-items: center;
+    color: var(--c-border);
+    font-family: 'Roboto-Bold';
+}
+.activity__icon {
+
+}
+.activity__item--loc {
+    svg {
+        width: 12px;
+        height: 10px;
+    }
+}
+.activity__item--comment {
+    svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+.activity__item--liked {
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+.activity__item--views {
+    svg {
+        width: 13px;
+        height: 10px;
+    }
+}
+.activity__value {
+    margin-left: 3px;
+    font-size: 13px;
+}
