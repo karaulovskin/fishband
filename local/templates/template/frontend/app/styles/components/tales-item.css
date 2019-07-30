@@ -54,6 +54,18 @@
 .tales-item__content {
     font-size: 14px;
 }
+.tales-item__content--flex {
+    display: flex;
+    align-items: center;
+
+    .tales-item__title,
+    .tales-item__desc {
+        margin-bottom: 0;
+    }
+    .tales-item__desc {
+        margin-left: 25px;
+    }
+}
 .tales-item__title {
     margin-top: -9px;
     margin-bottom: 10px;
