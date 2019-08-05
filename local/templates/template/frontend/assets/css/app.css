@@ -2877,12 +2877,39 @@ input::-ms-clear {
     padding: 0 8px;
 }
 .interactive__link {
-    display: block;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40px;
     height: 40px;
+    color: #95a5a6;
     background-color: #f0f0f0;
     border-radius: 5px;
     overflow: hidden;
+    cursor: pointer;
+}
+.interactive__link svg {
+  width: 24px;
+  height: 24px;
+}
+.interactive__link:hover path {
+  fill: #e07c1a;
+}
+.interactive__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
 }
 .liked {
     display: -webkit-box;
@@ -3347,6 +3374,9 @@ input::-ms-clear {
     letter-spacing: 0.08rem;
     color: #e07c1a;
 }
+.popup__title--left {
+    text-align: left;
+}
 .popup__subtitle {
     margin-bottom: 20px;
     font-family: 'RobotoCondensed-Bold';
@@ -3373,6 +3403,11 @@ input::-ms-clear {
 }
 .popup__label-title {
     font-size: 15px;
+}
+.popup__label-desc {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #95a5a6;
 }
 .popup__btn {
     margin-top: 32px;
