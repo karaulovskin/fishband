@@ -6,6 +6,10 @@
 .callback__label {
     margin-right: 10px;
     font-size: 15px;
+
+    @media (--container-below) {
+        display: none;
+    }
 }
 
 .callback__link {

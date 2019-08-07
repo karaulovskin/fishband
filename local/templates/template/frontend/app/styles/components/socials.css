@@ -6,6 +6,10 @@
     margin-right: 8px;
     font-size: 15px;
     letter-spacing: 0.03rem;
+
+    @media (--container-below) {
+        display: none;
+    }
 }
 .socials__repost {
     margin-right: 17px;
@@ -20,6 +24,10 @@
 }
 .socials-list__item {
     padding: 0 4px;
+
+    @media (--mobile-xs) {
+        padding: 0 2px;
+    }
 }
 .socials-list__link {
     display: block;
