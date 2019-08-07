@@ -11,6 +11,19 @@
     min-width: 20%;
     margin-bottom: 25px;
     padding: 0 12px;
+
+    @media (--tablet-below) {
+        width: 25%;
+        min-width: 25%;
+    }
+    @media (--tablet-above) {
+        width: 33.3%;
+        min-width: 33.3%;
+    }
+    @media (--mobile) {
+        width: 50%;
+        min-width: 50%;
+    }
 }
 .offers__link {
     position: relative;
@@ -40,6 +53,14 @@
     font-size: 20px;
     color: #fff;
     z-index: 1;
+
+    @media (--container-below) {
+        margin: 14px 16px 0;
+        font-size: 15px;
+    }
+    @media (--mobile-xs) {
+        font-size: 12px;
+    }
 }
 .offers__img {
     position: absolute;
@@ -53,4 +74,10 @@
 .offers__btns {
     margin-top: 40px;
     text-align: center;
+
+    @media (--mobile-xs) {
+        span {
+            display: none;
+        }
+    }
 }

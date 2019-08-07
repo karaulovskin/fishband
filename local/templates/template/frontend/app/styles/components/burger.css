@@ -1,0 +1,42 @@
+.burger {
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 2px
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        background-color: #fff;
+        border-radius: 2px
+    }
+
+
+    @media (--container-below) {
+        display: block;
+    }
+}

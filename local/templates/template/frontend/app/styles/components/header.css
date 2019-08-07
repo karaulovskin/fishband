@@ -44,5 +44,24 @@
              justify-content: flex-end;
         }
     }
+
+    @media (--tablet-above) {
+        .grid {
+            margin: 0 -10px;
+        }
+        .grid__col--3 {
+            width: auto;
+            min-width: auto;
+            padding: 0 10px;
+
+            &:nth-child(2) {
+                justify-content: flex-start;
+            }
+            &:nth-child(3) {
+                flex-grow: 1;
+                justify-content: flex-end;
+            }
+        }
+    }
 }
 

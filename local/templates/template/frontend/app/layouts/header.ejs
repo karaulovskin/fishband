@@ -60,6 +60,9 @@
     <div class="header__bottom">
         <div class="menu">
             <div class="container">
+                <div class="burger">
+                    <span></span>
+                </div>
                 <nav class="menu__list">
                     <div class="menu__item current">
                         <a href="#" class="menu__link">О проекте</a>
@@ -144,14 +147,14 @@
             <div class="container">
 
                 <!-- стр. Магазин -->
-                <!--<div class="page-head__nav">-->
-                    <!--<div class="page-head__row page-head__row--space-between">-->
-                        <!--<h1 class="title">Магазин</h1>-->
-                        <!--<a href="#" class="btn-orange">Если Shop, то Fishband</a>-->
-                    <!--</div>-->
-                <!--</div>-->
+                <div class="page-head__nav">
+                    <div class="page-head__row page-head__row--space-between">
+                        <h1 class="title">Магазин</h1>
+                        <a href="#" class="btn-orange">Если Shop, то Fishband</a>
+                    </div>
+                </div>
 
-
+                <!--
                 <div class="page-head__nav">
                     <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
                     <div class="page-head__row">
@@ -177,7 +180,7 @@
                         </button>
                     </div>
                 </div>
-
+                -->
 
                 <!-- Профиль -->
                 <!--
@@ -261,7 +264,12 @@
                     </div>
                     <div class="profile__right">
                         <div class="profile__btns">
-                            <a href="#" class="btn-gray">Настройки</a>
+                            <a href="#" class="btn-gray btn--settings">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-edit"></use>
+                                </svg>
+                                <span>Настройки</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -269,10 +277,10 @@
             </div>
         </div>
     </div>
+    <!-- Специальные предложения -->
+    <!--
     <div class="header__content">
         <div class="container">
-            <!-- Специальные предложения -->
-            <!--
             <div class="offers">
                 <div class="offers__list">
                     <div class="offers__item">
@@ -307,22 +315,22 @@
                     </div>
                 </div>
                 <div class="offers__btns">
-                    <a href="#" class="btn-orange">Все специальные предложения</a>
+                    <a href="#" class="btn-orange">Все <span>специальные предложения</span></a>
                 </div>
             </div>
-            -->
         </div>
     </div>
+    -->
     <div class="header__contacts">
         <div class="container">
             <div class="grid">
                 <div class="grid__col grid__col--3">
-                    <a href="#" class="btn-orange">Обсуждение и FAQ</a>
+                    <a href="#" class="btn-orange btn--faq"><span>Обсуждение и</span>F<span>AQ</span></a>
                 </div>
                 <div class="grid__col grid__col--3">
                     <div class="callback">
                         <div class="callback__label">Пишите, звоните нам</div>
-                        <a href="#" class="callback__link">WhatsApp</a>
+                        <a href="#" class="callback__link">W<span>hatsApp</span></a>
                     </div>
                 </div>
                 <div class="grid__col grid__col--3">

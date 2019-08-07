@@ -18,7 +18,6 @@
     width: 46px;
     min-width: 46px;
     height: 46px;
-    margin-right: 12px;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -29,9 +28,14 @@
     font-family: 'object-fit: cover;';
 }
 .profile-top__name {
+    margin-left: 12px;
     font-family: 'Roboto-Bold';
     font-size: 18px;
     letter-spacing: 0.08rem;
+
+    @media (--mobile-min) {
+        display: none;
+    }
 }
 .profile-top-menu {
     position: absolute;

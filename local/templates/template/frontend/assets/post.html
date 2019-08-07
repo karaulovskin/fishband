@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Добавить пост</title>
-    <link href="./css/app.css?1565206672000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1565214641000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -13,7 +13,7 @@
 
 <body>
     <script>
-        var INLINE_SVG_REVISION = 1565207091000;
+        var INLINE_SVG_REVISION = 1565209988000;
     </script>
 
     <div class="flow-container">
@@ -79,6 +79,9 @@
             <div class="header__bottom">
                 <div class="menu">
                     <div class="container">
+                        <div class="burger">
+                            <span></span>
+                        </div>
                         <nav class="menu__list">
                             <div class="menu__item current">
                                 <a href="#" class="menu__link">О проекте</a>
@@ -163,23 +166,23 @@
                     <div class="container">
 
                         <!-- стр. Магазин -->
-                        <!--<div class="page-head__nav">-->
-                        <!--<div class="page-head__row page-head__row--space-between">-->
-                        <!--<h1 class="title">Магазин</h1>-->
-                        <!--<a href="#" class="btn-orange">Если Shop, то Fishband</a>-->
-                        <!--</div>-->
-                        <!--</div>-->
-
-
                         <div class="page-head__nav">
-                            <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
-                            <div class="page-head__row">
-                                <h1 class="title">Про моторы</h1>
-                                <div class="title-desc">Лодочные моторы</div>
+                            <div class="page-head__row page-head__row--space-between">
+                                <h1 class="title">Магазин</h1>
+                                <a href="#" class="btn-orange">Если Shop, то Fishband</a>
                             </div>
-                            <a href="#" class="btn-orange btn-like">Мне нравится</a>
-                            <div class="page-head__edit">
-                                <button type="button" class="edit" data-edit>
+                        </div>
+
+                        <!--
+                <div class="page-head__nav">
+                    <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
+                    <div class="page-head__row">
+                        <h1 class="title">Про моторы</h1>
+                        <div class="title-desc">Лодочные моторы</div>
+                    </div>
+                    <a href="#" class="btn-orange btn-like">Мне нравится</a>
+                    <div class="page-head__edit">
+                        <button type="button" class="edit" data-edit>
                             <svg class="i-icon">
                                 <use xlink:href="#icon-edit"></use>
                             </svg>
@@ -194,9 +197,9 @@
                                 </div>
                             </div>
                         </button>
-                            </div>
-                        </div>
-
+                    </div>
+                </div>
+                -->
 
                         <!-- Профиль -->
                         <!--
@@ -280,7 +283,12 @@
                     </div>
                     <div class="profile__right">
                         <div class="profile__btns">
-                            <a href="#" class="btn-gray">Настройки</a>
+                            <a href="#" class="btn-gray btn--settings">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-edit"></use>
+                                </svg>
+                                <span>Настройки</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -288,10 +296,10 @@
                     </div>
                 </div>
             </div>
-            <div class="header__content">
-                <div class="container">
-                    <!-- Специальные предложения -->
-                    <!--
+            <!-- Специальные предложения -->
+            <!--
+    <div class="header__content">
+        <div class="container">
             <div class="offers">
                 <div class="offers__list">
                     <div class="offers__item">
@@ -326,22 +334,22 @@
                     </div>
                 </div>
                 <div class="offers__btns">
-                    <a href="#" class="btn-orange">Все специальные предложения</a>
+                    <a href="#" class="btn-orange">Все <span>специальные предложения</span></a>
                 </div>
             </div>
-            -->
-                </div>
-            </div>
+        </div>
+    </div>
+    -->
             <div class="header__contacts">
                 <div class="container">
                     <div class="grid">
                         <div class="grid__col grid__col--3">
-                            <a href="#" class="btn-orange">Обсуждение и FAQ</a>
+                            <a href="#" class="btn-orange btn--faq"><span>Обсуждение и</span>F<span>AQ</span></a>
                         </div>
                         <div class="grid__col grid__col--3">
                             <div class="callback">
                                 <div class="callback__label">Пишите, звоните нам</div>
-                                <a href="#" class="callback__link">WhatsApp</a>
+                                <a href="#" class="callback__link">W<span>hatsApp</span></a>
                             </div>
                         </div>
                         <div class="grid__col grid__col--3">
@@ -784,9 +792,31 @@
                 </div>
             </div>
         </div>
+
+        <div id="popupAddVideo" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Прикрепить видео</div>
+                </div>
+                <div class="popup__body">
+                    <form action="" class="popup__form">
+                        <div class="popup__row">
+                            <label class="popup__label">
+                        <div class="popup__label-title">Ссылка на видео</div>
+                        <input type="text" class="input" placeholder="Ссылка">
+                        <div class="popup__label-desc">YouTube, Vimeo, Twitch, Coub, VK, Gfycat, Imgur, Giphy, OK</div>
+                    </label>
+                        </div>
+                        <div class="popup__btn">
+                            <input type="submit" class="submit" value="Добавить">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1565206665000" type="text/javascript"></script>
+    <script src="./js/main.js?1565209872000" type="text/javascript"></script>
 </body>
 
 </html>

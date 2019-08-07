@@ -6,8 +6,12 @@
     display: block;
 }
 .logo__img-over {
-    width: 196px;
-    min-width: 196px;
+    width: 160px;
+    min-width: 160px;
+
+    @media (--tablet-below) {
+        font-size: 20px;
+    }
 }
 .logo__text {
     margin-left: 5%;
@@ -16,4 +20,12 @@
     letter-spacing: 0.054rem;
     font-size: 22px;
     color: var(--c-orange);
+
+    @media (--tablet-below) {
+        margin-left: 3%;
+        font-size: 20px;
+    }
+    @media (--tablet-above) {
+        display: none;
+    }
 }

@@ -5,3 +5,9 @@
         border-color: transparent;
     }
 }
+
+.mail-footer__label {
+    @media (--container-below) {
+        display: none;
+    }
+}

@@ -22,6 +22,10 @@
     color: var(--c-orange);
 }
 
+.popup__title--left {
+    text-align: left;
+}
+
 .popup__subtitle {
     margin-bottom: 20px;
     font-family: 'RobotoCondensed-Bold';
@@ -54,6 +58,12 @@
 
 .popup__label-title {
     font-size: 15px;
+}
+
+.popup__label-desc {
+    margin-top: 4px;
+    font-size: 14px;
+    color: var(--c-border);
 }
 
 .popup__btn {

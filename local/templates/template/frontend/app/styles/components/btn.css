@@ -109,3 +109,31 @@
     padding: 17px 48px 16px;
     font-size: 15px;
 }
+.btn--faq {
+    @media (--tablet-above) {
+        span:first-child {
+            display: none;
+        }
+    }
+    @media (--mobile-xxs) {
+        width: 38px;
+        padding: 13px 0 9px;
+        span:last-child {
+            display: none;
+        }
+    }
+}
+.btn--settings {
+    svg {
+        display: none;
+    }
+    @media (--tablet-below) {
+        padding: 11px;
+        span {
+            display: none;
+        }
+        svg {
+            display: block;
+        }
+    }
+}

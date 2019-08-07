@@ -18,12 +18,7 @@ html {
     @media (--container-below) {
         font-size: 15px;
     }
-    @media (--tablet-below) {
-        font-size: 14px;
-    }
-    @media (--mobile) {
-        font-size: 13px;
-    }
+
 }
 
 body {
@@ -68,9 +63,9 @@ body {
 }
 
 .container {
-    max-width: 1238px;
+    max-width: 1200px;
     margin: auto;
-    padding: 0 30px;
+    padding: 0 15px;
 
     @media (--mobile) {
         padding: 0 15px;

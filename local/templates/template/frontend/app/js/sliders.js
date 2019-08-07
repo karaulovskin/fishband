@@ -17,8 +17,14 @@ export default class Sliders {
                         dynamicBullets: true,
                     },
                     breakpoints: {
-                        600: {
-
+                        480: {
+                            slidesPerView: 1,
+                        },
+                        800: {
+                            slidesPerView: 2,
+                        },
+                        1000: {
+                            slidesPerView: 3,
                         }
                     }
                 }

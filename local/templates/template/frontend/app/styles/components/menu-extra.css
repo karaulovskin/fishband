@@ -8,6 +8,10 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    @media (--container-below) {
+        display: none;
+    }
 }
 .menu-extra__list {
     display: flex;

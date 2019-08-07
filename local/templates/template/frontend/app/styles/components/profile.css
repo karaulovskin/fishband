@@ -12,6 +12,12 @@
     height: 175px;
     border-radius: 25px;
     overflow: hidden;
+
+    @media (--tablet-below) {
+        width: 120px;
+        min-width: 120px;
+        height: 120px;
+    }
 }
 .profile__desc {
     width: 572px;
