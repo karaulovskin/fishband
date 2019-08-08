@@ -20,6 +20,10 @@
         margin-top: 15px;
         margin-bottom: 25px;
     }
+
+    @media (--mobile) {
+        display: none;
+    }
 }
 .catalog__link {
     position: relative;

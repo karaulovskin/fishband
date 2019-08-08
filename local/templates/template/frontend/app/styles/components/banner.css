@@ -13,7 +13,7 @@
 .banner__img {
     width: 100%;
     height: 100%;
-    object-fit: 'cover';
+    object-fit: cover;
     font-family: 'object-fit: "cover";';
 }
 
@@ -37,7 +37,15 @@
 }
 
 .banner-menu__icon-over {
-    margin-bottom: 8px;
+    width: 70px;
+    margin: 0 auto 8px;
+
+    @media (--tablet-below) {
+        width: 60px;
+    }
+    @media (--tablet-above) {
+        width: 50px;
+    }
 }
 
 .banner-menu__title {
@@ -49,5 +57,12 @@
     span {
         border-bottom: 1px solid var(--c-red);
         transition: .2s;
+    }
+
+    @media (--tablet-below) {
+        font-size: 16px;
+    }
+    @media (--tablet-above) {
+        font-size: 14px;
     }
 }

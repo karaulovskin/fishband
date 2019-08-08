@@ -12,6 +12,10 @@
 }
 .select-custom__label {
     margin-right: 12px;
+
+    @media (--mobile-xs) {
+        display: none;
+    }
 }
 .select-custom__trigger {
     position: relative;

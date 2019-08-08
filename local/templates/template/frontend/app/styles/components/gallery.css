@@ -9,11 +9,15 @@
     width: 533px;
     margin: auto;
     overflow: hidden;
+
+    @media (--mobile) {
+        width: auto;
+    }
 }
 .gallery__img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: 'cover';
+    object-fit: cover;
     font-family: "object-fit: 'cover';";
 }

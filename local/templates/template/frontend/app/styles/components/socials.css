@@ -17,6 +17,9 @@
     text-transform: uppercase;
     font-size: 14px;
     color: var(--c-border);
+    @media (--tablet-below) {
+        display: none;
+    }
 }
 .socials-list {
     display: flex;

@@ -4,6 +4,11 @@
 .tales__item {
     margin-bottom: 40px;
 }
+.tales__item--banner {
+    @media (--mobile) {
+        display: none;
+    }
+}
 .tales__btns {
     text-align: center;
 }

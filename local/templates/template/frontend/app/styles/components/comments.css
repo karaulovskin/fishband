@@ -30,6 +30,10 @@
         .banner {
             margin-top: 40px;
         }
+
+        @media (--mobile) {
+            display: none;
+        }
     }
 }
 .comments__item--banner + .comments__item {
