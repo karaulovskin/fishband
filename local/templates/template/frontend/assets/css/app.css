@@ -3415,7 +3415,7 @@ input::-ms-clear {
 }
 .map-mode__link {
     display: block;
-    padding: 16px;
+    padding: 16px 0px;
     font-family: 'RobotoCondensed-Bold';
     text-transform: uppercase;
     text-align: center;
@@ -3424,6 +3424,16 @@ input::-ms-clear {
     color: #e07c1a;
     background-color: #fff;
     border-radius: 5px 5px 0 0;
+}
+@media (max-width: 1000px) {
+  .map-mode__link {
+    font-size: 16px
+  }
+}
+@media (max-width: 800px) {
+  .map-mode__link {
+    font-size: 14px
+  }
 }
 .map-view {
     height: 380px;
