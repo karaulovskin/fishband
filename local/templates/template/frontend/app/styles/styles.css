@@ -391,4 +391,11 @@ p {
     bottom: 0;
     background: rgba(0,0,0, .6);
     z-index: 999;
+    opacity: 0;
+    transition: 1s;
+
+    &.is-open {
+        display: block;
+        opacity: 1;
+    }
 }

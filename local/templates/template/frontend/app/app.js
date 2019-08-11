@@ -19,6 +19,7 @@ import Comments from'./js/comments'
 import DownloadFile from'./js/download-file'
 import Edit from'./js/edit'
 import Maps from'./js/maps'
+import MobileMenu from'./js/mobile-menu'
 import Modals from'./js/modals'
 import Profile from'./js/profile'
 import SvgUse from'./js/svgUse'
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.DownloadFile = new DownloadFile();
     App.Edit = new Edit();
     App.Maps = new Maps();
+    App.MobileMenu = new MobileMenu();
     App.Modals = new Modals();
     App.Profile = new Profile();
     App.SvgUse = new SvgUse();

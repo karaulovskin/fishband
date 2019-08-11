@@ -141,31 +141,35 @@ var _maps = __webpack_require__(23);
 
 var _maps2 = _interopRequireDefault(_maps);
 
-var _modals = __webpack_require__(24);
+var _mobileMenu = __webpack_require__(24);
+
+var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
+
+var _modals = __webpack_require__(25);
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var _profile = __webpack_require__(26);
+var _profile = __webpack_require__(27);
 
 var _profile2 = _interopRequireDefault(_profile);
 
-var _svgUse = __webpack_require__(27);
+var _svgUse = __webpack_require__(28);
 
 var _svgUse2 = _interopRequireDefault(_svgUse);
 
-var _sliders = __webpack_require__(28);
+var _sliders = __webpack_require__(29);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _select = __webpack_require__(30);
+var _select = __webpack_require__(31);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _tabs = __webpack_require__(31);
+var _tabs = __webpack_require__(32);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _video = __webpack_require__(32);
+var _video = __webpack_require__(33);
 
 var _video2 = _interopRequireDefault(_video);
 
@@ -212,6 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.DownloadFile = new _downloadFile2.default();
     App.Edit = new _edit2.default();
     App.Maps = new _maps2.default();
+    App.MobileMenu = new _mobileMenu2.default();
     App.Modals = new _modals2.default();
     App.Profile = new _profile2.default();
     App.SvgUse = new _svgUse2.default();
@@ -12315,7 +12320,84 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fancybox = __webpack_require__(25);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+    function MobileMenu() {
+        _classCallCheck(this, MobileMenu);
+
+        this.burger = '[data-burger]';
+        this.menu = '[data-mobile-menu]';
+        this.close = '[data-mobile-menu-close]';
+        this.overlay = '[]';
+
+        this.bindEvents();
+    }
+
+    _createClass(MobileMenu, [{
+        key: 'menuHandler',
+        value: function menuHandler() {
+            console.log('this__ ' + $(this));
+            console.log('menu__ ' + $(this.menu));
+            if (!$(this.menu).hasClass('is-open')) {
+                this.menuOpen();
+            } else {
+                this.menuClose();
+            }
+        }
+    }, {
+        key: 'menuOpen',
+        value: function menuOpen() {
+            $(this.menu).addClass('is-open');
+            $('.overlay').addClass('is-open');
+            $(this.close).show();
+        }
+    }, {
+        key: 'menuClose',
+        value: function menuClose() {
+            $(this.menu).removeClass('is-open');
+            $('.overlay').removeClass('is-open');
+            $(this.close).hide();
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.burger, function (e) {
+                e.preventDefault();
+                self.menuHandler();
+            });
+            $(document).on('click', this.close, function (e) {
+                e.preventDefault();
+                self.menuHandler();
+            });
+            $(document).on('click', '.overlay', function (e) {
+                e.preventDefault();
+                self.menuHandler();
+            });
+        }
+    }]);
+
+    return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _fancybox = __webpack_require__(26);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
@@ -12368,7 +12450,7 @@ var Modals = function () {
 exports.default = Modals;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 // ==================================================
@@ -18005,7 +18087,7 @@ exports.default = Modals;
 })(document, jQuery);
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18055,7 +18137,7 @@ var Profile = function () {
 exports.default = Profile;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18145,7 +18227,7 @@ exports.default = SvgUse;
 ;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18158,7 +18240,7 @@ exports.Slider = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _swiper = __webpack_require__(29);
+var _swiper = __webpack_require__(30);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -18274,7 +18356,7 @@ var Slider = exports.Slider = function Slider(selector, options) {
 };
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25541,7 +25623,7 @@ return Swiper$1;
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25640,7 +25722,7 @@ var Select = function () {
 exports.default = Select;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25696,7 +25778,7 @@ var Tabs = function () {
 exports.default = Tabs;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
