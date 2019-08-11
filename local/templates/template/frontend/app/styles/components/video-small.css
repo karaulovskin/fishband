@@ -4,6 +4,10 @@
     height: 0;
     margin-right: 20px;
     padding-bottom: 10.8%;
+
+    @media (--container-below) {
+        padding-bottom: 120px;
+    }
 }
 .video-small__media {
     position: absolute;

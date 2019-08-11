@@ -1,6 +1,10 @@
 .comments-item {
     padding: 22px 25px;
     font-size: 15px;
+
+    @media (--container-below) {
+        font-size: 14px;
+    }
 }
 .comments-item__head {
     display: flex;
@@ -19,7 +23,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+
+    @media (--mobile-xs) {
+        align-items: flex-start;
+        flex-direction: column;
+
+        .comments-item__col {
+            &:last-child {
+                padding-top: 12px;
+            }
+        }
+    }
+ }
 .comments-item__col {
     display: flex;
     align-items: center;

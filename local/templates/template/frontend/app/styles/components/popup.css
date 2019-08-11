@@ -12,14 +12,28 @@
 
 .popup__content {
     padding: 40px 75px;
+
+    @media (--mobile-xs) {
+        padding: 40px 30px;
+    }
 }
 
 .popup__title {
     margin-bottom: 20px;
     font-family: 'RobotoCondensed-Bold';
     font-size: 32px;
+    line-height: 1;
     letter-spacing: 0.08rem;
     color: var(--c-orange);
+
+    @media (--container-below) {
+        margin-bottom: 18px;
+        font-size: 30px;
+    }
+    @media (--mobile) {
+        margin-bottom: 16px;
+        font-size: 28px;
+    }
 }
 
 .popup__title--left {
@@ -30,13 +44,27 @@
     margin-bottom: 20px;
     font-family: 'RobotoCondensed-Bold';
     font-size: 24px;
+    line-height: 1;
     letter-spacing: 0.08rem;
     color: var(--c-black);
+
+    @media (--container-below) {
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+    @media (--mobile) {
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
 }
 
 .popup__desc {
     text-align: left;
     font-size: 15px;
+
+    @media (--mobile) {
+        font-size: 14px;
+    }
 }
 
 .popup__body {

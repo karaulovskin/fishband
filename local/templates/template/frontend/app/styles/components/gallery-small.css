@@ -8,6 +8,7 @@
     display: block;
     width: 174px;
     min-width: 174px;
+    height: 120px;
 }
 .gallery-small__img {
     display: block;

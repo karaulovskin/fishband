@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     margin: 0 -5px;
+
+    @media (--tablet-above) {
+        display: none;
+    }
 }
 .map-mode__item {
     width: 16.6%;

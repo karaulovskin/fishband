@@ -31,4 +31,11 @@
     &:after {
          transform: translateY(-50%) rotate(90deg);
     }
+
+    @media (--container-below) {
+        font-size: 15px;
+    }
+    @media (--mobile) {
+        font-size: 14px;
+    }
 }

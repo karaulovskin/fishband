@@ -16,6 +16,10 @@
     &.page-head__row--space-between {
         justify-content: space-between;
     }
+
+    @media (--mobile-xs) {
+        display: none;
+    }
 }
 
 .page-head__shop {

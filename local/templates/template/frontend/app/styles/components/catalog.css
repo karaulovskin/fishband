@@ -11,6 +11,23 @@
     min-width: 25%;
     margin-bottom: 25px;
     padding: 0 12px;
+
+    @media (--tablet-below) {
+        width: 33.3%;
+        min-width: 33.3%;
+    }
+    @media (--tablet-below) {
+        width: 33.3%;
+        min-width: 33.3%;
+    }
+    @media (--mobile) {
+        width: 50%;
+        min-width: 50%;
+    }
+    @media (--mobile-xs) {
+        width: 100%;
+        min-width: 100%;
+    }
 }
 .catalog__item--banner {
     width: 100%;
@@ -50,5 +67,13 @@
     display: inline;
     font-family: 'Roboto-Medium';
     font-size: 18px;
+    line-height: 1.2;
     border-bottom: 1px solid var(--c-orange);
+
+    @media (--container-below) {
+        font-size: 17px;
+    }
+    @media (--mobile) {
+        font-size: 16px;
+    }
 }

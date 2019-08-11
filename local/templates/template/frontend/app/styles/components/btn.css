@@ -11,6 +11,10 @@
     border: 1px solid var(--c-orange);
     border-radius: 5px;
     cursor: pointer;
+
+    @media (--mobile) {
+        font-size: 13px;
+    }
 }
 .btn-gray {
     display: inline-block;
@@ -25,6 +29,10 @@
     border: 1px solid #e4e6e8;
     border-radius: 5px;
     cursor: pointer;
+
+    @media (--mobile) {
+        font-size: 13px;
+    }
 }
 .btn-border {
     display: inline-block;
@@ -39,6 +47,10 @@
     border: 1px solid var(--c-orange);
     border-radius: 5px;
     cursor: pointer;
+
+    @media (--mobile) {
+        font-size: 13px;
+    }
 }
 .btn--login {
     display: block;
@@ -51,6 +63,10 @@
     color: #fff;
     background-color: var(--c-orange);
     border-radius: 5px;
+
+    @media (--mobile) {
+        font-size: 13px;
+    }
 }
 .btn-buy {
     display: flex;
@@ -69,6 +85,10 @@
             border-color: transparent;
         }
     }
+
+    @media (--mobile) {
+        font-size: 13px;
+    }
 }
 .btn-delivery {
     display: flex;
@@ -86,6 +106,10 @@
         span {
             border-color: transparent;
         }
+    }
+
+    @media (--mobile) {
+        font-size: 13px;
     }
 }
 .btn-like {

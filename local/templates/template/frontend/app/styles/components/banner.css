@@ -1,5 +1,9 @@
 .banner {
     margin-bottom: 50px;
+
+    @media (--mobile) {
+        display: none;
+    }
 }
 
 .banner__img-over {
