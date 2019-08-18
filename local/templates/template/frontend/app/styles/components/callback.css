@@ -21,7 +21,14 @@
     letter-spacing: 0.06rem;
     color: #fff;
     background-color: var(--c-orange);
+    border: 2px solid var(--c-orange);
     border-radius: 5px;
+    transition: .2s;
+
+    &:hover {
+         color: var(--c-orange);
+         background-color: #fff;
+    }
 
     @media (--mobile-xxs) {
         width: 38px;
