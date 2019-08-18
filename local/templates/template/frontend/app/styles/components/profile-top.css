@@ -76,6 +76,12 @@
     &:last-child {
         border-color: transparent;
     }
+    &.current {
+        .profile-top-menu__link {
+            color: var(--c-bg-grey);
+            background-color: var(--c-black);
+        }
+    }
 }
 .profile-top-menu__link {
     display: block;
@@ -83,4 +89,10 @@
     font-family: 'Roboto-Medium';
     color: var(--c-black);
     background-color: var(--c-bg-grey);
+    transition: .2s;
+
+    &:hover {
+         color: var(--c-bg-grey);
+         background-color: var(--c-black);
+    }
 }

@@ -92,6 +92,12 @@
     &:last-child {
         border-color: transparent;
     }
+    &.current {
+        .menu-sub__link {
+            color: var(--c-bg-grey);
+            background-color: var(--c-black);
+        }
+    }
 }
 .menu-sub__link {
     display: block;
@@ -101,4 +107,10 @@
     line-height: 1.2;
     color: var(--c-black);
     background-color: var(--c-bg-grey);
+    transition: .2s;
+
+    &:hover {
+        color: var(--c-bg-grey);
+        background-color: var(--c-black);
+    }
 }
