@@ -18,6 +18,7 @@ import Accordion from'./js/accordion'
 import Comments from'./js/comments'
 import DownloadFile from'./js/download-file'
 import Edit from'./js/edit'
+import Increment from'./js/increment'
 import Maps from'./js/maps'
 import MobileMenu from'./js/mobile-menu'
 import Modals from'./js/modals'
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Comments = new Comments();
     App.DownloadFile = new DownloadFile();
     App.Edit = new Edit();
+    App.Increment = new Increment();
     App.Maps = new Maps();
     App.MobileMenu = new MobileMenu();
     App.Modals = new Modals();

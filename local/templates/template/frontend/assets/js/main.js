@@ -137,39 +137,43 @@ var _edit = __webpack_require__(22);
 
 var _edit2 = _interopRequireDefault(_edit);
 
-var _maps = __webpack_require__(23);
+var _increment = __webpack_require__(23);
+
+var _increment2 = _interopRequireDefault(_increment);
+
+var _maps = __webpack_require__(24);
 
 var _maps2 = _interopRequireDefault(_maps);
 
-var _mobileMenu = __webpack_require__(24);
+var _mobileMenu = __webpack_require__(25);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-var _modals = __webpack_require__(25);
+var _modals = __webpack_require__(26);
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var _profile = __webpack_require__(27);
+var _profile = __webpack_require__(28);
 
 var _profile2 = _interopRequireDefault(_profile);
 
-var _svgUse = __webpack_require__(28);
+var _svgUse = __webpack_require__(29);
 
 var _svgUse2 = _interopRequireDefault(_svgUse);
 
-var _sliders = __webpack_require__(29);
+var _sliders = __webpack_require__(30);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _select = __webpack_require__(31);
+var _select = __webpack_require__(32);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _tabs = __webpack_require__(32);
+var _tabs = __webpack_require__(33);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _video = __webpack_require__(33);
+var _video = __webpack_require__(34);
 
 var _video2 = _interopRequireDefault(_video);
 
@@ -215,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Comments = new _comments2.default();
     App.DownloadFile = new _downloadFile2.default();
     App.Edit = new _edit2.default();
+    App.Increment = new _increment2.default();
     App.Maps = new _maps2.default();
     App.MobileMenu = new _mobileMenu2.default();
     App.Modals = new _modals2.default();
@@ -12242,6 +12247,73 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var Increment = function () {
+    function Increment() {
+        _classCallCheck(this, Increment);
+
+        this.bindEvents();
+    }
+
+    _createClass(Increment, [{
+        key: 'increase',
+        value: function increase(elem) {
+            var $input = elem.parent().find('.card-buy__select-value');
+            $input.val(parseInt($input.val()) + 1);
+            $input.change();
+            return false;
+        }
+    }, {
+        key: 'reduce',
+        value: function reduce(elem) {
+            var $input = elem.parent().find('.card-buy__select-value');
+            if ($input.val() == 0) {
+                return;
+            }
+            var count = parseInt($input.val()) - 1;
+            count = count < 1 ? 1 : count;
+            $input.val(count);
+            $input.change();
+            return false;
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', '.card-buy__select-reduce', function (e) {
+                e.preventDefault();
+                self.reduce($(this));
+            });
+            $(document).on('click', '.card-buy__select-increase', function (e) {
+                e.preventDefault();
+                self.increase($(this));
+            });
+            // $(document).on('keydown', '.card-buy__select-value', function (eventObject) {
+            //     console.log(eventObject.which);
+            // });
+        }
+    }]);
+
+    return Increment;
+}();
+
+exports.default = Increment;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var Maps = function () {
     function Maps() {
         _classCallCheck(this, Maps);
@@ -12308,7 +12380,7 @@ var Maps = function () {
 exports.default = Maps;
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12385,7 +12457,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12397,7 +12469,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fancybox = __webpack_require__(26);
+var _fancybox = __webpack_require__(27);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
@@ -12450,7 +12522,7 @@ var Modals = function () {
 exports.default = Modals;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 // ==================================================
@@ -18087,7 +18159,7 @@ exports.default = Modals;
 })(document, jQuery);
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18137,7 +18209,7 @@ var Profile = function () {
 exports.default = Profile;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18227,7 +18299,7 @@ exports.default = SvgUse;
 ;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18240,7 +18312,7 @@ exports.Slider = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _swiper = __webpack_require__(30);
+var _swiper = __webpack_require__(31);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -18356,7 +18428,7 @@ var Slider = exports.Slider = function Slider(selector, options) {
 };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25623,7 +25695,7 @@ return Swiper$1;
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25722,7 +25794,7 @@ var Select = function () {
 exports.default = Select;
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25778,7 +25850,7 @@ var Tabs = function () {
 exports.default = Tabs;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
