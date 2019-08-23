@@ -25715,6 +25715,7 @@ var Select = function () {
 
         this.select = '[data-select]';
         this.input = '[data-select-input]';
+        this.selectTrigger = '[data-select-trigger]';
         this.inputText = '[data-select-input-text]';
         this.dropdown = '[data-select-dropdown]';
         this.option = '[data-select-option]';
@@ -25741,13 +25742,13 @@ var Select = function () {
         }
     }, {
         key: 'closeSelect',
-        value: function closeSelect() {
+        value: function closeSelect(target) {
             var self = this;
             var select = $(self.select);
-            var dropdown = $(self.dropdown);
 
-            select.removeClass('is_open');
-            dropdown.hide();
+            if (!select.is(target) && select.has(target).length === 0) {
+                select.removeClass('is_open');
+            }
         }
     }, {
         key: 'selectOption',
@@ -25760,14 +25761,11 @@ var Select = function () {
             var $select = $option.closest(self.select);
             var $input = $select.find(self.input);
             var $inputText = $select.find(self.inputText);
-            var $dropdown = $select.find(self.dropdown);
 
             $option.addClass('current');
             $otherOption.removeClass('current');
             $inputText.text($optionText);
             $input.val($optionValue);
-            $dropdown.hide();
-            $select.removeClass('is_open');
             $select.addClass('selected');
             $select.trigger('select::selected');
         }
@@ -25776,7 +25774,7 @@ var Select = function () {
         value: function bindEvents() {
             var self = this;
 
-            $(document).on('click', this.input, function (e) {
+            $(document).on('click', this.selectTrigger, function (e) {
                 e.preventDefault();
                 self.openSelect($(this));
             });
@@ -25784,6 +25782,10 @@ var Select = function () {
             $(document).on('click', this.option, function (e) {
                 e.preventDefault();
                 self.selectOption($(this));
+            });
+
+            $(document).on('click', function (e) {
+                self.closeSelect(e.target);
             });
         }
     }]);

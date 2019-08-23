@@ -4,6 +4,9 @@
     margin-right: 32px;
 
     &.is_open {
+        svg {
+            transform: rotate(180deg);
+        }
         .select-custom__dropdown {
             visibility: visible;
             opacity: 1;
@@ -72,8 +75,14 @@
     background-color: var(--c-bg-grey);
     border-bottom: 1px solid #dae0e0;
     cursor: pointer;
+    transition: .2s;
 
     &:last-child {
         border-color: transparent;
+    }
+
+    &.current {
+         color: var(--c-bg-grey);
+         background-color: var(--c-black);
     }
 }

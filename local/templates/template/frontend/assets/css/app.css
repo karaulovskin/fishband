@@ -4730,6 +4730,11 @@ input::-ms-clear {
             align-items: center;
     margin-right: 32px;
 }
+.select-custom.is_open svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 .select-custom.is_open .select-custom__dropdown {
   visibility: visible;
   opacity: 1;
@@ -4799,9 +4804,16 @@ input::-ms-clear {
     background-color: #f9f9f9;
     border-bottom: 1px solid #dae0e0;
     cursor: pointer;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
 .select-custom__option:last-child {
   border-color: transparent;
+}
+.select-custom__option.current {
+  color: #f9f9f9;
+  background-color: #2c3e50;
 }
 .shop-prod {
     margin-top: 95px;

@@ -1,6 +1,7 @@
 export default class Select {
     select = '[data-select]';
     input = '[data-select-input]';
+    selectTrigger = '[data-select-trigger]';
     inputText = '[data-select-input-text]';
     dropdown = '[data-select-dropdown]';
     option = '[data-select-option]';
@@ -25,13 +26,13 @@ export default class Select {
         }
     }
 
-    closeSelect() {
+    closeSelect(target) {
         let self = this;
         let select = $(self.select);
-        let dropdown = $(self.dropdown);
 
-        select.removeClass('is_open');
-        dropdown.hide();
+        if (!select.is(target) && select.has(target).length === 0) {
+            select.removeClass('is_open');
+        }
     }
 
     selectOption(elem) {
@@ -43,14 +44,11 @@ export default class Select {
         let $select = $option.closest(self.select);
         let $input = $select.find(self.input);
         let $inputText = $select.find(self.inputText);
-        let $dropdown = $select.find(self.dropdown);
 
         $option.addClass('current');
         $otherOption.removeClass('current');
         $inputText.text($optionText);
         $input.val($optionValue);
-        $dropdown.hide();
-        $select.removeClass('is_open');
         $select.addClass('selected');
         $select.trigger('select::selected');
     }
@@ -58,7 +56,7 @@ export default class Select {
     bindEvents() {
         let self = this;
 
-        $(document).on('click', this.input, function(e) {
+        $(document).on('click', this.selectTrigger, function(e) {
             e.preventDefault();
             self.openSelect($(this));
         });
@@ -66,6 +64,10 @@ export default class Select {
         $(document).on('click', this.option, function(e) {
             e.preventDefault();
             self.selectOption($(this));
+        });
+
+        $(document).on('click', function(e) {
+            self.closeSelect(e.target);
         });
     }
 }
