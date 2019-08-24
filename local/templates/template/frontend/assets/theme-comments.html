@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Наши байки комментарии</title>
+    <title>Есть тема внутри комментарий</title>
     <link href="./css/app.css?1566651570000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -64,10 +64,10 @@
                             <div class="menu__item">
                                 <a href="#" class="menu__link">Болталка</a>
                             </div>
-                            <div class="menu__item">
+                            <div class="menu__item current">
                                 <a href="#" class="menu__link">Есть тема</a>
                             </div>
-                            <div class="menu__item current">
+                            <div class="menu__item">
                                 <a href="#" class="menu__link">Наши байки</a>
                             </div>
                             <div class="menu__item">
@@ -110,13 +110,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="menu-extra">
+                    <div class="container">
+                        <nav class="menu-extra__list">
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Общалка</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Рыбная</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Точка на карте</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Куда и скем?</a>
+                            </div>
+                            <div class="menu-extra__item current">
+                                <a href="#" class="menu-extra__link">Парковка</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Камбуз</a>
+                            </div>
+                            <div class="menu-extra__item">
+                                <a href="#" class="menu-extra__link">Шопинг</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
                 <div class="page-head">
                     <div class="container">
                         <div class="page-head__nav">
                             <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
                             <div class="page-head__row">
-                                <h1 class="title">Комментарии к байке «Про дураков, дырку, щук и смекалку»</h1>
+                                <h1 class="title">Про моторы</h1>
+                                <div class="title-desc">Лодочные моторы и все что связанно сними</div>
                             </div>
+                            <a href="#" class="btn-orange btn-like">Мне нравится</a>
                         </div>
                     </div>
                 </div>
@@ -572,6 +601,31 @@
                     <div class="comments__btns">
                         <a href="#" class="btn-orange">Показать еще</a>
                     </div>
+                </div>
+                <div class="map bg-orange">
+                    <div class="map-mode">
+                        <div class="map-mode__list">
+                            <div class="map-mode__item current">
+                                <a href="#" class="map-mode__link">Наши люди</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Точка на карте</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Есть тема</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Фото</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Наши байки</a>
+                            </div>
+                            <div class="map-mode__item">
+                                <a href="#" class="map-mode__link">Магазин</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mapView" class="map-view" data-map="[55.740636537286,37.587128295898]"></div>
                 </div>
             </div>
         </div>

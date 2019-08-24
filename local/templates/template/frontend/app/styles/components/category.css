@@ -18,6 +18,9 @@
         }
     }
     &.is_open {
+        .category-list__head {
+            border-bottom: 1px solid var(--c-border);
+        }
     }
     &.last-child {
         margin-bottom: 0;

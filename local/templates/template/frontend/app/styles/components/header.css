@@ -64,4 +64,18 @@
         }
     }
 }
+.header__profile-bottom {
+    background-color: var(--c-bg-grey-dark);
+    border-bottom: 2px solid var(--c-orange);
+
+    .tales-item__footer {
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+    .comments-filter {
+        padding-top: 10px;
+        margin-top: 0;
+    }
+}
 
