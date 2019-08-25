@@ -2986,6 +2986,9 @@ input::-ms-clear {
     background-color: #f9f9f9;
     border-top: 1px solid #ccc;
 }
+.comments__item:first-child {
+  border-color: transparent;
+}
 .comments__item.comments__item--banner {
   margin-left: -20px;
   margin-right: -20px;
@@ -3003,6 +3006,9 @@ input::-ms-clear {
 }
 .comments__item--banner + .comments__item {
     border-color: transparent;
+}
+.comments-add {
+    border-bottom: 1px solid #ccc;
 }
 .comments-add__block {
     padding: 32px 25px;
