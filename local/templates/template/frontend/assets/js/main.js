@@ -12043,8 +12043,6 @@ var Accordion = function () {
             var $content = $item.find(self.content);
             var $otherContent = $container.find(self.content);
 
-            console.log($item);
-
             if (!$item.hasClass('is_open')) {
                 $items.removeClass('is_open');
                 $item.addClass('is_open');
@@ -18177,18 +18175,33 @@ var Profile = function () {
     function Profile() {
         _classCallCheck(this, Profile);
 
-        this.container = '[data-profile-top]';
+        this.profileTop = '[data-profile-top]';
+        this.profile = '[data-profile]';
+        this.profileEdit = '[data-profile-edit]';
+        this.profileEditButton = '[data-profile-edit-active]';
+        this.duration = 500;
 
         this.bindEvents();
     }
 
     _createClass(Profile, [{
-        key: 'handler',
-        value: function handler() {
-            if (!$(this.container).hasClass('is-active')) {
-                $(this.container).addClass('is-active');
+        key: 'profileTopActive',
+        value: function profileTopActive() {
+            if (!$(this.profileTop).hasClass('is-active')) {
+                $(this.profileTop).addClass('is-active');
             } else {
-                $(this.container).removeClass('is-active');
+                $(this.profileTop).removeClass('is-active');
+            }
+        }
+    }, {
+        key: 'profileEditActive',
+        value: function profileEditActive() {
+            if (!$(this.profileEdit).hasClass('is-active')) {
+                $(this.profileEdit).addClass('is-active');
+                $(this.profileEdit).stop(true, true).slideDown(self.duration);
+            } else {
+                $(this.profileEdit).removeClass('is-active');
+                $(this.profileEdit).slideUp(self.duration);
             }
         }
     }, {
@@ -18196,9 +18209,13 @@ var Profile = function () {
         value: function bindEvents() {
             var self = this;
 
-            $(document).on('click', this.container, function (e) {
+            $(document).on('click', this.profileTop, function (e) {
                 e.preventDefault();
-                self.handler();
+                self.profileTopActive();
+            });
+            $(document).on('click', this.profileEditButton, function (e) {
+                e.preventDefault();
+                self.profileEditActive();
             });
         }
     }]);
