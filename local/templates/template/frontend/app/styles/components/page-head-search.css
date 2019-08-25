@@ -1,0 +1,19 @@
+.page-head-search__row {
+    display: flex;
+    align-items: center;
+
+    .search {
+        flex-grow: 1;
+        margin-right: 12px;
+    }
+}
+.page-head-search__label {
+    margin-right: 12px;
+}
+.page-head-search__submit {
+    padding: 7px 20px 6px;
+    cursor: pointer;
+}
+.page-head-search__answer {
+    margin-top: 24px;
+}

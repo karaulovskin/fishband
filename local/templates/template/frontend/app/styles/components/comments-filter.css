@@ -32,4 +32,8 @@
         height: 2px;
         background-color: transparent;
     }
+
+    span {
+        margin-right: 4px;
+    }
 }
