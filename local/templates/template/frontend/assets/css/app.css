@@ -5409,6 +5409,11 @@ input::-ms-clear {
 .tales-item__content--flex .tales-item__desc {
   margin-left: 25px;
 }
+.tales-item__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
 .tales-item__title {
     margin-top: -9px;
     margin-bottom: 10px;
