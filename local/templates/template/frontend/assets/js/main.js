@@ -12205,11 +12205,18 @@ var Edit = function () {
     }
 
     _createClass(Edit, [{
-        key: 'handler',
-        value: function handler() {
+        key: 'open',
+        value: function open() {
             if (!$(this.container).hasClass('is-active')) {
                 $(this.container).addClass('is-active');
             } else {
+                $(this.container).removeClass('is-active');
+            }
+        }
+    }, {
+        key: 'close',
+        value: function close(target) {
+            if (!$(this.container).is(target) && $(this.container).has(target).length === 0) {
                 $(this.container).removeClass('is-active');
             }
         }
@@ -12220,7 +12227,10 @@ var Edit = function () {
 
             $(document).on('click', this.container, function (e) {
                 e.preventDefault();
-                self.handler($(this));
+                self.open($(this));
+            });
+            $(document).on('click', function (e) {
+                self.close(e.target);
             });
         }
     }]);
@@ -25762,6 +25772,7 @@ var Select = function () {
             if (!$select.hasClass('is_open')) {
                 $select.addClass('is_open');
                 $dropdown.show();
+                $select.siblings($(self.select)).removeClass('is_open');
             } else {
                 $select.removeClass('is_open');
                 $dropdown.hide();

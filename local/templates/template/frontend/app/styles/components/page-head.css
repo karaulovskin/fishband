@@ -5,13 +5,22 @@
 
 .page-head__nav {
     position: relative;
+
+    .link-back {
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+
+    .map {
+        margin-top: 35px;
+    }
 } 
 
 .page-head__row {
     display: flex;
     align-items: baseline;
-    margin-top: 24px;
-    margin-bottom: 28px;
+    /*margin-top: 24px;*/
+    /*margin-bottom: 28px;*/
 
     &.page-head__row--space-between {
         justify-content: space-between;

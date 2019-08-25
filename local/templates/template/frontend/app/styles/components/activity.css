@@ -11,6 +11,15 @@
     align-items: center;
     color: var(--c-border);
     font-family: 'Roboto-Bold';
+    transition: .2s;
+
+    &:hover,
+    &.is-active {
+        color: var(--c-orange);
+        svg {
+            fill: var(--c-orange);
+        }
+    }
 }
 .activity__icon {
 

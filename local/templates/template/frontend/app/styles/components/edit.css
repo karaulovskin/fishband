@@ -72,4 +72,9 @@
     line-height: 1.2;
     color: var(--c-black);
     background-color: var(--c-bg-grey);
+
+    &:hover {
+         color: var(--c-bg-grey);
+         background-color: var(--c-black);
+    }
 }

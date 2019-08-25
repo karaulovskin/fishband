@@ -20,6 +20,7 @@ export default class Select {
         if (!$select.hasClass('is_open')) {
             $select.addClass('is_open');
             $dropdown.show();
+            $select.siblings($(self.select)).removeClass('is_open');
         } else {
             $select.removeClass('is_open');
             $dropdown.hide();

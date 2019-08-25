@@ -1,3 +1,6 @@
+.page-head-search {
+    margin-top: 35px;
+}
 .page-head-search__row {
     display: flex;
     align-items: center;

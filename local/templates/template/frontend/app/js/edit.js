@@ -5,10 +5,15 @@ export default class Edit {
         this.bindEvents();
     }
 
-    handler() {
+    open() {
         if (!$(this.container).hasClass('is-active')) {
             $(this.container).addClass('is-active');
         } else {
+            $(this.container).removeClass('is-active');
+        }
+    }
+    close(target) {
+        if (!$(this.container).is(target) && $(this.container).has(target).length === 0) {
             $(this.container).removeClass('is-active');
         }
     }
@@ -18,7 +23,10 @@ export default class Edit {
 
         $(document).on('click', this.container, function(e) {
             e.preventDefault();
-            self.handler($(this));
+            self.open($(this));
+        });
+        $(document).on('click', function(e) {
+            self.close(e.target);
         });
     }
 

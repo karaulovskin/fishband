@@ -935,6 +935,9 @@ body.compensate-for-scrollbar{overflow:hidden}
     width: 1em;
     height: 1em;
     fill: currentColor;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
 *, ::before, ::after {
     -webkit-box-sizing: border-box;
@@ -1836,6 +1839,15 @@ input::-ms-clear {
             align-items: center;
     color: #95a5a6;
     font-family: 'Roboto-Bold';
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.activity__link:hover, .activity__link.is-active {
+  color: #e07c1a;
+}
+.activity__link:hover svg, .activity__link.is-active svg {
+  fill: #e07c1a;
 }
 .activity__icon {
 
@@ -2056,6 +2068,13 @@ input::-ms-clear {
     border: 1px solid #e4e6e8;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.btn-gray:hover {
+  color: #e4e6e8;
+  background-color: #2c3e50;
 }
 @media (max-width: 650px) {
   .btn-gray {
@@ -2091,7 +2110,15 @@ input::-ms-clear {
     letter-spacing: 0.06rem;
     color: #fff;
     background-color: #e07c1a;
+    border: 2px solid #e07c1a;
     border-radius: 5px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.btn--login:hover {
+  color: #e07c1a;
+  background-color: #fff;
 }
 @media (max-width: 650px) {
   .btn--login {
@@ -2617,6 +2644,9 @@ input::-ms-clear {
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
             box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
+.catalog__link:hover .catalog__label {
+  border-color: transparent;
+}
 .catalog__img-over {
     
 }
@@ -2638,6 +2668,9 @@ input::-ms-clear {
     font-size: 18px;
     line-height: 1.2;
     border-bottom: 1px solid #e07c1a;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
 }
 @media (max-width: 1199px) {
   .catalog__label {
@@ -3184,6 +3217,10 @@ input::-ms-clear {
     line-height: 1.2;
     color: #2c3e50;
     background-color: #f9f9f9;
+}
+.edit-dropdown__link:hover {
+  color: #f9f9f9;
+  background-color: #2c3e50;
 }
 .footer {
     padding: 25px 0;
@@ -4124,6 +4161,9 @@ input::-ms-clear {
     font-size: 24px;
     color: #2c3e50;
 }
+.page-head-search {
+    margin-top: 35px;
+}
 .page-head-search__row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4158,6 +4198,13 @@ input::-ms-clear {
 .page-head__nav {
     position: relative;
 }
+.page-head__nav .link-back {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.page-head__nav .map {
+  margin-top: 35px;
+}
 .page-head__row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4167,15 +4214,15 @@ input::-ms-clear {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    margin-top: 24px;
-    margin-bottom: 28px;
 }
+/*margin-bottom: 28px;*/
 .page-head__row.page-head__row--space-between {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+/*margin-top: 24px;*/
 @media (max-width: 480px) {
   .page-head__row {
     display: none
@@ -5241,6 +5288,13 @@ input::-ms-clear {
     color: #2c3e50;
     background-color: #dcdee0;
     border-radius: 2px;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}
+.tag__link.active, .tag__link:hover {
+  color: #dcdee0;
+  background-color: #2c3e50;
 }
 .tag__toggle {
     height: 19px;
@@ -5614,6 +5668,19 @@ input::-ms-clear {
     height: 100%;
     border: none;
 }
+.video-small__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background: url("../images/icons/play.png") no-repeat 50% 50%;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
 .video {
     position: relative;
     width: 710px;
@@ -5639,16 +5706,22 @@ input::-ms-clear {
     font-family: "object-fit:cover", "object-fit: 'cover';";
     border: none;
 }
-/*.video__button {*/
-/*position: absolute;*/
-/*top: 50%;*/
-/*left: 50%;*/
-/*transform: translate(-50%, -50%);*/
-/*width: 68px;*/
-/*height: 48px;*/
-/*background-color: #fff;*/
-/*border: none;*/
-/*}*/
+.video__link {
+    display: block;
+}
+.video__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background: url("../images/icons/play.png") no-repeat 50% 50%;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
 /*Main styles*/
 @media (max-width: 650px) {
   .hidden-mobile {
