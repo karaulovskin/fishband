@@ -3522,16 +3522,17 @@ input::-ms-clear {
     display: flex;
     align-aitems: center;
     color: #95a5a6;
+    cursor: pointer;
 }
 .liked svg {
   width: 18px;
   height: 18px;
   fill: #95a5a6;
 }
-.liked.is-active {
+.liked:hover, .liked.is-active {
   color: #e07c1a;
 }
-.liked.is-active svg {
+.liked:hover svg, .liked.is-active svg {
   fill: #e07c1a;
 }
 .liked__value {

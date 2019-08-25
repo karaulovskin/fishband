@@ -1,0 +1,525 @@
+<% locals.setLayout('base.ejs') %>
+<% locals.block('title', 'Новости Комментарий') %>
+
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-left">
+                <div class="logo">
+                    <a href="/" class="logo__link">
+                        <div class="logo__img-over">
+                            <img src="./images/logo/logo.png" alt="" class="logo__img">
+                        </div>
+                    </a>
+                    <div class="logo__text">Широта рыболовных горизонтов</div>
+                </div>
+            </div>
+            <div class="header__top-right">
+                <div class="header__search">
+                    <div class="search">
+                        <input type="text" class="search__input" placeholder="Поиск по сайту">
+                        <input type="submit" class="search__submit">
+                    </div>
+                </div>
+                <div class="header__btn">
+                    <a href="#popupCome" class="btn btn--login popup_modal">Авторизация на сайте</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="menu">
+            <div class="container">
+                <div class="burger" data-burger>
+                    <span></span>
+                </div>
+                <nav class="menu__list">
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">О проекте</a>
+                    </div>
+                    <div class="menu__item current">
+                        <a href="#" class="menu__link">Новости</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">Болталка</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">Есть тема</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">Наши байки</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">Рыболовные горизонты</a>
+                    </div>
+                    <div class="menu__item">
+                        <a href="#" class="menu__link">Магазин</a>
+                        <div class="menu-sub">
+                            <div class="menu-sub__list">
+                                <div class="menu-sub__item current">
+                                    <a href="#" class="menu-sub__link">Каталог</a>
+                                </div>
+                                <div class="menu-sub__item">
+                                    <a href="#" class="menu-sub__link">Условия оформления заказа</a>
+                                </div>
+                                <div class="menu-sub__item">
+                                    <a href="#" class="menu-sub__link">Оплата</a>
+                                </div>
+                                <div class="menu-sub__item">
+                                    <a href="#" class="menu-sub__link">Отгрузка</a>
+                                </div>
+                                <div class="menu-sub__item">
+                                    <a href="#" class="menu-sub__link">Страховка груза</a>
+                                </div>
+                                <div class="menu-sub__item">
+                                    <a href="#" class="menu-sub__link">Контакты</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header__bottom-right">
+                    <div class="basket">
+                        <img src="./images/icons/basket.png" alt="" class="basket__icons">
+                        <span>10</span>
+                    </div>
+                    <div class="add-fast">
+                        <a href="#" class="add-fast__link">Добавить пост</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-head">
+            <div class="container">
+                <div class="page-head__nav">
+                    <a href="#" class="link-back"><span>Вернуться в раздел</span></a>
+                    <div class="page-head__row">
+                        <h1 class="title">Комментарий к новости Важное объявление</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__profile-bottom">
+        <div class="container">
+            <div class="tales-item__footer">
+                <div class="tales-item__col">
+                    <div class="profile-small">
+                        <div class="profile-small__img-over">
+                            <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                        </div>
+                        <div class="profile-small__desc">
+                            <div class="profile-small__name">Петрович</div>
+                            <div class="profile-small__status">Бывалый</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tales-item__col">
+                    <div class="tag">
+                        <div class="tag__icon">
+                            <svg class="i-icon">
+                                <use xlink:href="#icon-tag"></use>
+                            </svg>
+                        </div>
+                        <div class="tag__list">
+                            <div class="tag__item">
+                                <a href="#" class="tag__link">Снасти</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="#" class="tag__link">Рыбалка</a>
+                            </div>
+                            <div class="tag__item">
+                                <a href="#" class="tag__link">Путешествия</a>
+                            </div>
+                        </div>
+                        <button class="tag__toggle">...</button>
+                    </div>
+                </div>
+                <div class="tales-item__col">
+                    <div class="activity">
+                        <div class="activity__item activity__item--comment">
+                            <a href="#" class="activity__link">
+                                <div class="activity__icon">
+                                    <svg class="i-icon">
+                                        <use xlink:href="#icon-comment"></use>
+                                    </svg>
+                                </div>
+                                <div class="activity__value">17</div>
+                            </a>
+                        </div>
+                        <div class="activity__item activity__item--liked">
+                            <a href="#" class="activity__link">
+                                <div class="activity__icon">
+                                    <svg class="i-icon">
+                                        <use xlink:href="#icon-liked"></use>
+                                    </svg>
+                                </div>
+                                <div class="activity__value">23</div>
+                            </a>
+                        </div>
+                        <div class="activity__item activity__item--views">
+                            <a href="#" class="activity__link">
+                                <div class="activity__icon">
+                                    <svg class="i-icon">
+                                        <use xlink:href="#icon-views"></use>
+                                    </svg>
+                                </div>
+                                <div class="activity__value">1 237</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="container">
+        <div class="comments">
+            <div class="comments__head">
+                <div class="comments__col">
+                    <div class="comments__value">23 комментария</div>
+                </div>
+                <div class="comments__col">
+                    <div class="comments-filter">
+                        <div class="comments-filter__item is-active">
+                            <a href="#" class="comments-filter__link">Новое</a>
+                        </div>
+                        <div class="comments-filter__item">
+                            <a href="#" class="comments-filter__link">Популярное</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-add">
+                <div class="comments-add__block">
+                    <button class="btn-orange" data-comments-add-btn>Написать комментарий</button>
+                    <div class="comments-add__note" data-comments-add-note>
+                        <form action="" class="comments-add__form">
+                            <textarea name="" id="" cols="30" rows="10" class="comments-add__textarea" placeholder="Написать комментарий..."></textarea>
+                            <div class="comments-add__btns">
+                                <div class="comments-add__btns-left">
+                                    <div class="interactive">
+                                        <div class="interactive__item">
+                                            <div class="interactive__link" aria-label="Загрузить изображение">
+                                                <input type="file" class="interactive__input">
+                                                <svg class="i-icon">
+                                                    <use xlink:href="#icon-pic"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="interactive__item">
+                                            <a href="#popupAddVideo" class="interactive__link popup_modal" aria-label="Загрузить видео">
+                                                <svg class="i-icon">
+                                                    <use xlink:href="#icon-video"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comments-add__btns-right">
+                                    <input type="submit" class="comments-add__submit btn-orange" value="Отправить" data-comments-add-submit>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="comments__list">
+                <div class="comments__item">
+                    <div class="comments-item">
+                        <div class="comments-item__head">
+                            <div class="profile-small">
+                                <div class="profile-small__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                                </div>
+                                <div class="profile-small__desc">
+                                    <div class="profile-small__name">Петрович</div>
+                                    <div class="profile-small__status">Бывалый</div>
+                                </div>
+                            </div>
+                            <div class="liked">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-liked"></use>
+                                </svg>
+                                <div class="liked__value">23</div>
+                            </div>
+                        </div>
+                        <div class="comments-item__body">
+                            <p>
+                                Нормально прокатились, хотя и под отпуск подгоняли даты. КУ не место для ловли трофейного судака, но зато мне не известно мест, где такая ценная в пищевом отношении рыба, как берш ловится так стабильно и в количестве. Единственная рыба, от которой моя жена не отказывается - это берш. А вообще-то конечно не за рыбой ездим. Прикипел я как-то к тем местам. Может татарская кровь проявляется.Спецом для КУ припаял на багорик проволочку, которую отгибаешь и получается рогатинка.
+                            </p>
+                            <div class="comments-item__media">
+                                <div class="gallery-small">
+                                    <div class="gallery-small__item">
+                                        <a href="./images/bg/gallery.jpg" class="gallery-small__link" data-fancybox="gallery">
+                                            <img src="./images/bg/gallery.jpg" alt="" class="gallery-small__img">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-small__item">
+                                        <a href="./images/bg/gallery.jpg" class="gallery-small__link" data-fancybox="gallery">
+                                            <img src="./images/bg/gallery.jpg" alt="" class="gallery-small__img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="video-small" data-video>
+                                    <a class="video-small__link" href="https://www.youtube.com/watch?v=35AtEhG4_34">
+                                        <picture>
+                                            <source srcset="https://i.ytimg.com/vi_webp/35AtEhG4_34/maxresdefault.webp" type="image/webp">
+                                            <img class="video-small__media" src="https://i.ytimg.com/vi/35AtEhG4_34/maxresdefault.jpg" alt="">
+                                        </picture>
+                                        <iframe class="video-small__embed" src="" frameborder="0"></iframe>
+                                    </a>
+                                    <button class="video-small__button" aria-label="Запустить видео"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments-item__footer">
+                            <div class="comments-item__col">
+                                <div class="comments-item__date">4 ноября 2018 20:59</div>
+                                <a href="#" class="link-orange">Ответить</a>
+                            </div>
+                            <div class="comments-item__col">
+                                <a href="#" class="link-orange">Нравиться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-item">
+                        <div class="comments-item__head">
+                            <div class="profile-small">
+                                <div class="profile-small__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                                </div>
+                                <div class="profile-small__desc">
+                                    <div class="profile-small__name">Петрович</div>
+                                    <div class="profile-small__status">Бывалый</div>
+                                </div>
+                            </div>
+                            <div class="liked">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-liked"></use>
+                                </svg>
+                                <div class="liked__value">23</div>
+                            </div>
+                        </div>
+                        <div class="comments-item__body">
+                            <p>
+                                <span>Петрович:</span>
+                                Нормально прокатились, хотя и под отпуск подгоняли даты. КУ не место для ловли трофейного судака, но зато мне не известно мест, где такая ценная в пищевом отношении рыба, как берш ловится так стабильно и в количестве. Единственная рыба, от которой моя жена не отказывается - это берш. А вообще-то конечно не за рыбой ездим. Прикипел я как-то к тем местам. Может татарская кровь проявляется.Спецом для КУ припаял на багорик проволочку, которую отгибаешь и получается рогатинка.
+                            </p>
+                            <div class="comments-item__media">
+
+                            </div>
+                        </div>
+                        <div class="comments-item__footer">
+                            <div class="comments-item__col">
+                                <div class="comments-item__date">4 ноября 2018 20:59</div>
+                                <a href="#" class="link-orange">Ответить</a>
+                            </div>
+                            <div class="comments-item__col">
+                                <a href="#" class="link-orange">Нравиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments__item">
+                    <div class="comments-item">
+                        <div class="comments-item__head">
+                            <div class="profile-small">
+                                <div class="profile-small__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                                </div>
+                                <div class="profile-small__desc">
+                                    <div class="profile-small__name">Петрович</div>
+                                    <div class="profile-small__status">Бывалый</div>
+                                </div>
+                            </div>
+                            <div class="liked is-active">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-liked"></use>
+                                </svg>
+                                <div class="liked__value">23</div>
+                            </div>
+                        </div>
+                        <div class="comments-item__body">
+                            <p>
+                                Нормально прокатились, хотя и под отпуск подгоняли даты. КУ не место для ловли трофейного судака, но зато мне не известно мест, где такая ценная в пищевом отношении рыба, как берш ловится так стабильно и в количестве. Единственная рыба, от которой моя жена не отказывается - это берш. А вообще-то конечно не за рыбой ездим. Прикипел я как-то к тем местам. Может татарская кровь проявляется.Спецом для КУ припаял на багорик проволочку, которую отгибаешь и получается рогатинка.
+                            </p>
+                            <div class="comments-item__media">
+
+                            </div>
+                        </div>
+                        <div class="comments-item__footer">
+                            <div class="comments-item__col">
+                                <div class="comments-item__date">4 ноября 2018 20:59</div>
+                                <a href="#" class="link-orange">Ответить</a>
+                            </div>
+                            <div class="comments-item__col">
+                                <a href="#" class="link-orange">Нравиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments__item comments__item--banner">
+                    <div class="banner">
+                        <div class="banner__img-over">
+                            <img src="./images/bg/banner.png" alt="" class="banner__img">
+                        </div>
+                        <div class="banner-menu">
+                            <div class="banner-menu__item">
+                                <a href="#" class="banner-menu__link">
+                                    <div class="banner-menu__icon-over">
+                                        <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                    </div>
+                                    <div class="banner-menu__title">
+                                        <span>Горячая тема</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-menu__item">
+                                <a href="#" class="banner-menu__link">
+                                    <div class="banner-menu__icon-over">
+                                        <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                    </div>
+                                    <div class="banner-menu__title">
+                                        <span>Top Fishband Shop</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-menu__item">
+                                <a href="#" class="banner-menu__link">
+                                    <div class="banner-menu__icon-over">
+                                        <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                    </div>
+                                    <div class="banner-menu__title">
+                                        <span>Точка на карте</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-menu__item">
+                                <a href="#" class="banner-menu__link">
+                                    <div class="banner-menu__icon-over">
+                                        <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                    </div>
+                                    <div class="banner-menu__title">
+                                        <span>Хит рыбацких баек</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="banner-menu__item">
+                                <a href="#" class="banner-menu__link">
+                                    <div class="banner-menu__icon-over">
+                                        <img src="./images/icons/menu_1.png" alt="" class="banner-menu__icon">
+                                    </div>
+                                    <div class="banner-menu__title">
+                                        <span>Подарок рыбаку</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments__item">
+                    <div class="comments-item">
+                        <div class="comments-item__head">
+                            <div class="profile-small">
+                                <div class="profile-small__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                                </div>
+                                <div class="profile-small__desc">
+                                    <div class="profile-small__name">Петрович</div>
+                                    <div class="profile-small__status">Бывалый</div>
+                                </div>
+                            </div>
+                            <div class="liked">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-liked"></use>
+                                </svg>
+                                <div class="liked__value">23</div>
+                            </div>
+                        </div>
+                        <div class="comments-item__body">
+                            <p>
+                                Нормально прокатились, хотя и под отпуск подгоняли даты. КУ не место для ловли трофейного судака, но зато мне не известно мест, где такая ценная в пищевом отношении рыба, как берш ловится так стабильно и в количестве. Единственная рыба, от которой моя жена не отказывается - это берш. А вообще-то конечно не за рыбой ездим. Прикипел я как-то к тем местам. Может татарская кровь проявляется.Спецом для КУ припаял на багорик проволочку, которую отгибаешь и получается рогатинка.
+                            </p>
+                            <div class="comments-item__media">
+                                <div class="gallery-small">
+                                    <div class="gallery-small__item">
+                                        <a href="./images/bg/gallery.jpg" class="gallery-small__link" data-fancybox="gallery">
+                                            <img src="./images/bg/gallery.jpg" alt="" class="gallery-small__img">
+                                        </a>
+                                    </div>
+                                    <div class="gallery-small__item">
+                                        <a href="./images/bg/gallery.jpg" class="gallery-small__link" data-fancybox="gallery">
+                                            <img src="./images/bg/gallery.jpg" alt="" class="gallery-small__img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="video-small" data-video>
+                                    <a class="video-small__link" href="https://www.youtube.com/watch?v=35AtEhG4_34">
+                                        <picture>
+                                            <source srcset="https://i.ytimg.com/vi_webp/35AtEhG4_34/maxresdefault.webp" type="image/webp">
+                                            <img class="video-small__media" src="https://i.ytimg.com/vi/35AtEhG4_34/maxresdefault.jpg" alt="">
+                                        </picture>
+                                        <iframe class="video-small__embed" src="" frameborder="0"></iframe>
+                                    </a>
+                                    <button class="video-small__button" aria-label="Запустить видео"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comments-item__footer">
+                            <div class="comments-item__col">
+                                <div class="comments-item__date">4 ноября 2018 20:59</div>
+                                <a href="#" class="link-orange">Ответить</a>
+                            </div>
+                            <div class="comments-item__col">
+                                <a href="#" class="link-orange">Нравиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments__item">
+                    <div class="comments-item">
+                        <div class="comments-item__head">
+                            <div class="profile-small">
+                                <div class="profile-small__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile-small__img">
+                                </div>
+                                <div class="profile-small__desc">
+                                    <div class="profile-small__name">Петрович</div>
+                                    <div class="profile-small__status">Бывалый</div>
+                                </div>
+                            </div>
+                            <div class="liked is-active">
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-liked"></use>
+                                </svg>
+                                <div class="liked__value">23</div>
+                            </div>
+                        </div>
+                        <div class="comments-item__body">
+                            <p>
+                                Нормально прокатились, хотя и под отпуск подгоняли даты. КУ не место для ловли трофейного судака, но зато мне не известно мест, где такая ценная в пищевом отношении рыба, как берш ловится так стабильно и в количестве. Единственная рыба, от которой моя жена не отказывается - это берш. А вообще-то конечно не за рыбой ездим. Прикипел я как-то к тем местам. Может татарская кровь проявляется.Спецом для КУ припаял на багорик проволочку, которую отгибаешь и получается рогатинка.
+                            </p>
+                            <div class="comments-item__media">
+
+                            </div>
+                        </div>
+                        <div class="comments-item__footer">
+                            <div class="comments-item__col">
+                                <div class="comments-item__date">4 ноября 2018 20:59</div>
+                                <a href="#" class="link-orange">Ответить</a>
+                            </div>
+                            <div class="comments-item__col">
+                                <a href="#" class="link-orange">Нравиться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments__btns">
+                <a href="#" class="btn-orange">Показать еще</a>
+            </div>
+        </div>
+    </div>
+</div>

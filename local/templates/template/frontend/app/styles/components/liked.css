@@ -2,6 +2,7 @@
     display: flex;
     align-aitems: center;
     color: var(--c-border);
+    cursor: pointer;
 
     svg {
         width: 18px;
@@ -9,6 +10,7 @@
         fill: var(--c-border);
     }
 
+    &:hover,
     &.is-active {
         color: var(--c-orange);
         svg {
