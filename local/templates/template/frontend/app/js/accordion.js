@@ -18,8 +18,6 @@ export default class Accordion {
         let $content = $item.find(self.content);
         let $otherContent = $container.find(self.content);
 
-        console.log($item);
-
         if (!$item.hasClass('is_open')) {
             $items.removeClass('is_open');
             $item.addClass('is_open');

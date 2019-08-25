@@ -4654,7 +4654,8 @@ input::-ms-clear {
     font-size: 15px;
 }
 .profile__edit {
-    margin-top: 25px;
+    display: none;
+    overflow: hidden;
 }
 .profile__row {
     padding: 22px 0 10px;

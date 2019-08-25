@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Поиск</title>
+    <title>Профиль</title>
     <link href="./css/app.css?1566709438000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -42,8 +42,34 @@
                                 <input type="submit" class="search__submit">
                             </div>
                         </div>
-                        <div class="header__btn">
-                            <a href="#popupCome" class="btn btn--login popup_modal">Авторизация на сайте</a>
+                        <div class="header__profile">
+                            <div class="profile-top" data-profile-top>
+                                <a href="#" class="profile-top__link" data-profile-top-link>
+                                    <div class="profile-top__img-over">
+                                        <img src="./images/bg/profile.jpg" alt="" class="profile-top__img">
+                                    </div>
+                                    <div class="profile-top__name">Петрович</div>
+                                </a>
+                                <div class="profile-top-menu" data-profile-top-menu>
+                                    <div class="profile-top-menu__list">
+                                        <div class="profile-top-menu__item current">
+                                            <a href="#" class="profile-top-menu__link">
+                                        <span>Профиль</span>
+                                    </a>
+                                        </div>
+                                        <div class="profile-top-menu__item">
+                                            <a href="#" class="profile-top-menu__link">
+                                        <span>Настройки</span>
+                                    </a>
+                                        </div>
+                                        <div class="profile-top-menu__item">
+                                            <a href="#" class="profile-top-menu__link">
+                                        <span>Выход</span>
+                                    </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -113,20 +139,92 @@
                 </div>
                 <div class="page-head">
                     <div class="container">
-                        <div class="page-head__nav">
-                            <div class="page-head__row">
-                                <h1 class="title">Поиск по сайту</h1>
-                            </div>
-                            <div class="page-head-search">
-                                <div class="page-head-search__row">
-                                    <div class="page-head-search__label">Поиск по сайту:</div>
-                                    <div class="search">
-                                        <input type="text" class="search__input" placeholder="Поиск по сайту">
-                                    </div>
-                                    <input type="submit" class="page-head-search__submit btn-orange" value="Поиск">
+                        <div class="profile" data-profile>
+                            <div class="profile__left">
+                                <div class="profile__img-over">
+                                    <img src="./images/bg/profile.jpg" alt="" class="profile__img">
                                 </div>
-                                <div class="page-head-search__answer">
-                                    <div class="page-head-search__label">По запросу «<span>рыбалка</span>» найдено:</div>
+                                <div class="profile__desc">
+                                    <div class="profile__name">Петрович</div>
+                                    <div class="profile__status">Бывалый</div>
+                                    <div class="profile__reg">Зарегистрировался 20 марта 2018</div>
+                                    <div class="profile__edit" data-profile-edit>
+                                        <form action="" class="profile__form">
+                                            <div class="profile__row">
+                                                <div class="profile__title">Основная информация</div>
+                                                <label class="profile__label">
+                                            <span class="profile__label-title">E-mail:</span>
+                                            <span class="profile__input">
+                                                <input type="text" class="input">
+                                            </span>
+                                        </label>
+                                            </div>
+                                            <div class="profile__row">
+                                                <div class="profile__title">Связанные аккаунты</div>
+                                                <label class="profile__label">
+                                            <span class="profile__label-title">Вконтакте:</span>
+                                            <span class="profile__input">
+                                                <input type="text" class="input">
+                                            </span>
+                                        </label>
+                                                <label class="profile__label">
+                                            <span class="profile__label-title">Facebook:</span>
+                                            <span class="profile__input">
+                                                <input type="text" class="input">
+                                            </span>
+                                        </label>
+                                                <label class="profile__label">
+                                            <span class="profile__label-title">Однокласники:</span>
+                                            <span class="profile__input">
+                                                <input type="text" class="input">
+                                            </span>
+                                        </label>
+                                                <label class="profile__label">
+                                            <span class="profile__label-title">Twitter:</span>
+                                            <span class="profile__input">
+                                                <input type="text" class="input">
+                                            </span>
+                                        </label>
+                                            </div>
+                                            <div class="profile__row">
+                                                <input type="submit" class="btn-orange" value="Сохранить изменения">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="socials">
+                                        <div class="socials-list">
+                                            <div class="socials-list__item">
+                                                <a href="#" class="socials-list__link">
+                                            <img src="./images/icons/vk.png" alt="" class="socials-list__img">
+                                        </a>
+                                            </div>
+                                            <div class="socials-list__item">
+                                                <a href="#" class="socials-list__link">
+                                            <img src="./images/icons/fb.png" alt="" class="socials-list__img">
+                                        </a>
+                                            </div>
+                                            <div class="socials-list__item">
+                                                <a href="#" class="socials-list__link">
+                                            <img src="./images/icons/od.png" alt="" class="socials-list__img">
+                                        </a>
+                                            </div>
+                                            <div class="socials-list__item">
+                                                <a href="#" class="socials-list__link">
+                                            <img src="./images/icons/tw.png" alt="" class="socials-list__img">
+                                        </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile__right">
+                                <div class="profile__btns">
+                                    <a href="#" class="btn-gray btn--settings" data-profile-edit-active>
+                                <svg class="i-icon">
+                                    <use xlink:href="#icon-edit"></use>
+                                </svg>
+                                <span>Настройки</span>
+                            </a>
                                 </div>
                             </div>
                         </div>
@@ -142,12 +240,6 @@
                             </div>
                             <div class="comments-filter__item">
                                 <a href="#" class="comments-filter__link"><span>24</span>Темы</a>
-                            </div>
-                            <div class="comments-filter__item">
-                                <a href="#" class="comments-filter__link"><span>10</span>Фотографии</a>
-                            </div>
-                            <div class="comments-filter__item">
-                                <a href="#" class="comments-filter__link"><span>5</span>Видео</a>
                             </div>
                         </div>
                     </div>
@@ -708,7 +800,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1566710522000" type="text/javascript"></script>
+    <script src="./js/main.js?1566710489000" type="text/javascript"></script>
 </body>
 
 </html>
