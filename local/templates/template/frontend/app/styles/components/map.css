@@ -51,3 +51,13 @@
 .map-view {
     height: 380px;
 }
+
+.ymaps-2-1-74-balloon__layout {
+    border-radius: 5px;
+}
+.ymaps-2-1-74-balloon__content {
+    padding: 20px 25px;
+}
+.ymaps-2-1-74-balloon__close + .ymaps-2-1-74-balloon__content {
+    padding-right: 10px;
+}

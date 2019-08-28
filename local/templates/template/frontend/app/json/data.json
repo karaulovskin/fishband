@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}, "properties": {"type": "Наши люди", "balloonContentHeader": "<div>Наши люди</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [56.763338, 38.565466]}, "properties": {"type": "Наши люди", "balloonContentHeader": "<div>Наши люди</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [55.755538, 39.565466]}, "properties": {"type": "Точка на карте", "balloonContentHeader": "<div>Точка на карте</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [56.744992, 38.616378]}, "properties": {"type": "Точка на карте", "balloonContentHeader": "<div>Точка на карте</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 4, "geometry": {"type": "Point", "coordinates": [53.780898, 40.642889]}, "properties": {"type": "Есть тема", "balloonContentHeader": "<div>Есть тема</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 5, "geometry": {"type": "Point", "coordinates": [53.663559, 40.435983]}, "properties": {"type": "Есть тема", "balloonContentHeader": "<div>Есть тема</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 6, "geometry": {"type": "Point", "coordinates": [52.880584, 62.675638]}, "properties": {"type": "Фото", "balloonContentHeader": "<div>Фото</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 7, "geometry": {"type": "Point", "coordinates": [62.716733, 65.589988]}, "properties": {"type": "Фото", "balloonContentHeader": "<div>Фото</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 8, "geometry": {"type": "Point", "coordinates": [55.775724, 60.56084]}, "properties": {"type": "Наши байки", "balloonContentHeader": "<div>Наши байки</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 9, "geometry": {"type": "Point", "coordinates": [56.822144, 64.433781]}, "properties": {"type": "Наши байки", "balloonContentHeader": "<div>Наши байки</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 10, "geometry": {"type": "Point", "coordinates": [56.87417, 60.669838]}, "properties": {"type": "Магазин", "balloonContentHeader": "<div>Магазин</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}},
+    {"type": "Feature", "id": 11, "geometry": {"type": "Point", "coordinates": [55.871539, 62.630223]}, "properties": {"type": "Магазин", "balloonContentHeader": "<div>Магазин</div>", "balloonContentBody": "<div><a href='#'>Показать</a></div>", "hintContent": "<strong>Текст</strong>"}}
+  ]
+}
