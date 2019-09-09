@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Наши байки комментарии</title>
-    <link href="./css/app.css?1566928675000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1568016197000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -835,6 +835,58 @@
                 </div>
             </div>
         </div>
+
+        <div id="popupOrder" class="popup">
+            <div class="popup__content">
+                <div class="popup__head">
+                    <div class="popup__title">Заказать услугу</div>
+                    <div class="popup__desc">Для заказа услуги заполните форму ниже.</div>
+                </div>
+                <div class="popup__body">
+                    <form action="" class="popup__form" data-form>
+                        <div class="popup__row">
+                            <label class="popup__label">
+                        <div class="popup__label-title">ФИО*</div>
+                        <input type="text" class="input" placeholder="Ваш логин" data-input-required>
+                    </label>
+                        </div>
+                        <div class="popup__row">
+                            <label class="popup__label">
+                        <div class="popup__label-title">Телефон*</div>
+                        <input type="phone" class="input inputmask" placeholder="Ваш логин" data-input-required>
+                    </label>
+                        </div>
+                        <div class="popup__row">
+                            <label class="popup__label">
+                        <div class="popup__label-title">E-mail*</div>
+                        <input type="email" class="input" placeholder="example@mail.ru" data-input-required>
+                    </label>
+                        </div>
+                        <div class="popup__row">
+                            <label class="popup__label">
+                        <div class="popup__label-title">Комментарий к заказу</div>
+                        <textarea type="text" class="textarea" placeholder="Ваш комментарий"></textarea>
+                    </label>
+                        </div>
+                        <div class="popup__row">
+                            <div class="checkbox">
+                                <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
+                            <div class="checkbox__fake"></div>
+                            <div class="checkbox__text">
+                                <span>Я согласен на</span>
+                                <a href="#">обработку персональных данных</a>
+                            </div>
+                        </label>
+                            </div>
+                        </div>
+                        <div class="popup__btn">
+                            <input type="submit" class="submit" value="Зарегистрироваться">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="mobile-menu" data-mobile-menu>
             <button class="mobile-menu__close" data-mobile-menu-close></button>
             <nav class="mobile-menu__list">
@@ -872,7 +924,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1566932161000" type="text/javascript"></script>
+    <script src="./js/main.js?1568014687000" type="text/javascript"></script>
 </body>
 
 </html>

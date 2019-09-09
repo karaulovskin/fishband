@@ -255,6 +255,14 @@ input::-ms-clear {
     visibility: hidden;
 }
 
+.checkbox__input.invalid + .checkbox__fake {
+    border-color: red;
+}
+
+.checkbox__input:checked + .checkbox__fake::after {
+    display: block;
+}
+
 .checkbox__fake {
     position: relative;
     width: 18px;
@@ -266,6 +274,7 @@ input::-ms-clear {
 
     &:after {
         content: '';
+        display: none;
         position: absolute;
         top: 2px;
         left: 5px;
