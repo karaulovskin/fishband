@@ -7,6 +7,10 @@
 
 .grid__col {
     padding: 0 15px;
+
+    .xlike {
+        display: inline-block;
+    }
 }
 
 .grid__col--flex-end {

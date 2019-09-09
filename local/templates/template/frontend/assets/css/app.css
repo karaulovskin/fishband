@@ -911,6 +911,9 @@ body.compensate-for-scrollbar{overflow:hidden}
 .grid__col {
     padding: 0 15px;
 }
+.grid__col .xlike {
+  display: inline-block;
+}
 .grid__col--flex-end {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2123,13 +2126,33 @@ input::-ms-clear {
     -o-transition: .2s;
     transition: .2s;
 }
+.btn--login svg {
+  display: none;
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
 .btn--login:hover {
   color: #e07c1a;
   background-color: #fff;
 }
+.btn--login:hover svg {
+  fill: #e07c1a;
+}
 @media (max-width: 650px) {
   .btn--login {
     font-size: 13px
+  }
+}
+@media (max-width: 600px) {
+  .btn--login {
+    padding: 10px 11px 10px
+  }
+  .btn--login svg {
+    display: block;
+  }
+  .btn--login span {
+    display: none;
   }
 }
 .btn-buy {
@@ -3026,6 +3049,9 @@ input::-ms-clear {
     background-color: #f9f9f9;
     border-top: 1px solid #ccc;
 }
+.comments__item:before {
+  content: none!important;
+}
 .comments__item:first-child {
   border-color: transparent;
 }
@@ -3435,6 +3461,12 @@ input::-ms-clear {
     width: 242px;
     min-width: 242px;
     margin-top: 14px;
+}
+@media (max-width: 600px) {
+  .header__btn {
+    width: auto;
+    min-width: auto
+  }
 }
 .header__bottom {
     border-bottom: 2px solid #e07c1a;

@@ -20,6 +20,10 @@
     background-color: var(--c-bg-grey);
     border-top: 1px solid #ccc;
 
+    &:before {
+        content: none!important;
+    }
+
     &:first-child {
         border-color: transparent;
     }

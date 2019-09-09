@@ -78,13 +78,33 @@
     border-radius: 5px;
     transition: .2s;
 
+    svg {
+        display: none;
+        width: 22px;
+        height: 22px;
+        fill: #fff;
+    }
+
     &:hover {
         color: var(--c-orange);
         background-color: #fff;
+
+        svg {
+            fill: var(--c-orange);
+        }
     }
 
     @media (--mobile) {
         font-size: 13px;
+    }
+    @media (--mobile-min) {
+        padding: 10px 11px 10px;
+        svg {
+            display: block;
+        }
+        span {
+            display: none;
+        }
     }
 }
 .btn-buy {
