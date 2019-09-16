@@ -4779,7 +4779,9 @@ input::-ms-clear {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column
+    flex-direction: column;
+    width: 100%;
+    left: 100%
   }
 }
 @media (max-width: 600px) {

@@ -12,6 +12,8 @@
     flex-grow: 1;
     @media (--mobile-min) {
         flex-direction: column;
+        width: 100%;
+        left: 100%;
     }
 }
 .profile__right {
