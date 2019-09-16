@@ -20,6 +20,7 @@ import DownloadFile from'./js/download-file'
 import Edit from'./js/edit'
 import Increment from'./js/increment'
 import Maps from'./js/maps'
+import MapPost from'./js/map-post'
 import MobileMenu from'./js/mobile-menu'
 import Modals from'./js/modals'
 import Profile from'./js/profile'
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Edit = new Edit();
     App.Increment = new Increment();
     App.Maps = new Maps();
+    App.MapPost = new MapPost();
     App.MobileMenu = new MobileMenu();
     App.Modals = new Modals();
     App.Profile = new Profile();
@@ -71,8 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Tabs = new Tabs();
     App.Video = new Video();
 
-
-
     $('.inputmask').inputmask({mask: "+7 (999) 999-99-99", greedy: false});
-
 });
+

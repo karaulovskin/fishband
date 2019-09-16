@@ -200,4 +200,12 @@
             display: block;
         }
     }
+    @media (--mobile-min) {
+        span {
+            display: block;
+        }
+        svg {
+            display: none;
+        }
+    }
 }

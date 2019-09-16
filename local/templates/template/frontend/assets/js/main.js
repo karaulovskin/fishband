@@ -145,35 +145,39 @@ var _maps = __webpack_require__(24);
 
 var _maps2 = _interopRequireDefault(_maps);
 
-var _mobileMenu = __webpack_require__(25);
+var _mapPost = __webpack_require__(25);
+
+var _mapPost2 = _interopRequireDefault(_mapPost);
+
+var _mobileMenu = __webpack_require__(26);
 
 var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
 
-var _modals = __webpack_require__(26);
+var _modals = __webpack_require__(27);
 
 var _modals2 = _interopRequireDefault(_modals);
 
-var _profile = __webpack_require__(28);
+var _profile = __webpack_require__(29);
 
 var _profile2 = _interopRequireDefault(_profile);
 
-var _svgUse = __webpack_require__(29);
+var _svgUse = __webpack_require__(30);
 
 var _svgUse2 = _interopRequireDefault(_svgUse);
 
-var _sliders = __webpack_require__(30);
+var _sliders = __webpack_require__(31);
 
 var _sliders2 = _interopRequireDefault(_sliders);
 
-var _select = __webpack_require__(32);
+var _select = __webpack_require__(33);
 
 var _select2 = _interopRequireDefault(_select);
 
-var _tabs = __webpack_require__(33);
+var _tabs = __webpack_require__(34);
 
 var _tabs2 = _interopRequireDefault(_tabs);
 
-var _video = __webpack_require__(34);
+var _video = __webpack_require__(35);
 
 var _video2 = _interopRequireDefault(_video);
 
@@ -221,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Edit = new _edit2.default();
     App.Increment = new _increment2.default();
     App.Maps = new _maps2.default();
+    App.MapPost = new _mapPost2.default();
     App.MobileMenu = new _mobileMenu2.default();
     App.Modals = new _modals2.default();
     App.Profile = new _profile2.default();
@@ -12327,7 +12332,7 @@ var Maps = function () {
         _classCallCheck(this, Maps);
 
         this.mapView();
-        this.contactsMap();
+        this.mapContacts();
     }
 
     _createClass(Maps, [{
@@ -12396,8 +12401,8 @@ var Maps = function () {
             }
         }
     }, {
-        key: "contactsMap",
-        value: function contactsMap() {
+        key: "mapContacts",
+        value: function mapContacts() {
             if ($("#contactsMap").length) ymaps.ready(init);
 
             var myMap = void 0;
@@ -12461,14 +12466,109 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var MapPost = function () {
+    function MapPost() {
+        _classCallCheck(this, MapPost);
+
+        this.map = '[data-post-map]';
+        this.mapButtonOpen = '[data-post-map-open]';
+        this.mapButtonClose = '[data-post-map-close]';
+
+        this.mapInit();
+        this.bindEvents();
+    }
+
+    _createClass(MapPost, [{
+        key: 'mapOpen',
+        value: function mapOpen() {
+            if (!$(this.map).hasClass('is-open')) {
+                $(this.map).addClass('is-open');
+                $('.overlay').addClass('is-open');
+            }
+        }
+    }, {
+        key: 'mapClose',
+        value: function mapClose() {
+            if ($(this.map).hasClass('is-open')) {
+                $(this.map).removeClass('is-open');
+                $('.overlay').removeClass('is-open');
+            }
+        }
+    }, {
+        key: 'mapInit',
+        value: function mapInit() {
+            if ($("#mapPost").length) ymaps.ready(init);
+
+            var myMap = void 0;
+            var map = $("#mapPost").data("map");
+
+            function init() {
+                myMap = new ymaps.Map("mapPost", {
+                    center: map,
+                    zoom: 3,
+                    type: 'yandex#satellite'
+                });
+
+                // myMap.events.add('click', function (e) {
+                //     var coords = e.get('coords');
+                //     alert(coords.join(', '));
+                // });
+
+                myMap.events.add(['click', 'contextmenu'], function (e) {
+                    var eType = e.get('type');
+                    eType == 'click' ? alert('left button') : alert('right button');
+                });
+            }
+        }
+    }, {
+        key: 'bindEvents',
+        value: function bindEvents() {
+            var self = this;
+
+            $(document).on('click', this.mapButtonOpen, function (e) {
+                e.preventDefault();
+                self.mapOpen();
+            });
+            $(document).on('click', this.mapButtonClose, function (e) {
+                e.preventDefault();
+                self.mapClose();
+            });
+            $(document).on('click', '.overlay', function (e) {
+                e.preventDefault();
+                self.mapClose();
+            });
+        }
+    }]);
+
+    return MapPost;
+}();
+
+exports.default = MapPost;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var MobileMenu = function () {
+    // overlay = '[]'
+
     function MobileMenu() {
         _classCallCheck(this, MobileMenu);
 
         this.burger = '[data-burger]';
         this.menu = '[data-mobile-menu]';
         this.close = '[data-mobile-menu-close]';
-        this.overlay = '[]';
 
         this.bindEvents();
     }
@@ -12476,8 +12576,8 @@ var MobileMenu = function () {
     _createClass(MobileMenu, [{
         key: 'menuHandler',
         value: function menuHandler() {
-            console.log('this__ ' + $(this));
-            console.log('menu__ ' + $(this.menu));
+            // console.log('this__ ' + $(this));
+            // console.log('menu__ ' + $(this.menu));
             if (!$(this.menu).hasClass('is-open')) {
                 this.menuOpen();
             } else {
@@ -12513,7 +12613,7 @@ var MobileMenu = function () {
             });
             $(document).on('click', '.overlay', function (e) {
                 e.preventDefault();
-                self.menuHandler();
+                self.menuClose();
             });
         }
     }]);
@@ -12524,7 +12624,7 @@ var MobileMenu = function () {
 exports.default = MobileMenu;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12536,7 +12636,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _fancybox = __webpack_require__(27);
+var _fancybox = __webpack_require__(28);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
@@ -12589,7 +12689,7 @@ var Modals = function () {
 exports.default = Modals;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports) {
 
 // ==================================================
@@ -18226,7 +18326,7 @@ exports.default = Modals;
 })(document, jQuery);
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18286,7 +18386,7 @@ var Profile = function () {
             var self = this;
 
             $(document).on('click', this.profileTop, function (e) {
-                e.preventDefault();
+                // e.preventDefault();
                 self.profileTopActive();
             });
             $(document).on('click', this.profileEditButton, function (e) {
@@ -18305,7 +18405,7 @@ var Profile = function () {
 exports.default = Profile;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18395,7 +18495,7 @@ exports.default = SvgUse;
 ;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18408,7 +18508,7 @@ exports.Slider = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _swiper = __webpack_require__(31);
+var _swiper = __webpack_require__(32);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -18524,7 +18624,7 @@ var Slider = exports.Slider = function Slider(selector, options) {
 };
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25791,7 +25891,7 @@ return Swiper$1;
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25893,7 +25993,7 @@ var Select = function () {
 exports.default = Select;
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25949,7 +26049,7 @@ var Tabs = function () {
 exports.default = Tabs;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

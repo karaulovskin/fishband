@@ -2,9 +2,22 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @media (--mobile-min) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 .profile__left {
     display: flex;
+    flex-grow: 1;
+    @media (--mobile-min) {
+        flex-direction: column;
+    }
+}
+.profile__right {
+    @media (--mobile-min) {
+        padding-top: 20px;
+    }
 }
 .profile__img-over {
     width: 175px;
@@ -18,11 +31,26 @@
         min-width: 120px;
         height: 120px;
     }
+    @media (--mobile-min) {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+    }
 }
 .profile__desc {
     width: 572px;
     min-width: 572px;
     margin-left: 25px;
+
+    @media(--tablet-above) {
+        width: calc(100% - 145px);
+        min-width: calc(100% - 145px);
+    }
+    @media (--mobile-min) {
+        width: 100%;
+        min-width: 100%;
+        margin-left: 0;
+    }
 }
 .profile__name {
     margin-top: 10px;

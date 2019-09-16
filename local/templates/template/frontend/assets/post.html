@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Добавить пост</title>
-    <link href="./css/app.css?1568065289000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1568140514000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -13,7 +13,7 @@
 
 <body>
     <script>
-        var INLINE_SVG_REVISION = 1568064762000;
+        var INLINE_SVG_REVISION = 1568127320000;
     </script>
 
     <div class="flow-container">
@@ -284,7 +284,11 @@
                             <div class="post__row">
                                 <label class="post__label post__label--bg">
                             <div class="post__label-title">Укажите место:</div>
-                            <a href="#" class="post__label-link">Выбрать на карте</a>
+                            <a href="#" class="post__label-link" data-post-map-open>Выбрать на карте</a>
+                            <div class="post-map-over" data-post-map>
+                                <div id="mapPost" class="post-map" data-map="[55.740636537286,37.587128295898]"></div>
+                                <div class="post-map__close" data-post-map-close>x</div>
+                            </div>
                         </label>
                             </div>
                             <div class="post__row">
@@ -661,7 +665,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1568064763000" type="text/javascript"></script>
+    <script src="./js/main.js?1568137092000" type="text/javascript"></script>
 </body>
 
 </html>

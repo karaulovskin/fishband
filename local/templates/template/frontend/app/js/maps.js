@@ -2,7 +2,7 @@ export default class Maps {
 
     constructor() {
         this.mapView();
-        this.contactsMap();
+        this.mapContacts();
     }
 
     mapView() {
@@ -70,7 +70,7 @@ export default class Maps {
         }
     }
 
-    contactsMap() {
+    mapContacts() {
         if ($("#contactsMap").length)
             ymaps.ready(init);
 

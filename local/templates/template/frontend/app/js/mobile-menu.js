@@ -2,15 +2,15 @@ export default class MobileMenu {
     burger = '[data-burger]';
     menu = '[data-mobile-menu]';
     close = '[data-mobile-menu-close]';
-    overlay = '[]'
+    // overlay = '[]'
 
     constructor() {
         this.bindEvents();
     }
 
     menuHandler() {
-        console.log('this__ ' + $(this));
-        console.log('menu__ ' + $(this.menu));
+        // console.log('this__ ' + $(this));
+        // console.log('menu__ ' + $(this.menu));
         if (!$(this.menu).hasClass('is-open')) {
             this.menuOpen();
         } else {
@@ -43,7 +43,7 @@ export default class MobileMenu {
         });
         $(document).on('click', '.overlay', function(e) {
             e.preventDefault();
-            self.menuHandler();
+            self.menuClose();
         });
     }
 

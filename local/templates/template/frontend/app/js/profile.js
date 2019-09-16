@@ -37,7 +37,7 @@ export default class Profile {
         let self = this;
 
         $(document).on('click', this.profileTop, function(e) {
-            e.preventDefault();
+            // e.preventDefault();
             self.profileTopActive();
         });
         $(document).on('click', this.profileEditButton, function(e) {
