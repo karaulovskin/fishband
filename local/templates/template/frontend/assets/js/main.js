@@ -12385,7 +12385,7 @@ var Maps = function () {
                 });
 
                 $.ajax({
-                    url: "./json/data.json"
+                    url: "/assets/templates/fishband/assets/json/data.json"
                 }).done(function (data) {
                     objectManager.add(data);
                 });
@@ -12509,15 +12509,16 @@ var MapPost = function () {
                     type: 'yandex#satellite'
                 });
 
-                // myMap.events.add('click', function (e) {
-                //     var coords = e.get('coords');
-                //     alert(coords.join(', '));
-                // });
-
-                myMap.events.add(['click', 'contextmenu'], function (e) {
-                    var eType = e.get('type');
-                    eType == 'click' ? alert('left button') : alert('right button');
+                myMap.events.add('click', function (e) {
+                    var coords = e.get('coords');
+                    var coordsPoint = coords.join(', ');
+                    $('input[data-post-map-cords]').val(coordsPoint);
                 });
+
+                // myMap.events.add(['click', 'contextmenu'], function (e) {
+                //     var eType = e.get('type');
+                //     eType == 'click' ? alert('left button') : alert('right button');
+                // });
             }
         }
     }, {

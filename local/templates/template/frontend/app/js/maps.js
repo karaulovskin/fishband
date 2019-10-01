@@ -54,7 +54,7 @@ export default class Maps {
             });
 
             $.ajax({
-                url: "./json/data.json"
+                url: "/assets/templates/fishband/assets/json/data.json"
             }).done(function(data) {
                 objectManager.add(data);
             });
