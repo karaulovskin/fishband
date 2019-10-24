@@ -1,0 +1,17 @@
+.ya-share2__list {
+    margin: 0 -2px;
+}
+.ya-share2__item {
+    margin: 0!important;
+    padding: 0 2px!important;
+    border-radius: 5px;
+    overflow: hidden;
+    &:before {
+        content: none;
+    }
+}
+
+.ya-share2__container_size_m .ya-share2__icon {
+    width: 38px!important;
+    height: 38px!important;
+}

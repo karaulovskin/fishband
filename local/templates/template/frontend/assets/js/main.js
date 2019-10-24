@@ -12591,6 +12591,7 @@ var MobileMenu = function () {
             $(this.menu).addClass('is-open');
             $('.overlay').addClass('is-open');
             $(this.close).show();
+            $('html').addClass('overflow-hidden');
         }
     }, {
         key: 'menuClose',
@@ -12598,6 +12599,7 @@ var MobileMenu = function () {
             $(this.menu).removeClass('is-open');
             $('.overlay').removeClass('is-open');
             $(this.close).hide();
+            $('html').removeClass('overflow-hidden');
         }
     }, {
         key: 'bindEvents',

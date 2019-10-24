@@ -2350,7 +2350,7 @@ input::-ms-clear {
 }
 @media (max-width: 450px) {
   .callback__link {
-    width: 38px;
+    width: 112px;
     padding: 13px 0 9px
   }
   .callback__link span{
@@ -4025,6 +4025,11 @@ input::-ms-clear {
     display: block
   }
 }
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 260px
+  }
+}
 .mobile-menu__close {
     display: none;
     position: absolute;
@@ -4059,6 +4064,10 @@ input::-ms-clear {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+.mobile-menu__list {
+    height: 100%;
+    overflow-y: auto;
+}
 .mobile-menu__item {
     border-bottom: 1px solid #f0f0f0;
 }
@@ -4073,6 +4082,11 @@ input::-ms-clear {
 .mobile-menu__link:hover {
   color: #fff;
   background-color: #2c3e50;
+}
+@media (max-width: 480px) {
+  .mobile-menu__link {
+    padding: 20px 2rem
+  }
 }
 .content .offers {
     margin-bottom: 40px;
@@ -5860,6 +5874,22 @@ input::-ms-clear {
     background: url("../images/icons/play.png") no-repeat 50% 50%;
     border: 2px solid #fff;
     border-radius: 100%;
+}
+.ya-share2__list {
+    margin: 0 -2px;
+}
+.ya-share2__item {
+    margin: 0!important;
+    padding: 0 2px!important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.ya-share2__item:before {
+  content: none;
+}
+.ya-share2__container_size_m .ya-share2__icon {
+    width: 38px!important;
+    height: 38px!important;
 }
 /*Main styles*/
 @media (max-width: 650px) {

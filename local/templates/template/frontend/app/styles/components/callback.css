@@ -31,7 +31,7 @@
     }
 
     @media (--mobile-xxs) {
-        width: 38px;
+        width: 112px;
         padding: 13px 0 9px;
         span{
             display: none;

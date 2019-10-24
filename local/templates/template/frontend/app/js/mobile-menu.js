@@ -22,12 +22,14 @@ export default class MobileMenu {
         $(this.menu).addClass('is-open');
         $('.overlay').addClass('is-open');
         $(this.close).show();
+        $('html').addClass('overflow-hidden');
     }
 
     menuClose() {
         $(this.menu).removeClass('is-open');
         $('.overlay').removeClass('is-open');
         $(this.close).hide();
+        $('html').removeClass('overflow-hidden');
     }
 
     bindEvents() {
