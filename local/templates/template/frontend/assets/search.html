@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Поиск</title>
-    <link href="./css/app.css?1569959916000" type="text/css" rel="stylesheet" />
+    <link href="./css/app.css?1572192669000" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=61536017-f4a7-4aaf-a708-fa73ef88c02d&lang=ru_RU" type="text/javascript"></script>
@@ -13,7 +13,7 @@
 
 <body>
     <script>
-        var INLINE_SVG_REVISION = 1569959907000;
+        var INLINE_SVG_REVISION = 1572192665000;
     </script>
 
     <div class="flow-container">
@@ -629,6 +629,17 @@
                     </label>
                         </div>
                         <div class="popup__row">
+                            <label class="post__label post__label--bg">
+                        <div class="post__label-title">Укажите место:</div>
+                        <a href="#" class="post__label-link" data-post-map-open>Выбрать на карте</a>
+                        <div class="post-map-over" data-post-map>
+                            <input type="text" value="" hidden data-post-map-cords>
+                            <div id="mapPost" class="post-map" data-map="[55.740636537286,37.587128295898]"></div>
+                            <div class="post-map__close" data-post-map-close>x</div>
+                        </div>
+                    </label>
+                        </div>
+                        <div class="popup__row">
                             <div class="checkbox">
                                 <label class="checkbox__label">
                             <input type="checkbox" class="checkbox__input" data-input-required="checkbox">
@@ -770,7 +781,7 @@
         </div>
         <div class="overlay"></div>
     </div>
-    <script src="./js/main.js?1569960675000" type="text/javascript"></script>
+    <script src="./js/main.js?1572192665000" type="text/javascript"></script>
 </body>
 
 </html>
