@@ -12500,6 +12500,7 @@ var MapPost = function () {
             if ($("#mapPost").length) ymaps.ready(init);
 
             var myMap = void 0;
+            var myPlacemark = void 0;
             var map = $("#mapPost").data("map");
 
             function init() {
@@ -12513,6 +12514,11 @@ var MapPost = function () {
                     var coords = e.get('coords');
                     var coordsPoint = coords.join(', ');
                     $('input[data-post-map-cords]').val(coordsPoint);
+                    // alert(coordsPoint);
+                    myMap.balloon.open(coords, {
+                        contentHeader: 'Место выбрано!',
+                        contentBody: [coords[0].toPrecision(6), coords[1].toPrecision(6)].join(', ') + '</p>'
+                    });
                 });
 
                 // myMap.events.add(['click', 'contextmenu'], function (e) {
