@@ -49,6 +49,7 @@ export default class MapPost {
                         coords[1].toPrecision(6)
                     ].join(', ') + '</p>',
                 });
+                $('[data-post-map-open]').text('Точка выбрана');
             });
 
             // myMap.events.add(['click', 'contextmenu'], function (e) {

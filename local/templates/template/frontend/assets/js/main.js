@@ -12519,6 +12519,7 @@ var MapPost = function () {
                         contentHeader: 'Место выбрано!',
                         contentBody: [coords[0].toPrecision(6), coords[1].toPrecision(6)].join(', ') + '</p>'
                     });
+                    $('[data-post-map-open]').text('Точка выбрана');
                 });
 
                 // myMap.events.add(['click', 'contextmenu'], function (e) {
