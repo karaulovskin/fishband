@@ -63,6 +63,14 @@
         border-right: 5px solid transparent;
         border-bottom: 5px solid transparent;
     }
+    @media(--mobile-min) {
+        left: auto;
+        right: 0;
+        &:before {
+            right: 12px;
+            left: auto;
+        }
+    }
 }
 .profile-top-menu__list {
     border-radius: 5px;

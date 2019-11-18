@@ -4719,6 +4719,16 @@ input::-ms-clear {
   border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
+@media(max-width: 600px) {
+  .profile-top-menu {
+    left: auto;
+    right: 0
+  }
+  .profile-top-menu:before {
+    right: 12px;
+    left: auto;
+  }
+}
 .profile-top-menu__list {
     border-radius: 5px;
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
