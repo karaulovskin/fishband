@@ -58,6 +58,12 @@
 }
 .edit-dropdown__item {
     border-bottom: 1px solid #dae0e0;
+    &.active {
+        .edit-dropdown__link {
+            color: var(--c-bg-grey);
+            background-color: var(--c-black);
+        }
+    }
 
     &:last-child {
         border-color: transparent;

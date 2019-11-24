@@ -58,7 +58,6 @@
 .comments-add__note {
     position: relative;
     display: none;
-    height: 170px;
     padding-bottom: 95px;
     background-color: #fff;
     border: 1px solid var(--c-border);

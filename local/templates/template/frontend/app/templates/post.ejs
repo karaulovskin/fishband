@@ -224,7 +224,7 @@
                 </div>
             </div>
             <div class="post__body">
-                <form action="" class="post__form">
+                <form action="" class="post__form" data-form novalidate>
                     <input type="text" value="" hidden data-post-map-cords>
                     <div class="post__title">Заголовок</div>
                     <div class="post__row">
@@ -237,7 +237,14 @@
                     <div class="post__row">
                         <label class="post__label">
                             <div class="post__input">
-                                <input type="text" class="input" placeholder="Заголовок">
+                                <input type="text" class="input" placeholder="Заголовок" required data-input-required="text">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="post__row">
+                        <label class="post__label">
+                            <div class="post__input">
+                                <input type="text" class="input" placeholder="Наименование места" required data-input-required="text">
                             </div>
                         </label>
                     </div>
