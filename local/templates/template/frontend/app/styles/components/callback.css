@@ -24,14 +24,12 @@
     border: 2px solid var(--c-orange);
     border-radius: 5px;
     transition: .2s;
-
     &:hover {
          color: var(--c-orange);
          background-color: #fff;
     }
-
     @media (--mobile-xxs) {
-        width: 112px;
+        width: 40px;
         padding: 13px 0 9px;
         span{
             display: none;

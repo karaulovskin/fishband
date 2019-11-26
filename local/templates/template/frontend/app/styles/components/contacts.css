@@ -5,10 +5,18 @@
     background-color: var(--c-bg-grey);
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    @media(--tablet-below) {
+        flex-direction: column;
+        padding: 35px 50px 38px;
+    }
 }
 .contacts__col  {
     width: 50%;
     min-width: 50%;
+    @media(--tablet-below) {
+        width: 100%;
+        min-width: 100%;
+    }
 }
 .contacts-item {
     margin-bottom: 20px;

@@ -22,11 +22,11 @@ export default class Edit {
         let self = this;
 
         $(document).on('click', this.container, function(e) {
-            e.preventDefault();
+            // e.preventDefault();
             self.open($(this));
         });
         $(document).on('click', function(e) {
-            self.close(e.target);
+            // self.close(e.target);
         });
     }
 

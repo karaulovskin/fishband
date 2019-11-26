@@ -88,6 +88,11 @@
     @media (--mobile-xs) {
         margin-right: 10px;
     }
+    .callback__link {
+        @media (--mobile-xxs) {
+            width: 112px;
+        }
+    }
 }
 
 .footer__mail,

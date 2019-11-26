@@ -1051,11 +1051,27 @@ body {
 .bg-orange:after {
   left: 100%;
 }
+@media (max-width: 480px) {
+  .title {
+    margin-bottom: 10px;
+    padding-right: 40px
+  }
+}
 .title-desc {
     margin-left: 20px;
 }
+@media (max-width: 480px) {
+  .title-desc {
+    margin-left: 0
+  }
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'RobotoCondensed-Bold';
+}
+@media (max-width: 650px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2
+  }
 }
 h1 {
     margin: 0;
@@ -2360,7 +2376,7 @@ input::-ms-clear {
 }
 @media (max-width: 450px) {
   .callback__link {
-    width: 112px;
+    width: 40px;
     padding: 13px 0 9px
   }
   .callback__link span{
@@ -3170,9 +3186,25 @@ input::-ms-clear {
     -webkit-box-shadow: 0 10px 20px rgba(0,0,0,.1);
             box-shadow: 0 10px 20px rgba(0,0,0,.1);
 }
+@media(max-width: 1000px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 35px 50px 38px
+  }
+}
 .contacts__col  {
     width: 50%;
     min-width: 50%;
+}
+@media(max-width: 1000px) {
+  .contacts__col  {
+    width: 100%;
+    min-width: 100%
+  }
 }
 .contacts-item {
     margin-bottom: 20px;
@@ -3401,6 +3433,11 @@ input::-ms-clear {
 @media (max-width: 480px) {
   .footer__call {
     margin-right: 10px
+  }
+}
+@media (max-width: 450px) {
+  .footer__call .callback__link {
+    width: 112px
   }
 }
 @media (max-width: 800px) {
@@ -4308,7 +4345,7 @@ input::-ms-clear {
 /*margin-top: 24px;*/
 @media (max-width: 480px) {
   .page-head__row {
-    display: none
+    display: block
   }
 }
 .page-head__shop {
@@ -4603,13 +4640,43 @@ input::-ms-clear {
     padding: 0 15px;
     z-index: 1000;
 }
+@media(max-width: 650px) {
+  .post-map-over {
+    height: 80vh
+  }
+}
 .post-map-over.is-open {
   display: block;
 }
 .post-map__close {
     position: absolute;
-    top: -10px;
-    right: 0;
+    top: -25px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+}
+.post-map__close:before, .post-map__close:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+.post-map__close:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.post-map__close:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .post-map {
     width: 100%;

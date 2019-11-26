@@ -102,12 +102,25 @@ body {
     }
 }
 
+.title {
+    @media (--mobile-xs) {
+        margin-bottom: 10px;
+        padding-right: 40px;
+    }
+}
+
 .title-desc {
     margin-left: 20px;
+    @media (--mobile-xs) {
+        margin-left: 0;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'RobotoCondensed-Bold';
+    @media (--mobile) {
+        line-height: 1.2;
+    }
 }
 
 h1 {
