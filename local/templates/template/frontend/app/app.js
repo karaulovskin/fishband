@@ -29,6 +29,7 @@ import Sliders from'./js/sliders'
 import Select from'./js/select'
 import Tabs from'./js/tabs'
 import Video from'./js/video'
+import Anchor from'./js/anchor'
 
 // Run components
 
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     App.Select = new Select();
     App.Tabs = new Tabs();
     App.Video = new Video();
+    App.Anchor = new Anchor();
 
     $('.inputmask').inputmask({mask: "+7 (999) 999-99-99", greedy: false});
 });

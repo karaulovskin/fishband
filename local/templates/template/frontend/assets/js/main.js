@@ -181,6 +181,10 @@ var _video = __webpack_require__(35);
 
 var _video2 = _interopRequireDefault(_video);
 
+var _anchor = __webpack_require__(36);
+
+var _anchor2 = _interopRequireDefault(_anchor);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.svg4everybody = _svg4everybody2.default; // Load plugins
@@ -234,6 +238,7 @@ document.addEventListener('DOMContentLoaded', function () {
     App.Select = new _select2.default();
     App.Tabs = new _tabs2.default();
     App.Video = new _video2.default();
+    App.Anchor = new _anchor2.default();
 
     $('.inputmask').inputmask({ mask: "+7 (999) 999-99-99", greedy: false });
 });
@@ -26150,6 +26155,53 @@ var Video = function () {
 }();
 
 exports.default = Video;
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Anchor = function () {
+    function Anchor() {
+        _classCallCheck(this, Anchor);
+
+        this.events();
+    }
+
+    _createClass(Anchor, [{
+        key: 'handler',
+        value: function handler($this) {
+            var id = $this.attr('href');
+            var top = $(id).offset().top;
+
+            $('body,html').animate({ scrollTop: top - 77 }, 1500);
+        }
+    }, {
+        key: 'events',
+        value: function events() {
+            var self = this;
+
+            $('.reply').on("click", function (e) {
+                e.preventDefault();
+                self.handler($(this));
+            });
+        }
+    }]);
+
+    return Anchor;
+}();
+
+exports.default = Anchor;
 
 /***/ })
 /******/ ]);
