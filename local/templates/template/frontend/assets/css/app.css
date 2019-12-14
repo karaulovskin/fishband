@@ -2932,6 +2932,9 @@ input::-ms-clear {
     width: 16px;
     height: 16px;
 }
+.cke_button__table, .cke_button__horizontalrule, .cke_button__specialchar {
+    display: none!important;
+}
 .comments-filter {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2996,6 +2999,11 @@ input::-ms-clear {
 }
 .comments-item__body {
     padding: 10px 0;
+}
+.comments-item__body p {
+  max-height: 110px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 .comments-item__body span {
   font-family: 'Roboto-Medium';
@@ -3114,6 +3122,13 @@ input::-ms-clear {
     padding: 32px 25px;
     text-align: center;
     background-color: #f9f9f9;
+}
+.comments__user {
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Roboto-Medium';
+    line-height: 1rem;
+    color: #e07c1a;
 }
 .comments-add__note {
     position: relative;

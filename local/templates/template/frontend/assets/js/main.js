@@ -12119,6 +12119,7 @@ var Comments = function () {
         value: function closeNote() {
             var self = this;
 
+            $('.comments__user').remove();
             $(this.commentsAdd).show();
             $(this.commentsNote).removeClass('is-active');
         }
@@ -12132,6 +12133,9 @@ var Comments = function () {
             });
             $(document).on('click', this.commentsSubmit, function () {
                 self.closeNote();
+            });
+            $(document).on('click', '.reply', function () {
+                self.openNote();
             });
         }
     }]);
@@ -26175,6 +26179,8 @@ var Anchor = function () {
     function Anchor() {
         _classCallCheck(this, Anchor);
 
+        this.redactor = '[data-comments-add-note]';
+
         this.events();
     }
 
@@ -26183,8 +26189,18 @@ var Anchor = function () {
         value: function handler($this) {
             var id = $this.attr('href');
             var top = $(id).offset().top;
+            $('.comments__user').remove();
+            var userName = $this.closest('.comments-item').find('.comments-item__head').find('.profile-small__name').text();
+
+            this.addUser(userName);
 
             $('body,html').animate({ scrollTop: top - 77 }, 1500);
+        }
+    }, {
+        key: 'addUser',
+        value: function addUser(userName) {
+            $(this.redactor).before("<div class='comments__user'></div>");
+            $('.comments__user').text('ответить ' + userName);
         }
     }, {
         key: 'events',

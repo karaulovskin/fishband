@@ -1,0 +1,5 @@
+.cke_button__table,
+.cke_button__horizontalrule,
+.cke_button__specialchar {
+    display: none!important;
+}

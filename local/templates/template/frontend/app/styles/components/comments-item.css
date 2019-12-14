@@ -14,6 +14,12 @@
 .comments-item__body {
     padding: 10px 0;
 
+    p {
+        max-height: 110px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
     span {
         font-family: 'Roboto-Medium';
         color: var(--c-orange);

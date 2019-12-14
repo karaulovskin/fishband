@@ -55,6 +55,13 @@
     text-align: center;
     background-color: var(--c-bg-grey);
 }
+.comments__user {
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'Roboto-Medium';
+    line-height: 1rem;
+    color: #e07c1a;
+}
 .comments-add__note {
     position: relative;
     display: none;

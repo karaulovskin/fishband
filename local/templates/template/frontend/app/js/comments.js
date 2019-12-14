@@ -17,6 +17,7 @@ export default class Comments {
     closeNote() {
         let self = this;
 
+        $('.comments__user').remove();
         $(this.commentsAdd).show();
         $(this.commentsNote).removeClass('is-active');
     }
@@ -30,5 +31,9 @@ export default class Comments {
         $(document).on('click', this.commentsSubmit, function() {
             self.closeNote();
         });
+        $(document).on('click', '.reply', function() {
+            self.openNote();
+        });
+
     }
 }
