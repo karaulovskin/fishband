@@ -3060,6 +3060,9 @@ input::-ms-clear {
     display: flex;
     margin-top: 12px;
 }
+.cke_editable.cke_editable_themed.cke_contents_ltr.cke_show_borders p {
+  margin: 0!important;
+}
 .comments {
     margin-bottom: 50px;
     border-radius: 5px;

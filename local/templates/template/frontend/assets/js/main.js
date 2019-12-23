@@ -12365,6 +12365,18 @@ var Maps = function () {
                     gridSize: 32,
                     clusterDisableClickZoom: true
                 });
+                objectManager.objects.options.set({
+                    preset: 'islands#redIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: '/assets/templates/fishband/assets/images/icons/mark.jpg',
+                    iconImageSize: [25, 25]
+                });
+                objectManager.clusters.options.set({
+                    preset: 'islands#grayClusterIcons',
+                    iconLayout: 'default#image',
+                    iconImageHref: '/assets/templates/fishband/assets/images/icons/mark.jpg',
+                    iconImageSize: [25, 25]
+                });
                 myMap.geoObjects.add(objectManager);
 
                 $('.map-mode__item').each(function () {
@@ -12398,15 +12410,6 @@ var Maps = function () {
                 }).done(function (data) {
                     objectManager.add(data);
                 });
-
-                // myPlacemark = new ymaps.Placemark(map, {}, {
-                //     iconLayout: 'default#image',
-                //     iconImageHref: '/images/icons/mark.png',
-                //     iconImageSize: [43, 53],
-                //     // iconImageOffset: [-12, -10]
-                // });
-
-                // myMap.geoObjects.add(myPlacemark);
             }
         }
     }, {
@@ -12431,10 +12434,22 @@ var Maps = function () {
                     gridSize: 32,
                     clusterDisableClickZoom: true
                 });
+                objectManager.objects.options.set({
+                    preset: 'islands#redIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: '/assets/templates/fishband/assets/images/icons/mark.jpg',
+                    iconImageSize: [25, 25]
+                });
+                objectManager.clusters.options.set({
+                    preset: 'islands#grayClusterIcons',
+                    iconLayout: 'default#image',
+                    iconImageHref: '/assets/templates/fishband/assets/images/icons/mark.jpg',
+                    iconImageSize: [25, 25]
+                });
                 myMap.geoObjects.add(objectManager);
 
                 $.ajax({
-                    url: "./json/data.json"
+                    url: "/assets/templates/fishband/assets/json/data.json"
                 }).done(function (data) {
                     objectManager.add(data);
                 });
@@ -12442,15 +12457,6 @@ var Maps = function () {
                 objectManager.setFilter(function (object) {
                     return object.properties.type == 'Магазин';
                 });
-
-                // myPlacemark = new ymaps.Placemark(map, {}, {
-                //     iconLayout: 'default#image',
-                //     iconImageHref: '/images/icons/mark.png',
-                //     iconImageSize: [43, 53],
-                //     // iconImageOffset: [-12, -10]
-                // });
-
-                // myMap.geoObjects.add(myPlacemark);
             }
         }
     }]);
